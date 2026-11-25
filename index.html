@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080912">
-<title>QuantumTheology | The Case for Christ</title>
-<meta name="description" content="A Christian apologetics research archive examining atheism, naturalism, competing religions, philosophy, cosmology, morality, and the identity of Jesus Christ.">
+<title>QuantumTheology | S-GUOT Apologetics Archive</title>
+<meta name="description" content="The Seibert Grand Unified Ontological Theory (S-GUOT): 20 hardened axioms showing every worldview fails except Jesus.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QuantumTheology | S-GUOT Apologetics Archive">
+<meta property="og:description" content="Every worldview fails except Jesus. The 20 hardened axioms, the disjunctive syllogism, and the debate archive.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +22,7 @@
   --line:rgba(255,255,255,.09);
   --text:#f5f6ff;
   --muted:#a6abc2;
+  --body:#dfe2f3;
   --purple:#a78bfa;
   --blue:#60a5fa;
   --cyan:#67e8f9;
@@ -27,6 +31,7 @@
   --red:#fb7185;
 }
 *{box-sizing:border-box}
+[hidden]{display:none !important}
 html{scroll-behavior:smooth}
 body{
   margin:0;
@@ -41,10 +46,13 @@ body{
 a{color:var(--cyan);text-decoration:none}
 a:hover{opacity:.8}
 button,input{font:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+/* ---------- Header ---------- */
 header{
   position:sticky;top:0;z-index:20;
   background:rgba(8,9,18,.9);
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
 .nav{
@@ -52,7 +60,7 @@ header{
   display:flex;align-items:center;justify-content:space-between;
 }
 .logo{
-  font-family:'Space Grotesk',sans-serif;
+  font-family:'Space Grotesk',sans-serif;color:#fff;
   font-size:23px;font-weight:700;letter-spacing:-1.2px;
 }
 .logo span{
@@ -61,17 +69,20 @@ header{
 }
 .menu-button{
   background:var(--panel2);border:1px solid var(--line);
-  color:white;border-radius:13px;padding:11px 18px;
+  color:#fff;border-radius:13px;padding:11px 18px;
   cursor:pointer;font-weight:700;
 }
 .nav-links{
   display:none;position:absolute;top:72px;right:20px;
   background:#151727;border:1px solid var(--line);
-  border-radius:16px;padding:15px;min-width:220px;
+  border-radius:16px;padding:12px;min-width:250px;
   box-shadow:0 20px 60px #0009;
 }
-.nav-links.open{display:grid;gap:12px}
-.nav-links a{color:var(--text);padding:7px}
+.nav-links.open{display:grid;gap:4px}
+.nav-links a{color:var(--text);padding:8px 10px;border-radius:10px}
+.nav-links a:hover{background:var(--panel2);opacity:1}
+
+/* ---------- Layout ---------- */
 .container{max-width:1150px;margin:auto;padding:0 25px}
 .hero{padding:100px 0 80px;text-align:center}
 .eyebrow{
@@ -92,92 +103,192 @@ h1{font-size:clamp(42px,8vw,82px);letter-spacing:-4px;margin:25px 0}
   display:inline-block;padding:14px 22px;border-radius:13px;
   font-weight:800;border:1px solid var(--line);
 }
-.btn-primary{background:linear-gradient(100deg,#7655d9,#287fbd);color:white}
-.btn-secondary{background:var(--panel);color:white}
-.stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:14px;margin-top:65px;
-}
-.stat{
-  background:rgba(17,19,33,.8);border:1px solid var(--line);
-  border-radius:17px;padding:22px;
-}
-.stat strong{display:block;font-size:27px;color:var(--cyan);font-family:'Space Grotesk'}
+.btn-primary{background:linear-gradient(100deg,#7655d9,#287fbd);color:#fff}
+.btn-secondary{background:var(--panel);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:65px}
+.stat{background:rgba(17,19,33,.8);border:1px solid var(--line);border-radius:17px;padding:22px}
+.stat strong{display:block;font-size:27px;color:var(--cyan);font-family:'Space Grotesk',sans-serif}
 .stat span{color:var(--muted);font-size:13px}
-section{padding:65px 0}
+section{padding:65px 0;scroll-margin-top:70px}
 .section-heading{margin-bottom:30px}
+.section-heading .eyebrow{margin-bottom:16px}
 .section-heading h2{font-size:clamp(30px,5vw,45px);margin:0 0 12px}
 .section-heading p{color:var(--muted);max-width:760px;margin:0}
+.sub-heading{font-size:22px;margin:36px 0 16px}
+
+/* ---------- Cards ---------- */
 .card{
   background:linear-gradient(145deg,rgba(21,24,42,.96),rgba(13,15,28,.96));
   border:1px solid var(--line);border-radius:22px;
   padding:28px;margin-bottom:17px;
   box-shadow:0 15px 45px rgba(0,0,0,.12);
+  scroll-margin-top:95px;
 }
 .card h3{font-size:23px;margin:8px 0 12px}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .label{
   color:var(--purple);font-size:12px;letter-spacing:2px;
   font-weight:800;text-transform:uppercase;
 }
 .card p{color:var(--muted);margin:10px 0}
-.evidence{
-  border-left:3px solid var(--green);
-  background:rgba(110,231,183,.055);
-  padding:14px 17px;border-radius:0 12px 12px 0;
-  margin-top:17px;color:#d5f8e9;
-}
-.reasoning{
-  border-left:3px solid var(--gold);
-  background:rgba(251,191,36,.05);
-  padding:14px 17px;border-radius:0 12px 12px 0;
-  margin-top:14px;color:#f5dfbd;
-}
-.caution{
-  border-left:3px solid var(--blue);
-  background:rgba(96,165,250,.06);
-  padding:14px 17px;border-radius:0 12px 12px 0;
-  margin-top:14px;color:#d5e7ff;
-}
+.card .body{color:var(--body)}
+.card .q-note{margin:-6px 0 4px;font-size:14px;font-weight:700}
+.evidence,.receipts,.fallacy{padding:14px 17px;border-radius:0 12px 12px 0;margin-top:14px}
+.evidence{border-left:3px solid var(--green);background:rgba(110,231,183,.055);color:#d5f8e9}
+.receipts{border-left:3px solid var(--gold);background:rgba(251,191,36,.05);color:#f5dfbd}
+.fallacy{border-left:3px solid var(--red);background:rgba(251,113,133,.06);color:#ffd6dd}
 .tag{
   display:inline-block;font-size:11px;font-weight:800;
   border:1px solid var(--line);border-radius:30px;
   padding:5px 9px;color:var(--cyan);margin:3px 4px 3px 0;
 }
+.tag.green{color:var(--green);border-color:rgba(110,231,183,.3)}
+.tag.red{color:var(--red);border-color:rgba(251,113,133,.3)}
+.ref{color:var(--cyan);text-decoration:underline dotted;text-underline-offset:3px}
+.axlink{color:var(--purple);font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid > .card{margin:0}
+.sub-list{margin:10px 0 0;padding-left:20px}
+.sub-list li{margin:8px 0}
+.card.flash{animation:flash 1.8s ease-out}
+@keyframes flash{
+  0%,35%{border-color:var(--purple);box-shadow:0 0 0 3px rgba(167,139,250,.35)}
+  100%{border-color:var(--line);box-shadow:0 15px 45px rgba(0,0,0,.12)}
+}
+
+/* ---------- Search + filters ---------- */
 .search{
   width:100%;padding:16px 18px;background:var(--panel);
   border:1px solid var(--line);border-radius:14px;
-  color:white;margin:15px 0 25px;outline:none;
+  color:#fff;margin:15px 0 10px;outline:none;
 }
 .search:focus{border-color:var(--purple)}
-details{margin-top:15px;border-top:1px solid var(--line);padding-top:13px}
-summary{cursor:pointer;color:var(--cyan);font-weight:800}
-details p{margin-top:14px}
-table{width:100%;border-collapse:collapse;margin-top:20px}
-th,td{text-align:left;padding:15px;border-bottom:1px solid var(--line);vertical-align:top}
-th{color:var(--cyan);font-size:13px}
-td{color:var(--muted)}
-.table-wrap{overflow-x:auto}
-footer{
-  border-top:1px solid var(--line);padding:45px 20px;
-  text-align:center;color:var(--muted);
+.result-count{color:var(--muted);font-size:13px;margin:0 0 18px}
+.empty{color:var(--muted);text-align:center;padding:30px;border:1px dashed var(--line);border-radius:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  background:var(--panel);border:1px solid var(--line);color:var(--muted);
+  border-radius:30px;padding:8px 14px;font-size:13px;font-weight:800;cursor:pointer;
 }
-footer strong{color:white}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed="true"]{background:linear-gradient(100deg,#7655d9,#287fbd);color:#fff;border-color:transparent}
+.stage{
+  display:flex;align-items:center;gap:14px;margin:30px 0 16px;
+  color:var(--cyan);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;
+}
+.stage::after{content:"";flex:1;height:1px;background:var(--line)}
+.copy-btn{
+  background:transparent;border:1px solid var(--line);color:var(--muted);
+  border-radius:10px;padding:5px 11px;font-size:12px;font-weight:800;
+  cursor:pointer;flex-shrink:0;
+}
+.copy-btn:hover{color:var(--text);border-color:rgba(255,255,255,.22)}
+.copy-btn.copied{color:var(--green);border-color:rgba(110,231,183,.45)}
+
+/* ---------- Founder ---------- */
+.record-score{
+  font-family:'Space Grotesk',sans-serif;font-size:64px;font-weight:700;
+  line-height:1;margin-top:16px;letter-spacing:-2px;
+}
+.card .mini-label{
+  font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text);margin:18px 0 4px;
+}
+.slogan{display:flex;flex-direction:column;justify-content:center}
+.slogan blockquote{
+  margin:0;font-family:'Space Grotesk',sans-serif;font-size:21px;
+  font-weight:600;line-height:1.4;color:var(--text);
+}
+
+/* ---------- Memory map ---------- */
+.bucket-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.bucket{grid-column:span 2;display:flex;flex-direction:column;margin:0}
+.bucket:nth-child(n+4){grid-column:span 3}
+.bucket .num{font-family:'Space Grotesk',sans-serif;color:var(--muted);font-size:13px;font-weight:700;letter-spacing:2px}
+.bucket h3{font-size:28px;letter-spacing:-.5px;margin:6px 0 2px}
+.card .axrefs{font-size:13px;font-weight:700;margin:0}
+.bucket .desc{flex:1}
+.bucket-btn{
+  align-self:flex-start;margin-top:8px;background:var(--panel2);
+  border:1px solid var(--line);color:#fff;border-radius:12px;
+  padding:10px 15px;font-weight:800;cursor:pointer;
+}
+.bucket-btn:hover{border-color:var(--purple)}
+
+/* ---------- Worldview elimination ---------- */
+.wv{display:flex;gap:18px;align-items:flex-start;border-left:3px solid var(--red)}
+.wv.win{
+  border-color:rgba(110,231,183,.3);border-left-color:var(--green);
+  background:linear-gradient(145deg,rgba(14,44,38,.9),rgba(13,15,28,.96));
+}
+.wv-num{
+  font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;
+  color:rgba(255,255,255,.25);line-height:1;min-width:38px;padding-top:4px;
+}
+.wv h3{margin:0 0 8px}
+.badge{
+  display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;
+  text-transform:uppercase;border-radius:30px;padding:5px 10px;
+}
+.badge.out{color:var(--red);border:1px solid rgba(251,113,133,.4)}
+.badge.in{color:var(--green);border:1px solid rgba(110,231,183,.45)}
+
+/* ---------- 4-step proof ---------- */
+.step{display:flex;gap:18px;align-items:flex-start}
+.step-n{
+  flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:var(--panel2);border:1px solid var(--line);
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--cyan);
+}
+.step p{margin:8px 0 0;color:var(--text);font-size:17px}
+.step.final{border-color:rgba(110,231,183,.35)}
+.step.final .step-n{background:rgba(110,231,183,.12);border-color:rgba(110,231,183,.4);color:var(--green)}
+
+/* ---------- Thesis ---------- */
+.thesis{border-color:rgba(167,139,250,.35);background:linear-gradient(145deg,rgba(43,30,88,.55),rgba(13,15,28,.96))}
+.card .big{font-size:19px;color:var(--text)}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:45px 20px;text-align:center;color:var(--muted)}
+footer strong{color:#fff}
 .tiktok{
   display:inline-block;margin-top:15px;padding:13px 20px;
   border-radius:12px;background:#171a2b;border:1px solid var(--line);
-  color:white;font-weight:800;
+  color:#fff;font-weight:800;
+}
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:30;width:46px;height:46px;
+  border-radius:14px;background:var(--panel2);border:1px solid var(--line);
+  color:#fff;font-size:20px;cursor:pointer;box-shadow:0 10px 30px #0008;
+  opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;
+}
+.to-top.show{opacity:1;visibility:visible}
+
+@media(max-width:900px){
+  .bucket,.bucket:nth-child(n+4){grid-column:span 3}
+  .bucket:last-child{grid-column:span 6}
 }
 @media(max-width:700px){
   .container{padding:0 17px}
   .nav{padding:15px 17px}
   .logo{font-size:19px}
+  .nav-links{top:66px;right:12px;left:12px}
   .hero{padding:75px 0 55px}
   h1{letter-spacing:-2px}
   .stats{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
   .card{padding:21px}
   section{padding:48px 0}
+  .bucket,.bucket:nth-child(n+4),.bucket:last-child{grid-column:span 6}
+  .wv,.step{gap:12px}
+  .wv-num{font-size:24px;min-width:26px}
+  .step-n{flex-basis:38px;height:38px;font-size:16px}
+  .record-score{font-size:52px}
+  .slogan blockquote{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card.flash{animation:none}
 }
 </style>
 </head>
@@ -186,15 +297,17 @@ footer strong{color:white}
 
 <header>
   <nav class="nav">
-    <a class="logo" href="#home" style="color:white">QUANTUM<span>THEOLOGY</span></a>
-    <button class="menu-button" id="menuButton" aria-label="Open navigation">MENU ☰</button>
+    <a class="logo" href="#home">QUANTUM<span>THEOLOGY</span></a>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">MENU ☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#thesis">Central Thesis</a>
-      <a href="#worldviews">Worldview Examination</a>
+      <a href="#about">The Founder</a>
+      <a href="#map">Memory Map</a>
       <a href="#axioms">20 Axioms</a>
-      <a href="#christ">Jesus Christ</a>
+      <a href="#syllogism">Worldview Elimination</a>
+      <a href="#proof">Proof Jesus Is God</a>
+      <a href="#atheism">Why Atheism Is Impossible</a>
+      <a href="#debate">Debate Q&amp;A</a>
       <a href="#islam">Islam</a>
-      <a href="#sources">Sources</a>
     </div>
   </nav>
 </header>
@@ -202,448 +315,599 @@ footer strong{color:white}
 <main id="home">
 <div class="container">
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <span class="eyebrow">Christian Apologetics Research Archive</span>
-  <h1>Does every worldview<br><span class="gradient">lead to the same truth?</span></h1>
-  <p>
-    A systematic Christian examination of atheism, naturalism, pantheism,
-    Buddhism, Islam, and competing explanations of reality.
-    The central question: which worldview best accounts for existence,
-    reason, consciousness, morality, and the historical Jesus?
-  </p>
+  <span class="eyebrow">Biblical Christian Apologetics</span>
+  <h1>Every worldview fails<br><span class="gradient">except Jesus.</span></h1>
+  <p>The Seibert Grand Unified Ontological Theory (S-GUOT) &amp; Apologetics Archive — formulated by Jacob Benjamin Seibert.</p>
   <div class="hero-buttons">
-    <a class="btn btn-primary" href="#worldviews">Examine the Worldviews</a>
-    <a class="btn btn-secondary" href="#thesis">Read the Central Thesis</a>
+    <a class="btn btn-primary" href="#axioms">Explore the 20 Axioms</a>
+    <a class="btn btn-secondary" href="#syllogism">See Every Worldview Eliminated</a>
   </div>
   <div class="stats">
-    <div class="stat"><strong>20</strong><span>Core philosophical and theological arguments</span></div>
-    <div class="stat"><strong>6+</strong><span>Major worldview categories examined</span></div>
-    <div class="stat"><strong>1</strong><span>Central question: Is Jesus truly God?</span></div>
+    <div class="stat"><strong>20</strong><span>Hardened axioms</span></div>
+    <div class="stat"><strong>7–0+</strong><span>Undefeated debate record</span></div>
+    <div class="stat"><strong>1</strong><span>Worldview left standing</span></div>
   </div>
 </section>
 
-<section id="thesis">
+<!-- ================= FOUNDER ================= -->
+<section id="about">
   <div class="section-heading">
-    <span class="eyebrow">The central thesis</span>
-    <h2>Why Christianity?</h2>
-    <p>The Christian case is cumulative. It does not depend on one scientific discovery or one philosophical argument.</p>
+    <span class="eyebrow">Formulated by</span>
+    <h2>Jacob Benjamin Seibert</h2>
+    <p>14-year-old Biblical Christian Apologist</p>
   </div>
 
-  <div class="card">
-    <h3>The S-GUOT Thesis</h3>
-    <p>
-      The Seibert Grand Unified Ontological Theory examines whether a
-      reality grounded in a personal, rational, morally perfect Creator
-      explains the universe more coherently than worldviews that treat
-      reality as ultimately impersonal, self-existing, or dependent on
-      finite beings.
-    </p>
-    <div class="evidence">
-      <strong>Central Christian claim:</strong>
-      The universe is created by God; human beings possess real moral
-      significance; and Jesus Christ is the incarnate Son of God whose
-      death and resurrection are the foundation of Christian salvation.
-    </div>
-    <div class="reasoning">
-      <strong>Method:</strong>
-      Examine each worldview by its explanation of existence, the origin
-      and reliability of reason, consciousness, morality, evil, and the
-      historical claims surrounding Jesus.
-    </div>
+  <div class="grid">
+    <article class="card">
+      <span class="label">Debate record</span>
+      <div class="record-score gradient">7–0+</div>
+      <h3>Undefeated</h3>
+      <p>Across live, street, school, TikTok Live panels, and Roblox debates.</p>
+    </article>
+
+    <article class="card">
+      <span class="label">Theological stance</span>
+      <h3>Biblical Christian</h3>
+      <p>Championing a personal relationship with Jesus over dead, man-made institutional religion.</p>
+      <p class="mini-label">Defending</p>
+      <p><span class="tag green">The full Deity of Christ</span><span class="tag green">The Trinity</span><span class="tag green">Sola Fide</span><span class="tag green">Sola Scriptura</span></p>
+      <p class="mini-label">Rejecting</p>
+      <p><span class="tag red">Roman Catholic sacramental works</span><span class="tag red">Earthly priesthood</span><span class="tag red">Purgatory</span><span class="tag red">Praying to Mary/saints</span></p>
+    </article>
+  </div>
+
+  <h3 class="sub-heading">Core Slogans</h3>
+  <div class="grid">
+    <article class="card slogan"><blockquote>"Every worldview fails except Jesus."</blockquote></article>
+    <article class="card slogan"><blockquote>"Physics + Logic = Jesus. Debate me."</blockquote></article>
+    <article class="card slogan"><blockquote>"Jesus is real. Every other worldview self-destructs. Prove me wrong."</blockquote></article>
+    <article class="card slogan"><blockquote>"I take the hardest fields on earth—quantum mechanics, thermodynamics, formal logic, and ancient manuscripts—and prove every single one of them leads straight to Jesus."</blockquote></article>
   </div>
 </section>
 
-<section id="worldviews">
+<!-- ================= PART 1: MEMORY MAP ================= -->
+<section id="map">
   <div class="section-heading">
-    <span class="eyebrow">Worldview examination</span>
-    <h2>Competing explanations of reality</h2>
-    <p>Each worldview is examined by its central claims, philosophical challenges, and the Christian response.</p>
+    <span class="eyebrow">Part 1</span>
+    <h2>The 5-Bucket Memory Map</h2>
+    <p>"Cosmos, Code, Conscience, Cross." Tap a bucket to pull up its axioms.</p>
   </div>
 
-  <input class="search" id="worldviewSearch" placeholder="Search worldviews or arguments...">
-
-  <div id="worldviewCards">
-
-    <article class="card worldview">
-      <span class="label">Worldview 01</span>
-      <h3>Atheism & Naturalism</h3>
-      <p><span class="tag">Materialism</span><span class="tag">Cosmology</span><span class="tag">Consciousness</span><span class="tag">Morality</span></p>
-      <p><strong>Central claim:</strong> Reality is ultimately physical, and no God exists.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        The universe's expansion, the past-boundary implications of the
-        Borde-Guth-Vilenkin theorem, the existence of mathematical laws,
-        the hard problem of consciousness, and debates about objective morality.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        Even a complete physical description of the universe leaves
-        philosophical questions about why physical reality exists,
-        why it is mathematically intelligible, and how subjective
-        consciousness and objective moral obligations fit into a
-        fundamentally impersonal reality.
-      </div>
-      <div class="caution">
-        <strong>Important distinction:</strong>
-        These are serious explanatory challenges, not demonstrations
-        that every atheist position is logically impossible.
-        Naturalists offer responses involving brute facts, physicalism,
-        emergent consciousness, and moral realism.
-        The debate must address those responses directly.
-      </div>
+  <div class="bucket-grid">
+    <article class="card bucket">
+      <span class="num">01</span>
+      <h3><span class="gradient">COSMOS</span></h3>
+      <p class="axrefs" data-link>Axioms 1, 2, 11</p>
+      <p class="desc body">Universe had a hard start (BGV Theorem / Thermodynamics) + cosmic fine-tuning.</p>
+      <button class="bucket-btn" type="button" data-show-bucket="cosmos">Show these axioms →</button>
     </article>
-
-    <article class="card worldview">
-      <span class="label">Worldview 02</span>
-      <h3>Pantheism</h3>
-      <p><span class="tag">God and universe</span><span class="tag">Identity</span><span class="tag">Change</span></p>
-      <p><strong>Central claim:</strong> God and the universe are identical, or all reality is divine.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        The universe contains change, decay, physical distinctions,
-        and apparently contingent objects. Classical theism describes
-        God as necessary and not dependent on the physical universe.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        If God is identical to the changing physical universe, pantheism
-        must explain how ultimate divinity relates to change, imperfection,
-        and suffering. Christianity distinguishes the Creator from creation.
-      </div>
-      <div class="caution">
-        <strong>Important distinction:</strong>
-        Not every form of pantheism defines God as a single unchanging
-        object. Some versions distinguish ultimate reality from the
-        changing world. Those versions require their own examination.
-      </div>
+    <article class="card bucket">
+      <span class="num">02</span>
+      <h3><span class="gradient">CODE</span></h3>
+      <p class="axrefs" data-link>Axioms 3, 4</p>
+      <p class="desc body">Human DNA is 3.2 billion letters of digital software; math and physical laws do not create matter.</p>
+      <button class="bucket-btn" type="button" data-show-bucket="code">Show these axioms →</button>
     </article>
-
-    <article class="card worldview">
-      <span class="label">Worldview 03</span>
-      <h3>Hindu Philosophical Traditions</h3>
-      <p><span class="tag">Brahman</span><span class="tag">Karma</span><span class="tag">Reincarnation</span></p>
-      <p><strong>Central claim:</strong> Hindu traditions contain different accounts of ultimate reality, the self, karma, and liberation.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        Advaita Vedanta, Dvaita Vedanta, and other Hindu schools
-        disagree about whether the individual self is ultimately
-        identical with Brahman, distinct from Brahman, or related
-        to ultimate reality in another way.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        Christianity challenges accounts in which personal identity
-        is ultimately dissolved or in which salvation depends on
-        escaping the cycle of rebirth. It instead argues for a personal
-        Creator, enduring human identity, resurrection, and a final
-        moral judgment.
-      </div>
-      <div class="caution">
-        <strong>Important distinction:</strong>
-        Hinduism is not one uniform worldview. Arguments against
-        Advaita do not automatically refute every Hindu tradition.
-      </div>
+    <article class="card bucket">
+      <span class="num">03</span>
+      <h3><span class="gradient">MIND &amp; MORALS</span></h3>
+      <p class="axrefs" data-link>Axioms 5, 6, 7, 12, 13</p>
+      <p class="desc body">Logic, consciousness, and objective morality ("Random Pear" / "Accidental Monkey Brain") collapse without God.</p>
+      <button class="bucket-btn" type="button" data-show-bucket="mind">Show these axioms →</button>
     </article>
-
-    <article class="card worldview">
-      <span class="label">Worldview 04</span>
-      <h3>Buddhism</h3>
-      <p><span class="tag">Anatta</span><span class="tag">Karma</span><span class="tag">Samsara</span></p>
-      <p><strong>Central claim:</strong> Buddhist traditions explain suffering through craving, impermanence, and ignorance, with liberation through awakening.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        The doctrine of anatta denies a permanent, independent self.
-        Buddhist traditions explain continuity across lives through
-        causal processes rather than an unchanging soul.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        Christianity disagrees with the denial of a permanent self
-        and with rebirth as the explanation of human destiny.
-        It argues that personal identity, moral responsibility,
-        and the hope of resurrection are grounded in a personal God.
-      </div>
-      <div class="caution">
-        <strong>Important distinction:</strong>
-        Buddhism has developed multiple schools, and its account of
-        rebirth is not simply the claim that an identical soul moves
-        from one body to another. The Christian critique must address
-        the actual Buddhist position.
-      </div>
+    <article class="card bucket">
+      <span class="num">04</span>
+      <h3><span class="gradient">TRINITY &amp; EVIL</span></h3>
+      <p class="axrefs" data-link>Axioms 8, 9</p>
+      <p class="desc body">Tri-Une God possesses eternal love (unlike lonely unitarian deities); evil is brokenness/privation (rust on a car).</p>
+      <button class="bucket-btn" type="button" data-show-bucket="trinity">Show these axioms →</button>
     </article>
-
-    <article class="card worldview">
-      <span class="label">Worldview 05</span>
-      <h3>Islam</h3>
-      <p><span class="tag">Tawhid</span><span class="tag">Quran</span><span class="tag">Jesus</span></p>
-      <p><strong>Central claim:</strong> There is one God, and Muhammad is His messenger. Jesus is honored as a prophet and Messiah, but not as God.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        The Quran's statements about earlier revelation, its account
-        of Jesus, the historical evidence for the crucifixion, and
-        the development and transmission of biblical and Quranic texts.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        Christianity argues that Jesus' identity cannot be reduced
-        to that of a prophet. The earliest Christian sources place
-        extraordinary claims about Jesus at the center of their
-        message, including His crucifixion, resurrection, divine
-        status, and role in salvation.
-      </div>
-      <div class="caution">
-        <strong>Important distinction:</strong>
-        The relationship between the Quran and earlier scriptures
-        is debated. The Islamic response includes arguments about
-        textual corruption and interpretation. Those arguments
-        must be examined passage by passage.
-      </div>
+    <article class="card bucket">
+      <span class="num">05</span>
+      <h3><span class="gradient">JESUS &amp; HISTORY</span></h3>
+      <p class="axrefs" data-link>Axioms 10, 14–20</p>
+      <p class="desc body">Infinite sin debt requires a 100% God / 100% Man Savior; backed by 5,800+ Greek NT manuscripts, Dead Sea Scrolls, and the Minimal-Facts Resurrection ("liars make terrible martyrs").</p>
+      <button class="bucket-btn" type="button" data-show-bucket="jesus">Show these axioms →</button>
     </article>
-
-    <article class="card worldview">
-      <span class="label">Worldview 06</span>
-      <h3>Deism</h3>
-      <p><span class="tag">First cause</span><span class="tag">Creator</span><span class="tag">Revelation</span></p>
-      <p><strong>Central claim:</strong> A creator exists but does not necessarily intervene in the universe or reveal Himself through specific historical events.</p>
-      <div class="evidence">
-        <strong>Evidence examined:</strong>
-        Cosmological arguments can support a first cause or necessary
-        foundation of reality, but additional historical and
-        philosophical arguments are needed to establish revelation.
-      </div>
-      <div class="reasoning">
-        <strong>Christian argument:</strong>
-        If God is personal, powerful, and morally good, divine
-        communication is not inherently impossible. Christianity
-        claims that God has acted in history, most decisively through Jesus.
-      </div>
-    </article>
-
   </div>
 </section>
 
+<!-- ================= PART 2: 20 AXIOMS ================= -->
 <section id="axioms">
   <div class="section-heading">
-    <span class="eyebrow">The S-GUOT framework</span>
-    <h2>The 20 core arguments</h2>
-    <p>Explore the philosophical, scientific, moral, and historical arguments in the archive.</p>
+    <span class="eyebrow">Part 2</span>
+    <h2>The Complete 20 Hardened Axioms of S-GUOT</h2>
+    <p>Filter by bucket, or search any name, receipt, or argument.</p>
   </div>
-  <input class="search" id="axiomSearch" placeholder="Search the 20 arguments...">
-  <div id="axiomCards"></div>
+
+  <div class="chips" role="group" aria-label="Filter axioms by bucket">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">All 20</button>
+    <button class="chip" type="button" data-filter="cosmos" aria-pressed="false">Cosmos</button>
+    <button class="chip" type="button" data-filter="code" aria-pressed="false">Code</button>
+    <button class="chip" type="button" data-filter="mind" aria-pressed="false">Mind &amp; Morals</button>
+    <button class="chip" type="button" data-filter="trinity" aria-pressed="false">Trinity &amp; Evil</button>
+    <button class="chip" type="button" data-filter="jesus" aria-pressed="false">Jesus &amp; History</button>
+  </div>
+  <input class="search" id="axiomSearch" type="search" placeholder='Search the 20 axioms… (try "Gödel" or "DNA")' aria-label="Search the 20 axioms">
+  <p class="result-count" id="axiomCount" aria-live="polite">Showing 20 of 20 axioms</p>
+  <p class="empty" id="axiomEmpty" hidden>No axioms match that search.</p>
+
+  <!-- STAGE I -->
+  <div class="stage-group">
+    <h3 class="stage">Stage I · Cosmology, Physics &amp; Information</h3>
+
+    <article class="card axiom" id="axiom-1" data-bucket="cosmos">
+      <div class="card-top"><span class="label">Axiom 1</span></div>
+      <h3>Thermodynamic &amp; Spacetime Boundary</h3>
+      <p><span class="tag">Cosmos</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Rudolf Clausius &amp; Ludwig Boltzmann (1st &amp; 2nd Laws of Thermodynamics), Borde-Guth-Vilenkin (BGV) Theorem (<i>Physical Review Letters</i>, 2003), Gottfried Wilhelm Leibniz &amp; Ibn Sina (Contingency).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Energy cannot create itself (1st Law) and usable energy runs down over time like a forgotten phone battery (2nd Law)—and the BGV Theorem proved any universe or multiverse with average expansion (<i>H</i><sub>avg</sub> &gt; 0) has a past spacetime boundary. Believing the universe popped itself out of literal nothing is like claiming a magic hat pulled itself out of a rabbit that didn't exist yet.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-2" data-bucket="cosmos">
+      <div class="card-top"><span class="label">Axiom 2</span></div>
+      <h3>Quantum Measurement, Decoherence &amp; Cosmic Lawfulness</h3>
+      <p><span class="tag">Cosmos</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> John von Neumann (<i>Mathematical Foundations of Quantum Mechanics</i>), Eugene Wigner (1961), John Archibald Wheeler (Delayed-Choice Experiment), Decoherence Limits.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Quantum systems evolve in superposition until measurement/interaction, yet every physical subsystem—even the entire cosmos—requires an external frame of reference to define definite physical reality. Thinking blind subatomic particles bootstrapped razor-sharp mathematical lawfulness out of nothing without a Transcendent Cosmic Mind is like expecting a TikTok livestream to record, edit, and upload itself with no camera and no creator.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-3" data-bucket="code">
+      <div class="card-top"><span class="label">Axiom 3</span></div>
+      <h3>Mathematical Platonism &amp; Gödelian Incompleteness</h3>
+      <p><span class="tag">Code</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Kurt Gödel (Incompleteness Theorems, 1931), Eugene Wigner ("The Unreasonable Effectiveness of Mathematics in the Natural Sciences," 1960), Stephen Hawking ("What breathes fire into the equations?").</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Gödel proved no consistent mathematical system can ever validate itself from within, and abstract equations have zero causal power to create physical matter—no matter how hard String Theorists bluff with 10<sup>500</sup> unverified landscapes. Saying "the laws of physics created the universe" is like saying the rules of Monopoly printed the paper money and built Boardwalk.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-4" data-bucket="code">
+      <div class="card-top"><span class="label">Axiom 4</span></div>
+      <h3>Wheeler "It from Bit" &amp; Abiogenesis Specified Information Law</h3>
+      <p><span class="tag">Code</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> John Archibald Wheeler ("Information, Physics, Quantum," 1989), Claude Shannon (Information Theory), Francis Crick &amp; James Watson (DNA 4-base code), Stephen C. Meyer (<i>Signature in the Cell</i>).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Reality reduces to binary informational distinctions, and every living cell runs on specified digital software (DNA)—3.2 billion base pairs in the human genome alone. Natural selection cannot write DNA because selection doesn't even turn on until you already have a working self-replicating machine. Believing random chemical soup wrote DNA by accident is like thinking a tornado in a junkyard assembled a working iPhone 16 Pro Max with iOS installed.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-5" data-bucket="mind">
+      <div class="card-top"><span class="label">Axiom 5</span></div>
+      <h3>Libertarian Agent Causation vs. Frozen Eternity &amp; Non-Contradiction</h3>
+      <p><span class="tag">Mind &amp; Morals</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Al-Ghazali (<i>The Incoherence of the Philosophers</i>), William Lane Craig (Kalam), Aristotle (Law of Non-Contradiction).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> If a timeless First Cause were a blind, mechanical force, its effect would have been triggered from eternity—locking the universe into a frozen block forever; only a free Conscious Mind can choose to initiate time. Plus, an unchanging God cannot be identical to a decaying universe—so telling people "you are the universe experiencing itself" is just fancy poetry for "I failed basic logic."</div>
+    </article>
+
+    <article class="card axiom" id="axiom-6" data-bucket="mind">
+      <div class="card-top"><span class="label">Axiom 6</span></div>
+      <h3>Hard Problem of Consciousness &amp; Evolutionary Epistemology (EAAN)</h3>
+      <p><span class="tag">Mind &amp; Morals</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> David Chalmers (1995), Alvin Plantinga (Evolutionary Argument Against Naturalism), Thomas Nagel (<i>Mind and Cosmos</i>, 2012).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Mindless quarks have zero inner experience (qualia), and Plantinga proved that if your brain is just a blind survival accident, evolution only cares that you run from tigers—not that your beliefs are actually true. An atheist using an "accidental monkey brain" to argue against God is sawing off the exact tree branch they're sitting on.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-7" data-bucket="mind">
+      <div class="card-top"><span class="label">Axiom 7</span></div>
+      <h3>Axiological Purpose, Objective Moral Duty &amp; "Random Pear" Refutation</h3>
+      <p><span class="tag">Mind &amp; Morals</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Aristotle (Final Causality), Immanuel Kant (Moral Law), C.S. Lewis (<i>Mere Christianity</i>), Jacob Benjamin Seibert ("Random Pear" Refutation).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Without a purposeful Creator, human beings have no more objective moral worth than a random pear floating in deep space—and impersonal karma fails justice because blind cosmic energy can't read moral intent or justify punishing you for a past life you don't even remember.</div>
+    </article>
+  </div>
+
+  <!-- STAGE II -->
+  <div class="stage-group">
+    <h3 class="stage">Stage II · Ontology &amp; Theodicy</h3>
+
+    <article class="card axiom" id="axiom-8" data-bucket="trinity">
+      <div class="card-top"><span class="label">Axiom 8</span></div>
+      <h3>Trinitarian Relational Ontology</h3>
+      <p><span class="tag">Trinity &amp; Evil</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Augustine (<i>De Trinitate</i>), Richard of St. Victor (<i>De Trinitate</i>, Book III), Athanasius.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Self-giving love (<i>caritas</i>) requires a Lover, a Beloved, and a Shared Bond. Any strict unitarian deity (Islam, JWs, Oneness) was totally alone before creation—meaning either God didn't know how to love until He made humans, or He had to create us just to cure His cosmic loneliness. Only the Tri-Une God (Father, Son, Spirit) was eternally full of love before Day One.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-9" data-bucket="trinity">
+      <div class="card-top"><span class="label">Axiom 9</span></div>
+      <h3>Libertarian Free Will &amp; Cross-Bearing Theodicy (Privatio Boni)</h3>
+      <p><span class="tag">Trinity &amp; Evil</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Augustine (<i>Enchiridion</i>), Alvin Plantinga (<i>God, Freedom, and Evil</i>), Anselm.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Forced love is a robotic contradiction, and evil isn't a "thing" God created—it's brokenness, like rust on a car or a hole in a shirt. Skeptics love whining about suffering while ignoring that every other god sits comfortably in the sky, whereas Jesus literally stepped into human skin to bleed and suffer with us on a Roman cross.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-10" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 10</span></div>
+      <h3>Substitutionary Grace &amp; Minimal-Facts Historical Resurrection</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Gary Habermas &amp; Michael Licona, N.T. Wright, Bart Ehrman (conceding crucifixion, disciples' experiences, and Paul/James conversions).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Every other religion hands you an impossible ladder of rules or karma and says "climb or perish," while Jesus paid 100% Justice and 100% Grace on the Cross. Terrified skeptics like Paul and James gladly died for seeing Him alive—liars make terrible martyrs.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-11" data-bucket="cosmos">
+      <div class="card-top"><span class="label">Axiom 11</span></div>
+      <h3>Cosmic Fine-Tuning &amp; Boltzmann Brain Collapse</h3>
+      <p><span class="tag">Cosmos</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Roger Penrose (1 in 10<sup>10<sup>123</sup></sup> initial entropy), Luke Barnes &amp; Geraint Lewis, Sean Carroll (2017).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Cosmic constants are dialed in tighter than a laser—and when atheists invent an infinite multiverse to dodge design, physicists proved it overwhelmingly spawns Boltzmann Brains (delusional single brains hallucinating in empty space) instead of real people. Invoking the multiverse literally destroys your right to trust your own brain.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-12" data-bucket="mind">
+      <div class="card-top"><span class="label">Axiom 12</span></div>
+      <h3>Modal Ontological Necessity &amp; Divine Simplicity</h3>
+      <p><span class="tag">Mind &amp; Morals</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Anselm, Kurt Gödel (Modal Ontological Proof), Alvin Plantinga, Thomas Aquinas.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> A Maximally Great Being exists by sheer logical necessity—so asking "Who created God?" is as embarrassing as asking "Who drew the married bachelor?" And polytheism dies on contact because two omnipotent gods would instantly cancel each other out the second they disagreed.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-13" data-bucket="mind">
+      <div class="card-top"><span class="label">Axiom 13</span></div>
+      <h3>Epistemic &amp; Logical Transcendental (Self-Refutation Law)</h3>
+      <p><span class="tag">Mind &amp; Morals</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Aristotle (<i>Metaphysics</i> Book IV), Gottlob Frege, Greg Bahnsen &amp; Cornelius Van Til.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Immaterial Laws of Logic require an eternal Rational Mind—and anyone who says "There is no absolute truth" or "All religions are equally true" just face-planted into self-refutation, because they stated an absolute truth to tell you absolute truth doesn't exist.</div>
+    </article>
+  </div>
+
+  <!-- STAGE III -->
+  <div class="stage-group">
+    <h3 class="stage">Stage III · Scripture, Prophecy &amp; Christological Proof</h3>
+
+    <article class="card axiom" id="axiom-14" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 14</span></div>
+      <h3>Historical Continuity &amp; New Testament Textual Integrity</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Bruce Metzger, Daniel B. Wallace (CSNTM — 5,800+ Greek NT manuscripts + 19,000+ early translations, plus Codex Sinaiticus/Vaticanus ~300 years before the Quran was compiled), F.F. Bruce.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> With copies scattered across Africa, Asia, and Europe within decades of the eyewitnesses (and 5,800+ Greek manuscripts surviving today), nobody could secretly rewrite the Bible without leaving fingerprints everywhere—exposing late Gnostic gospels and 7th-century "corrupted Bible" claims as desperate historical cope.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-15" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 15</span></div>
+      <h3>Christological Trilemma &amp; Prophetic Convergence (Dead Sea Scrolls)</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> C.S. Lewis (Liar, Lunatic, or Lord), Dead Sea Scrolls (Great Isaiah Scroll 1QIsa<sup>a</sup> ~125 BC; 4QPs<sup>f</sup> Psalm 22), Micah 5:2, Isaiah 53, Daniel 9:24–26.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Jesus claimed to forgive sins, judge humanity, and carry God's eternal name ("Before Abraham was, I AM"), locking out the lazy "just a nice teacher" dodge—backed by Messianic prophecies written centuries before His birth and preserved in the Dead Sea Scrolls.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-16" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 16</span></div>
+      <h3>Aesthetic &amp; Intentional Teleology</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Franz Brentano (Intentionality), Roger Scruton (<i>Beauty</i>), G.H. Hardy.</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Thoughts are about real things, and mathematical elegance and symphonies carry objective beauty—none of which can be squeezed out of blind chemical fizz.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-17" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 17</span></div>
+      <h3>Moral Guilt, Conscience &amp; Cosmic Justice</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Immanuel Kant (Moral Postulate), Romans 2:15, C.S. Lewis (<i>The Abolition of Man</i>).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Every human conscience screams for ultimate justice—without a Final Moral Judge, genocidal tyrants and innocent martyrs get the exact same prize (dirt and zero consequences), making the universe a rigged cosmic scam.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-18" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 18</span></div>
+      <h3>Covenantal Fulfillment &amp; 70 AD Temple Typology</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Flavius Josephus (70 AD Temple destruction), Hebrews 7–10, Babylonian Talmud (Yoma 39b — miracle signs ceasing 40 years before 70 AD).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Every Passover lamb pointed straight to Jesus—and when Rome wiped out the Jerusalem Temple in 70 AD, animal sacrifice stopped permanently because the real Lamb of God had already paid the bill in full.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-19" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 19</span></div>
+      <h3>Anthropological Realism (Image of God + Fallen Nature)</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Blaise Pascal (<i>Pensées</i>), G.K. Chesterton (<i>Orthodoxy</i>), Aleksandr Solzhenitsyn (<i>The Gulag Archipelago</i>).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Humans are both royal masterpieces (Imago Dei) and deeply broken rebels—which explains why every secular utopia eventually turns into a dictatorship with body bags.</div>
+    </article>
+
+    <article class="card axiom" id="axiom-20" data-bucket="jesus">
+      <div class="card-top"><span class="label">Axiom 20</span></div>
+      <h3>Transformative Resurrection Power &amp; Martyrs' Asymmetric Witness</h3>
+      <p><span class="tag">Jesus &amp; History</span></p>
+      <div class="receipts" data-link><strong>Receipts:</strong> Tacitus (<i>Annals</i> 15.44), Pliny the Younger (<i>Epistles</i> 10.96), Eusebius, Rodney Stark (<i>The Rise of Christianity</i>).</div>
+      <div class="evidence" data-link><strong>Evidence:</strong> Fake messiahs fizzle out when their founder dies, yet a crucified Jewish carpenter launched a fearless global movement right inside hostile Jerusalem within weeks—powered by eyewitnesses who smiled through execution because they had physically eaten breakfast with the risen King.</div>
+    </article>
+  </div>
 </section>
 
-<section id="christ">
+<!-- ================= PART 3: DISJUNCTIVE SYLLOGISM ================= -->
+<section id="syllogism">
   <div class="section-heading">
-    <span class="eyebrow">The central Christian claim</span>
-    <h2>Why Jesus is claimed to be God</h2>
-    <p>The question is not merely whether God exists. It is whether Jesus is the divine Son of God.</p>
+    <span class="eyebrow">Part 3 · The S-GUOT Disjunctive Syllogism</span>
+    <h2>Worldview Elimination</h2>
+    <p>Every worldview tested against the 20 axioms. Only one is left standing.</p>
   </div>
 
-  <div class="card">
-    <h3>1. Jesus' identity in the New Testament</h3>
-    <p>
-      The Gospel of John opens by describing the Word as existing
-      in the beginning, being with God, and being God. John then
-      identifies the Word as becoming flesh.
-    </p>
-    <div class="evidence">
-      <strong>Primary texts:</strong>
-      John 1:1–14; John 8:58; John 10:30; John 17:5;
-      Colossians 2:9; Hebrews 1:1–12.
+  <article class="card wv">
+    <span class="wv-num">1</span>
+    <div>
+      <h3>Materialism / Atheism</h3>
+      <span class="badge out">✕ Eliminated</span>
+      <p class="body" data-link>Violates Thermodynamics &amp; BGV Theorem, fails DNA digital code, destroys reason (EAAN), consciousness, logic, and objective morality (Axioms 1, 3, 4, 6, 7, 11, 13).</p>
     </div>
-    <div class="reasoning">
-      <strong>Christian interpretation:</strong>
-      These passages are understood as presenting Jesus as more
-      than a prophet or moral teacher: He shares divine identity
-      while becoming genuinely human.
+  </article>
+
+  <article class="card wv">
+    <span class="wv-num">2</span>
+    <div>
+      <h3>Pantheism / Hinduism</h3>
+      <span class="badge out">✕ Eliminated</span>
+      <p class="body" data-link>Violates the Law of Non-Contradiction—an unchanging God cannot equal a decaying universe; impersonal karma fails justice (Axioms 5, 7, 9, 13).</p>
     </div>
+  </article>
+
+  <article class="card wv">
+    <span class="wv-num">3</span>
+    <div>
+      <h3>Buddhism</h3>
+      <span class="badge out">✕ Eliminated</span>
+      <p class="body" data-link>Infinite regress of Samsara violates Contingency &amp; Thermodynamics; denies a lasting self (Anatta) yet still teaches rebirth—leaving no one to be reborn or to carry karma (Axioms 1, 5, 7, 13).</p>
+    </div>
+  </article>
+
+  <article class="card wv">
+    <span class="wv-num">4</span>
+    <div>
+      <h3>Polytheism / Paganism</h3>
+      <span class="badge out">✕ Eliminated</span>
+      <p class="body" data-link>Two omnipotent gods cancel out; finite spirits require a Creator (Axioms 1, 9, 12).</p>
+    </div>
+  </article>
+
+  <article class="card wv">
+    <span class="wv-num">5</span>
+    <div>
+      <h3>Strict Unitarian Theism (Islam, JWs, Deism)</h3>
+      <span class="badge out">✕ Eliminated</span>
+      <p class="body" data-link>A solitary deity cannot exercise eternal self-giving love before creation without needing creatures (Axiom 8) and cannot forgive infinite sin without breaking justice or demanding impossible works (Axioms 10, 17).</p>
+    </div>
+  </article>
+
+  <article class="card wv win">
+    <span class="wv-num">6</span>
+    <div>
+      <h3>Biblical Trinitarian Christianity</h3>
+      <span class="badge in">✓ Left standing</span>
+      <p class="body">Satisfies all 20 Axioms.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ================= PART 3: 4-STEP PROOF ================= -->
+<section id="proof">
+  <div class="section-heading">
+    <span class="eyebrow">Part 3 · Christological Proof</span>
+    <h2>The 4-Step Proof Jesus MUST Be God</h2>
   </div>
 
-  <div class="card">
-    <h3>2. The crucifixion</h3>
-    <p>
-      Jesus' crucifixion under Pontius Pilate is one of the most
-      widely accepted facts about His life among historians.
-      It is reported in early Christian sources and referenced
-      by non-Christian ancient writers.
-    </p>
-    <div class="evidence">
-      <strong>Sources to examine:</strong>
-      Tacitus, Annals 15.44; Josephus, Antiquities 18.3.3
-      (with scholarly discussion of the passage's textual history);
-      the Pauline letters and the canonical Gospels.
-    </div>
+  <article class="card step"><span class="step-n">1</span><p>Sin against an infinitely holy God creates an infinite moral debt.</p></article>
+  <article class="card step"><span class="step-n">2</span><p>Finite creatures (humans, angels, prophets) have zero infinite merit to pay an infinite debt.</p></article>
+  <article class="card step"><span class="step-n">3</span><p>God cannot ignore sin without violating justice, yet loves sinners completely.</p></article>
+  <article class="card step final"><span class="step-n">4</span><p data-link><strong>Therefore,</strong> the Savior MUST be 100% Man (to represent humanity, Hebrews 2:14–17) AND 100% God (to give the sacrifice infinite value and conquer death, John 1:1, 8:58, 10:30)—validated by His bodily Resurrection.</p></article>
+</section>
+
+<!-- ================= PART 4: ATHEISM ================= -->
+<section id="atheism">
+  <div class="section-heading">
+    <span class="eyebrow">Part 4 · Formal Thesis</span>
+    <h2>Why Atheism Is Impossible</h2>
   </div>
 
-  <div class="card">
-    <h3>3. The resurrection claim</h3>
-    <p>
-      The earliest Christians proclaimed that Jesus had been raised
-      from the dead. The central historical questions include
-      the disciples' experiences, the origin of resurrection belief,
-      Paul's conversion, and James' conversion.
-    </p>
-    <div class="evidence">
-      <strong>Primary text:</strong>
-      1 Corinthians 15:3–8 preserves an early tradition concerning
-      Jesus' death, burial, resurrection, and appearances.
-    </div>
-    <div class="reasoning">
-      <strong>Christian argument:</strong>
-      Christians argue that the resurrection best explains the
-      origin of the early Christian movement and the disciples'
-      conviction that Jesus was alive.
-    </div>
-    <div class="caution">
-      <strong>Historical distinction:</strong>
-      Historians can investigate testimony, experiences, and
-      the origins of belief. Whether a miracle occurred also
-      involves philosophical assumptions about God's existence
-      and the possibility of divine action.
-    </div>
-  </div>
+  <article class="card thesis">
+    <span class="label">Thesis statement</span>
+    <p class="big">Atheism—the claim that only physical matter and energy exist without a transcendent Creator—is self-refuting and impossible because it contradicts established thermodynamics and spacetime physics, cannot account for digital genetic information, destroys the trustworthiness of human reason, and eliminates objective morality.</p>
+  </article>
 
-  <div class="card">
-    <h3>4. The Christian argument for the God-man</h3>
-    <p><strong>Step one:</strong> Christianity teaches that humanity is morally accountable to a perfectly holy God.</p>
-    <p><strong>Step two:</strong> Human beings cannot earn their way into salvation through perfect moral performance.</p>
-    <p><strong>Step three:</strong> Christianity teaches that God acts in grace rather than abandoning justice.</p>
-    <p><strong>Step four:</strong> Jesus is understood as fully human, representing humanity, and fully divine, revealing God and accomplishing salvation.</p>
-    <div class="evidence">
-      <strong>Primary texts:</strong>
-      John 1:1–14; Romans 3:21–26; Hebrews 2:14–17;
-      Philippians 2:5–11; Colossians 2:9.
-    </div>
+  <div class="grid">
+    <article class="card">
+      <span class="label">Pillar 1</span>
+      <h3>Cosmology &amp; Physics</h3>
+      <p class="body">The 1st and 2nd Laws of Thermodynamics prove energy cannot create itself and usable energy runs down toward Heat Death, while the BGV Theorem (2003) proves any expanding universe or multiverse has a past spacetime boundary—forcing a spaceless, timeless, immaterial Creator.</p>
+    </article>
+    <article class="card">
+      <span class="label">Pillar 2</span>
+      <h3>Information &amp; Code</h3>
+      <p class="body">Abstract math has zero causal power to create physical matter (Gödel), and every living cell runs on specified digital software (DNA)—3.2 billion base pairs in the human genome alone. Natural selection cannot write DNA because selection does not turn on until a self-replicating machine already exists.</p>
+    </article>
+    <article class="card">
+      <span class="label">Pillar 3</span>
+      <h3>Consciousness &amp; Rationality</h3>
+      <p class="body">Mindless quarks have zero inner awareness (Chalmers' Hard Problem), and Plantinga's EAAN proves that if human brains are blind survival accidents, evolution selects for survival—not truth—making atheism epistemically self-refuting.</p>
+    </article>
+    <article class="card">
+      <span class="label">Pillar 4</span>
+      <h3>Objective Morality</h3>
+      <p class="body">Without a transcendent Moral Lawgiver, humans are rearranged stardust with no more objective moral worth than a random pear floating in deep space.</p>
+    </article>
   </div>
 </section>
 
+<!-- ================= PART 5: DEBATE Q&A ================= -->
+<section id="debate">
+  <div class="section-heading">
+    <span class="eyebrow">Part 5</span>
+    <h2>Debate Q&amp;A Archive &amp; Fallacy Rebuttals</h2>
+    <p>Every objection, the fallacy behind it, and the rebuttal.</p>
+  </div>
+
+  <input class="search" id="qaSearch" type="search" placeholder='Search objections… (try "energy" or "multiverse")' aria-label="Search the debate archive">
+  <p class="result-count" id="qaCount" aria-live="polite">Showing 14 of 14 questions</p>
+  <p class="empty" id="qaEmpty" hidden>No questions match that search.</p>
+
+  <article class="card qa" id="q-1">
+    <div class="card-top"><span class="label">Question 01</span></div>
+    <h3>"How does Thermodynamics + the BGV Theorem disprove atheism?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ignoratio Elenchi (Missing the Point) &amp; Argument from Personal Incredulity.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Atheism claims only the physical universe exists. Because Thermodynamics and the BGV Theorem prove all matter, energy, space, and time had a hard beginning, the First Cause cannot be physical, spatial, or temporal—mathematically eliminating atheism.</div>
+  </article>
+
+  <article class="card qa" id="q-2">
+    <div class="card-top"><span class="label">Question 02</span></div>
+    <h3>"Elements made God."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Category Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Chemical elements didn't even exist at <i>t</i> = 0 (they formed via Big Bang nucleosynthesis and stellar fusion after space, time, and energy began). Claiming physical elements created a spaceless, timeless God is like claiming LEGO bricks built the factory and engineer that invented LEGOs.</div>
+  </article>
+
+  <article class="card qa" id="q-3">
+    <div class="card-top"><span class="label">Question 03</span></div>
+    <h3>"Energy can create itself."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Violation of the Law of Non-Contradiction &amp; denial of empirical physics.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Directly violates the 1st Law of Thermodynamics (energy cannot be created or destroyed) and basic logic—to create itself, energy would have to already exist before it existed, which is like claiming you gave birth to yourself.</div>
+  </article>
+
+  <article class="card qa" id="q-4">
+    <div class="card-top"><span class="label">Question 04</span></div>
+    <h3>"How has space not always existed?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Shifting the Burden of Proof &amp; Argument from Personal Incredulity.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Einstein's General Relativity proves space, time, and matter are fused into spacetime, and the BGV Theorem (2003) proves expanding spacetime has an absolute past boundary. Furthermore, you cannot cross an infinite number of past days to reach today.</div>
+  </article>
+
+  <article class="card qa" id="q-5">
+    <div class="card-top"><span class="label">Question 05</span></div>
+    <h3>"Well, God doesn't exist / Who created God?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Bare Assertion (Ipse Dixit), Category Error, &amp; Special Pleading.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Only physical things bound by space and time that begin to exist require a cause. A spaceless, timeless, immaterial Necessary Being exists outside time and has no beginning—asking "Who created God?" is like asking "Who drew the married bachelor?"</div>
+  </article>
+
+  <article class="card qa" id="q-6">
+    <div class="card-top"><span class="label">Question 06</span></div>
+    <h3>"Is 'more is likely infinite' or 'more infinite likely'?"</h3>
+    <p class="q-note">Infinite Universe / Infinite Chances</p>
+    <div class="fallacy"><strong>Fallacy:</strong> Reification Fallacy &amp; Equivocation.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Actual infinities cannot exist in physical reality (Hilbert's Hotel paradox), the BGV Theorem proves our universe has a finite past, and an infinite multiverse spawns delusional Boltzmann Brains rather than trustworthy observers (Sean Carroll / Roger Penrose).</div>
+  </article>
+
+  <article class="card qa" id="q-7">
+    <div class="card-top"><span class="label">Question 07</span></div>
+    <h3>"Why do people who don't believe in God still have internal consciousness?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Strawman &amp; Non Sequitur.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Christianity teaches every human is made in God's image (Imago Dei, Genesis 1:27) with a moral conscience (Romans 2:15), regardless of belief—just like you don't have to believe in gravity for gravity to hold you down. Moreover, mindless quarks have zero inner experience (Hard Problem of Consciousness), proving a Conscious Creator.</div>
+  </article>
+
+  <article class="card qa" id="q-8">
+    <div class="card-top"><span class="label">Question 08</span></div>
+    <h3>"I don't believe in Thermodynamics, the BGV Theorem, or Contingency."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Invincible Ignorance Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Denying peer-reviewed physics when cornered exposes blind-faith atheism. Thermodynamics is literally draining your phone battery right now—denying gravity doesn't stop you from falling.</div>
+  </article>
+
+  <article class="card qa" id="q-9">
+    <div class="card-top"><span class="label">Question 09</span></div>
+    <h3>"What is the 'Firmament' in the Bible, and is outer space real?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Word-Concept Fallacy &amp; Presentism.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The Hebrew word <i>raqia</i> (Genesis 1:6–8) means "expanse" or "stretched-out space"—not a solid glass dome. Genesis 1 defines it directly: God calls it Sky (Gen 1:8), birds fly across it (Gen 1:20), and the sun, moon, and stars sit inside it (Gen 1:14–17). Both Earth's fine-tuned atmosphere and expanding outer space are 100% real and match Isaiah 40:22 ("stretches out the heavens").</div>
+  </article>
+
+  <article class="card qa" id="q-10">
+    <div class="card-top"><span class="label">Question 10</span></div>
+    <h3>"Where is God located in space?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Category Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> God created space and time, so He exists outside the universe like a game developer exists outside Minecraft, while being omnipresent everywhere at once (Colossians 1:17; John 4:24).</div>
+  </article>
+
+  <article class="card qa" id="q-11">
+    <div class="card-top"><span class="label">Question 11</span></div>
+    <h3>"Religion has flaws like supporting slavery and misogyny."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Stolen Concept Fallacy, Presentism, &amp; Equivocation (confusing dead man-made religion with Jesus).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Under atheism, humans are accidental atoms with zero objective human rights. Meanwhile, the actual Bible gave the death penalty for kidnapping slaves (Exodus 21:16), listed slave traders alongside murderers (1 Timothy 1:10), declared equal Imago Dei for male and female from Day One (Genesis 1:27), made women the first eyewitnesses of the Resurrection (Matthew 28:1–10), and commanded husbands to love their wives sacrificially unto death (Ephesians 5:25).</div>
+  </article>
+
+  <article class="card qa" id="q-12">
+    <div class="card-top"><span class="label">Question 12</span></div>
+    <h3>Advanced Skeptic Objections</h3>
+    <p class="q-note">Quantum Equations, Prebiotic RNA Catalysts, Circular EAAN, &amp; Moral Anti-Realism</p>
+    <div class="fallacy"><strong>Fallacies:</strong> Appeal to Authority, Magic-Wand Hand-Waving, Strawman, Genetic Fallacy, &amp; God-of-the-Gaps Strawman.</div>
+    <div class="evidence" data-link><strong>Rebuttals:</strong>
+      <ul class="sub-list">
+        <li><strong>Quantum Equations:</strong> Describing a quantum state's evolution doesn't explain why mathematical laws or the Hilbert space exist (Gödel / Hawking) or solve the measurement problem—and physics stops at the BGV boundary, making metaphysics necessary.</li>
+        <li><strong>Prebiotic RNA:</strong> Mineral catalysts do not solve the asphalt paradox, water hydrolysis, or generate specified sequence-dependent code required before chemical selection can turn on.</li>
+        <li><strong>EAAN Circularity:</strong> Plantinga's EAAN is an internal defeater proving Naturalism + Evolution undermines its own rationality (<i>P</i>(<i>R</i> | <i>N</i>&amp;<i>E</i>)), whereas Theism has no such internal defeater because a rational Creator grounds reliable minds (Imago Dei).</li>
+        <li><strong>God of the Gaps:</strong> Deducing a spaceless, timeless Cause from established laws (Thermodynamics + BGV) is deductive elimination from what we know, not an argument from ignorance.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="card qa" id="q-13">
+    <div class="card-top"><span class="label">Question 13</span></div>
+    <h3>"Jesus isn't God / God is merely within Jesus like a prophet."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Word-Concept Fallacy &amp; Equivocation.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> John 1:1 says the Word WAS God and became flesh (John 1:14); Colossians 2:9 says the whole fullness of deity dwells in Him bodily; He claimed Yahweh's eternal name ("Before Abraham was, I AM", John 8:58), existed in glory before the world began (John 17:5), took Yahweh's exclusive title "First and Last" (Isaiah 44:6 vs. Revelation 1:17), and unlike prophets who refuse worship (Acts 14:15), Jesus accepted Thomas calling Him "My Lord and my God" (John 20:28).</div>
+  </article>
+
+  <article class="card qa" id="q-14">
+    <div class="card-top"><span class="label">Question 14</span></div>
+    <h3>"If Jesus was born human, didn't He sin?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> False Equivalence &amp; Non Sequitur.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Conceived by the Holy Spirit without Adam's sin nature (Luke 1:35; Genesis 3:15), Jesus lived a 100% sinless life (Hebrews 4:15; 2 Corinthians 5:21; 1 Peter 2:22; 1 John 3:5), qualifying Him as the spotless Lamb of God to pay humanity's infinite sin debt.</div>
+  </article>
+</section>
+
+<!-- ================= PART 6: ISLAM ================= -->
 <section id="islam">
   <div class="section-heading">
-    <span class="eyebrow">Comparative theology</span>
-    <h2>Christianity and Islam</h2>
-    <p>A focused examination of the central disagreements between the two faiths.</p>
+    <span class="eyebrow">Part 6</span>
+    <h2>Master Takedown of Islam</h2>
+    <p>The 7-Point Arsenal.</p>
   </div>
 
-  <div class="card">
-    <h3>1. The identity of Jesus</h3>
-    <p>
-      Christianity teaches that Jesus is the incarnate Son of God.
-      Islam honors Jesus as Messiah and prophet but rejects His
-      divinity.
-    </p>
-    <div class="evidence">
-      <strong>Texts:</strong>
-      John 1:1–14; John 20:28; Colossians 2:9;
-      Quran 4:171; Quran 5:72–75.
-    </div>
-    <div class="reasoning">
-      <strong>Christian argument:</strong>
-      The New Testament's earliest theological claims about Jesus
-      create a major disagreement with the Quran's later account.
-      The historical reliability and interpretation of these
-      sources are central to evaluating the disagreement.
-    </div>
-  </div>
+  <article class="card point" id="islam-1">
+    <span class="label">Point 1</span>
+    <h3>The Islamic Dilemma</h3>
+    <p class="body" data-link>Surah 3:3, 5:47, and 10:94 affirm the Torah and Gospel, while Surah 6:115 and 18:27 declare none can alter Allah's words—either the Bible is uncorrupted and Islam is false, or the Quran lied about Allah's words being uncorruptible and Islam is still false.</p>
+  </article>
 
-  <div class="card">
-    <h3>2. The crucifixion disagreement</h3>
-    <p>
-      The mainstream Islamic interpretation of Quran 4:157 denies
-      that Jesus was crucified in the way Christians believe.
-      Christianity places the crucifixion at the center of its
-      historical and theological message.
-    </p>
-    <div class="evidence">
-      <strong>Evidence to examine:</strong>
-      Paul's letters, the four Gospels, Tacitus' Annals 15.44,
-      and the historical scholarship on Jesus' execution.
-    </div>
-    <div class="reasoning">
-      <strong>Christian argument:</strong>
-      If Jesus was crucified, as the strong historical consensus
-      holds, an interpretation denying the crucifixion faces a
-      substantial historical challenge.
-    </div>
-  </div>
+  <article class="card point" id="islam-2">
+    <span class="label">Point 2</span>
+    <h3 data-link>Crucifixion Denial Disaster (Surah 4:157)</h3>
+    <p class="body">Claiming Jesus was "made to resemble him" contradicts Tacitus, Josephus, and Bart Ehrman, and means Allah deceived Jesus's mother, disciples, and millions of Christians for 600 years before the Quran existed—making Allah the founder of Christianity.</p>
+  </article>
 
-  <div class="card">
-    <h3>3. Earlier revelation and the Bible</h3>
-    <p>
-      The Quran refers to the Torah and Gospel. Christian-Muslim
-      debate concerns what those references mean and whether
-      the Quran affirms the biblical texts available in its time.
-    </p>
-    <div class="evidence">
-      <strong>Texts:</strong>
-      Quran 3:3; 5:47; 5:68; 10:94; 18:27.
-    </div>
-    <div class="reasoning">
-      <strong>Christian argument:</strong>
-      Christians argue that the manuscript history of the New
-      Testament provides substantial evidence that its central
-      claims were not simply invented centuries later.
-    </div>
-    <div class="caution">
-      <strong>Important distinction:</strong>
-      Manuscript evidence demonstrates textual transmission
-      and variation. It does not by itself prove every event
-      described in the New Testament.
-    </div>
-  </div>
+  <article class="card point" id="islam-3">
+    <span class="label">Point 3</span>
+    <h3>Muhammad's Own Doubt &amp; Black Magic</h3>
+    <ul class="sub-list body" data-link>
+      <li>Sahih al-Bukhari 6982: came back from the Cave of Hira terrified ("I fear that something may happen to me") and later tried several times to throw himself off mountain tops</li>
+      <li>Bukhari 5763: bewitched by a sorcerer</li>
+      <li>Satanic Verses (Surah 22:52)</li>
+    </ul>
+  </article>
 
-  <div class="card">
-    <h3>4. Salvation and assurance</h3>
-    <p>
-      Christianity teaches salvation through God's grace, received
-      through faith in Christ. Islamic theology has different
-      accounts of divine mercy, judgment, faith, and deeds.
-    </p>
-    <div class="evidence">
-      <strong>Texts:</strong>
-      Ephesians 2:8–10; Romans 3:21–26; Quran 23:102–103;
-      Quran 39:53.
-    </div>
-    <div class="reasoning">
-      <strong>Christian argument:</strong>
-      The Christian message emphasizes assurance grounded in
-      Christ's completed work rather than confidence in one's
-      own ability to accumulate sufficient merit.
-    </div>
-  </div>
-</section>
+  <article class="card point" id="islam-4">
+    <span class="label">Point 4</span>
+    <h3 data-link>Lonely Unitarian Deity (Axiom 8)</h3>
+    <p class="body">A strict unitarian deity could not exercise eternal self-giving love before creation without needing creatures.</p>
+  </article>
 
-<section id="sources">
-  <div class="section-heading">
-    <span class="eyebrow">Research foundations</span>
-    <h2>Sources & further reading</h2>
-    <p>Primary texts and scholarly resources for examining the arguments rather than relying on slogans.</p>
-  </div>
+  <article class="card point" id="islam-5">
+    <span class="label">Point 5</span>
+    <h3>Zero Assurance of Salvation</h3>
+    <p class="body" data-link>Surah 46:9 &amp; Bukhari 1243 (Muhammad did not even know what Allah would do to him or his followers).</p>
+  </article>
 
-  <div class="card">
-    <h3>Philosophy and science</h3>
-    <p><a href="https://plato.stanford.edu/entries/philosophy-religion/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Philosophy of Religion</a></p>
-    <p><a href="https://plato.stanford.edu/entries/natural-theology/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Natural Theology</a></p>
-    <p><a href="https://plato.stanford.edu/entries/miracles/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Miracles</a></p>
-    <p><a href="https://plato.stanford.edu/entries/consciousness/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Consciousness</a></p>
-  </div>
+  <article class="card point" id="islam-6">
+    <span class="label">Point 6</span>
+    <h3>Scientific &amp; Historical Blunders</h3>
+    <ul class="sub-list body" data-link>
+      <li>Sun sets in a muddy spring (Surah 18:86 / Sunan Abi Dawud 4002)</li>
+      <li>Semen originates between backbone and ribs (Surah 86:6–7)</li>
+      <li>Bones formed before flesh (Surah 23:14)</li>
+      <li>Mary confused with Aaron's sister Miriam 1,400 years earlier (Surah 19:28)</li>
+      <li>Crucifixion in Moses's Egypt (Surah 7:124)</li>
+      <li>Samaritans at Mt. Sinai 700 years early (Surah 20:85)</li>
+    </ul>
+  </article>
 
-  <div class="card">
-    <h3>Historical Christianity</h3>
-    <p><a href="https://www.biblegateway.com/" target="_blank" rel="noopener">Bible Gateway — Biblical texts</a></p>
-    <p><a href="https://www.deadseascrolls.org.il/" target="_blank" rel="noopener">Israel Antiquities Authority — Dead Sea Scrolls</a></p>
-    <p><a href="https://www.csntm.org/" target="_blank" rel="noopener">Center for the Study of New Testament Manuscripts</a></p>
-  </div>
-
-  <div class="card">
-    <h3>How evidence is evaluated</h3>
-    <p>
-      Scientific findings, historical testimony, philosophical
-      arguments, and theological conclusions are different kinds
-      of evidence. Each must be evaluated using the appropriate
-      standards. A strong argument should acknowledge its
-      assumptions and address the best opposing response.
-    </p>
-  </div>
+  <article class="card point" id="islam-7">
+    <span class="label">Point 7</span>
+    <h3>Apostle John / NT Authors "Illiterate Fisherman" Refutation</h3>
+    <ul class="sub-list body" data-link>
+      <li>NT written in Koine Greek (not Hebrew)</li>
+      <li>John spoke Aramaic/Greek (not Arabic)</li>
+      <li>Zebedee owned a fishing business with hired servants (Mark 1:20)</li>
+      <li>Dictating to scribes (Romans 16:22) is identical to illiterate Muhammad (Surah 7:157) dictating to companions</li>
+      <li>Surah 47 is titled "Surah Muhammad."</li>
+    </ul>
+  </article>
 </section>
 
 </div>
@@ -651,219 +915,222 @@ footer strong{color:white}
 
 <footer>
   <strong>QUANTUMTHEOLOGY</strong>
-  <p>Faith examined. Arguments tested. Truth pursued.</p>
+  <p>Physics + Logic = Jesus. Debate me.</p>
   <a class="tiktok" href="https://www.tiktok.com/@quantumtheology" target="_blank" rel="noopener">
     Follow @QuantumTheology on TikTok ↗
   </a>
-  <p style="font-size:12px;margin-top:25px">An independent Christian apologetics project.</p>
+  <p style="font-size:12px;margin-top:25px">S-GUOT · The Seibert Grand Unified Ontological Theory · Formulated by Jacob Benjamin Seibert</p>
 </footer>
 
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
 <script>
-const axioms = [
-{
-n:1,t:"Thermodynamic & Spacetime Boundary",
-tags:"cosmology physics BGV thermodynamics contingency",
-body:"The universe's expansion and thermodynamic history raise questions about whether physical reality is past-eternal and what explains its existence.",
-evidence:"The Borde-Guth-Vilenkin theorem shows that spacetimes with a positive average expansion rate along a past-directed geodesic are past-incomplete under its assumptions. The laws of thermodynamics describe physical processes and the behavior of energy.",
-argument:"If the physical universe has a past boundary, its explanation may require a cause or foundation not contained within the physical spacetime it explains.",
-limit:"The BGV theorem does not prove creation from absolute nothing, nor does it establish the identity of the cause. The first law of thermodynamics is not a simple proof that the universe required an external energy source."
-},
-{
-n:2,t:"Quantum Measurement & Cosmic Lawfulness",
-tags:"quantum mechanics measurement consciousness",
-body:"Quantum mechanics describes physical systems through mathematical states and probabilities, raising philosophical questions about measurement and the intelligibility of nature.",
-evidence:"Quantum theory and decoherence are extensively studied. Different interpretations disagree about what the mathematical formalism says about physical reality.",
-argument:"A rational Creator offers a philosophical explanation for why reality is intelligible and governed by stable mathematical structures.",
-limit:"Quantum measurement does not generally require a conscious observer. Quantum mechanics does not establish that the universe needs an external mind to perform measurements."
-},
-{
-n:3,t:"Mathematical Platonism & Abstract Truth",
-tags:"mathematics Gödel logic",
-body:"Mathematical truths appear objective and are remarkably effective in describing the physical universe.",
-evidence:"Kurt Gödel's incompleteness theorems establish limits on what sufficiently expressive consistent formal systems can prove about arithmetic.",
-argument:"The existence of abstract mathematical truths and the intelligibility of nature are compatible with theism and can be incorporated into a theistic account of rational creation.",
-limit:"Gödel's theorems do not prove God. Philosophers disagree about the nature of mathematical objects and whether mathematical realism requires a divine mind."
-},
-{
-n:4,t:"Biological Information & Abiogenesis",
-tags:"DNA biology information origins life",
-body:"Living organisms contain highly organized molecular systems, including DNA and RNA, whose sequences play essential roles in biological function.",
-evidence:"DNA stores hereditary information. Research into the origin of life examines possible prebiotic chemistry, self-organization, catalytic molecules, and early replication systems.",
-argument:"The complexity and functional organization of life can be considered within a broader argument for design.",
-limit:"DNA is not literally computer software, and abiogenesis research is ongoing. Natural selection acts on heritable variation, but research into life's origin also investigates processes before modern natural selection."
-},
-{
-n:5,t:"First Cause & Agent Causation",
-tags:"cause time free will Kalam",
-body:"The Kalam cosmological argument reasons that whatever begins to exist has a cause, and that the universe began to exist.",
-evidence:"The argument is defended in contemporary philosophy of religion and draws on philosophical and cosmological premises.",
-argument:"A cause of spacetime would not be an ordinary physical object inside spacetime. Theism proposes a transcendent personal cause.",
-limit:"The argument's premises and the move from a first cause to a personal God are debated."
-},
-{
-n:6,t:"Consciousness & Rationality",
-tags:"mind consciousness qualia Plantinga EAAN",
-body:"Subjective experience remains a major philosophical challenge for purely physical accounts of mind.",
-evidence:"The hard problem of consciousness, associated with David Chalmers, asks why and how physical processes are accompanied by subjective experience.",
-argument:"A worldview grounded in a fundamental mind may offer a unified account of consciousness and rationality.",
-limit:"The existence of consciousness does not by itself prove theism. Physicalist, emergentist, and panpsychist theories offer competing explanations. Plantinga's evolutionary argument against naturalism is philosophical and contested."
-},
-{
-n:7,t:"Objective Morality & Human Worth",
-tags:"morality ethics conscience value",
-body:"People often regard at least some moral claims as objectively true rather than merely matters of preference.",
-evidence:"Metaethics debates whether moral truths are objective and, if so, what grounds them.",
-argument:"Christianity grounds human worth and moral obligation in God's nature and humanity's creation in God's image.",
-limit:"Secular moral realists argue that objective moral truths can exist without God. Theism must explain how moral facts relate to God's nature."
-},
-{
-n:8,t:"Trinitarian Relational Ontology",
-tags:"Trinity love unitarian theology",
-body:"Christianity teaches one God eternally existing as Father, Son, and Holy Spirit.",
-evidence:"The New Testament contains passages used by Christians to develop Trinitarian theology, including Matthew 28:19, John 1:1–14, and 2 Corinthians 13:14.",
-argument:"The Trinity offers an account of eternal personal relationship and love within God's own life before creation.",
-limit:"A unitarian theologian can argue that God does not need another person to be loving. The Trinity is a distinctively Christian theological claim, not a standalone proof against every unitarian conception of God."
-},
-{
-n:9,t:"Free Will & The Problem of Evil",
-tags:"evil suffering free will Augustine Plantinga",
-body:"The existence of suffering and evil is one of the strongest challenges to belief in an all-powerful, perfectly good God.",
-evidence:"Augustine developed the privation account of evil. Alvin Plantinga argued that the existence of evil is not logically incompatible with God's existence if creatures have significant freedom.",
-argument:"Christianity argues that freedom, moral responsibility, and the possibility of love help explain why God might permit some evil, while the cross presents God as entering human suffering.",
-limit:"The free-will defense does not fully answer every question about natural suffering or apparently pointless evil."
-},
-{
-n:10,t:"Grace & Resurrection",
-tags:"Jesus resurrection salvation grace",
-body:"Christianity centers salvation on the death and resurrection of Jesus.",
-evidence:"1 Corinthians 15:3–8 preserves an early summary of the resurrection proclamation. The Pauline letters provide early evidence for Christian belief.",
-argument:"Christians argue that the resurrection best explains the disciples' conviction that Jesus had been raised and the rapid emergence of resurrection-centered Christianity.",
-limit:"The historical evidence must be evaluated carefully. A historical argument for resurrection also depends on whether miracles are considered possible."
-},
-{
-n:11,t:"Cosmic Fine-Tuning",
-tags:"fine tuning physics cosmology multiverse",
-body:"Some physical constants and initial conditions appear to fall within ranges compatible with complex structures and life.",
-evidence:"Fine-tuning arguments are discussed by physicists and philosophers. Proposed explanations include design, selection effects, and multiverse hypotheses.",
-argument:"A purposeful Creator is one possible explanation for life-permitting physical conditions.",
-limit:"The probabilities involved are difficult to establish, and fine-tuning does not by itself identify Christianity as the correct religion."
-},
-{
-n:12,t:"Modal Ontological Argument",
-tags:"Anselm Plantinga necessity logic",
-body:"Ontological arguments attempt to reason from the concept or possibility of a maximally great being to necessary existence.",
-evidence:"Versions have been developed by Anselm and Alvin Plantinga, among others.",
-argument:"If a maximally great being is genuinely possible in the relevant modal sense, some versions argue that such a being exists necessarily.",
-limit:"The possibility premise is controversial. These arguments do not automatically establish the Christian doctrine of God."
-},
-{
-n:13,t:"Logical Laws & Rational Foundations",
-tags:"logic truth reason transcendental",
-body:"Reasoning presupposes logical principles such as identity, non-contradiction, and valid inference.",
-evidence:"The laws of logic are foundational to mathematics, science, and ordinary reasoning.",
-argument:"Christian theists argue that an eternal rational God provides a foundation for objective logical truths and human rationality.",
-limit:"Non-theistic philosophers have developed accounts of logic as abstract truths, necessary structures, or features of rational thought."
-},
-{
-n:14,t:"New Testament Textual Transmission",
-tags:"Bible manuscripts textual criticism history",
-body:"The New Testament survives in a large manuscript tradition with thousands of Greek manuscripts and many ancient translations.",
-evidence:"Textual critics compare manuscripts to reconstruct the earliest attainable text and identify variations.",
-argument:"The manuscript tradition makes it possible to study the transmission of the New Testament rather than relying on a single late copy.",
-limit:"Manuscript quantity does not prove every event in the text. Textual criticism identifies variants and evaluates readings."
-},
-{
-n:15,t:"Jesus' Identity & Messianic Prophecy",
-tags:"Jesus Messiah prophecy Isaiah Daniel Micah",
-body:"Christians interpret several Hebrew Bible passages as anticipating Jesus and His mission.",
-evidence:"Commonly discussed texts include Isaiah 53, Micah 5:2, Psalm 22, and Daniel 9.",
-argument:"Christians argue that Jesus' life, death, and resurrection fulfill a coherent pattern of biblical expectation.",
-limit:"Jewish and secular interpreters often understand these passages differently. Each proposed prophecy must be examined in its literary and historical context."
-},
-{
-n:16,t:"Beauty, Meaning & Intentionality",
-tags:"beauty aesthetics meaning mind",
-body:"Human experience includes beauty, meaning, intentional thought, and the ability of thoughts to refer to things.",
-evidence:"Philosophy of mind and aesthetics examine intentionality, artistic value, and the nature of beauty.",
-argument:"Theism can explain meaning and beauty as reflections of a rational and creative source.",
-limit:"Naturalistic accounts of aesthetics, meaning, and intentionality also exist and require engagement."
-},
-{
-n:17,t:"Conscience & Final Justice",
-tags:"justice conscience morality judgment",
-body:"Human beings frequently experience moral responsibility and a desire for justice beyond immediate social consequences.",
-evidence:"Moral philosophy examines conscience, responsibility, punishment, forgiveness, and justice.",
-argument:"Christianity teaches that God is the final judge and that no injustice is ultimately beyond His concern.",
-limit:"The desire for ultimate justice does not independently demonstrate that a final judge exists."
-},
-{
-n:18,t:"Biblical Continuity & Temple Theology",
-tags:"Temple sacrifice Hebrews history 70 AD",
-body:"The New Testament interprets Jesus' death through themes of sacrifice, covenant, priesthood, and fulfillment.",
-evidence:"Hebrews 7–10 develops a theological account of Jesus' priesthood and sacrifice. The Jerusalem Temple was destroyed by Rome in AD 70.",
-argument:"Christian theology understands Jesus as the fulfillment of the sacrificial system and the mediator of a new covenant.",
-limit:"The destruction of the Temple does not independently prove that Jesus was the Messiah. Jewish interpretations of sacrifice and covenant differ."
-},
-{
-n:19,t:"Human Nature & the Image of God",
-tags:"human nature sin dignity anthropology",
-body:"Christianity describes humanity as possessing extraordinary dignity while also being morally fallen.",
-evidence:"Genesis 1:26–27 teaches humanity is made in God's image. Christian theology uses this to explain both human worth and moral responsibility.",
-argument:"This account combines human dignity with a realistic understanding of moral failure.",
-limit:"Other religious and secular traditions also offer accounts of human dignity and moral weakness."
-},
-{
-n:20,t:"The Historical Growth of Christianity",
-tags:"early church martyrs Roman history resurrection",
-body:"The Christian movement emerged in the first century and spread throughout the Roman world.",
-evidence:"Tacitus, Pliny the Younger, and early Christian writings provide evidence for the movement and its beliefs.",
-argument:"Christians argue that the early movement's growth, commitment, and resurrection proclamation are best understood in light of the disciples' experiences of the risen Jesus.",
-limit:"The growth of a religious movement does not itself prove its central supernatural claims. Historical context and alternative explanations matter."
-}
-];
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var scrollMode = reduceMotion ? "auto" : "smooth";
 
-const axiomContainer=document.getElementById("axiomCards");
+  /* ---------- 1. Clickable receipts: Bible, Quran, hadith, Talmud, axiom cross-links ---------- */
+  var BOOKS = "1 Corinthians|2 Corinthians|1 Timothy|1 Peter|1 John|Genesis|Gen|Exodus|Psalms?|Isaiah|Daniel|Micah|Matthew|Mark|Luke|John|Acts|Romans|Ephesians|Philippians|Colossians|Hebrews|Revelation";
+  var SEP = "(?:,\\s(?:and\\s)?|\\sand\\s)";
+  var LINK_RX = new RegExp(
+    "\\b(" + BOOKS + ")\\s(\\d+(?::\\d+(?:[–-]\\d+)?|[–-]\\d+)?(?:,\\s\\d+:\\d+(?:[–-]\\d+)?)*)" +
+    "|\\bSurah\\s(\\d+(?::\\d+(?:[–-]\\d+)?)?(?:" + SEP + "\\d+:\\d+(?:[–-]\\d+)?)*)" +
+    "|\\b(?:Sahih\\s)?(?:al-)?Bukhari\\s(\\d+)" +
+    "|\\bSunan Abi Dawud\\s(\\d+)" +
+    "|\\b(Yoma 39b)" +
+    "|\\b(Axioms?\\s)(\\d+(?:[–-]\\d+)?(?:" + SEP + "\\d+(?:[–-]\\d+)?)*)",
+    "g"
+  );
+  function ext(href, text) { return '<a class="ref" href="' + href + '" target="_blank" rel="noopener">' + text + "</a>"; }
+  function dash(s) { return s.replace(/–/g, "-"); }
+  function bibleUrl(ref) { return "https://www.biblegateway.com/passage/?search=" + encodeURIComponent(dash(ref)) + "&version=ESV"; }
+  function quranUrl(ref) { var p = dash(ref).split(":"); return "https://quran.com/" + p[0] + (p[1] ? "/" + p[1] : ""); }
+  function linkEach(list, rx, make) {
+    var first = true;
+    return list.replace(rx, function (r) { var out = make(r, first); first = false; return out; });
+  }
+  function linkify(html) {
+    return html.replace(LINK_RX, function (m, book, brefs, qrefs, bukhari, dawud, yoma, axWord, axrefs) {
+      if (book) return linkEach(brefs, /\d+(?::\d+(?:[–-]\d+)?|[–-]\d+)?/g, function (r, first) {
+        return ext(bibleUrl(book + " " + r), first ? book + " " + r : r);
+      });
+      if (qrefs) return linkEach(qrefs, /\d+(?::\d+(?:[–-]\d+)?)?/g, function (r, first) {
+        return ext(quranUrl(r), first ? "Surah " + r : r);
+      });
+      if (bukhari) return ext("https://sunnah.com/bukhari:" + bukhari, m);
+      if (dawud) return ext("https://sunnah.com/abudawud:" + dawud, m);
+      if (yoma) return ext("https://www.sefaria.org/Yoma.39b", m);
+      if (axrefs) return linkEach(axrefs, /\d+(?:[–-]\d+)?/g, function (r, first) {
+        return '<a class="axlink" href="#axiom-' + parseInt(r, 10) + '">' + (first ? axWord + r : r) + "</a>";
+      });
+      return m;
+    });
+  }
+  document.querySelectorAll("[data-link]").forEach(function (el) { el.innerHTML = linkify(el.innerHTML); });
 
-function renderAxioms(filter=""){
-  const q=filter.toLowerCase();
-  axiomContainer.innerHTML="";
-  axioms.filter(a=>(a.t+" "+a.tags+" "+a.body+" "+a.argument).toLowerCase().includes(q))
-  .forEach(a=>{
-    const article=document.createElement("article");
-    article.className="card";
-    article.innerHTML=`
-      <span class="label">AXIOM ${a.n}</span>
-      <h3>${a.t}</h3>
-      <p>${a.tags.split(" ").map(t=>`<span class="tag">${t}</span>`).join("")}</p>
-      <p>${a.body}</p>
-      <details>
-        <summary>▼ Examine the evidence and argument</summary>
-        <div class="evidence"><strong>Evidence:</strong> ${a.evidence}</div>
-        <div class="reasoning"><strong>Christian argument:</strong> ${a.argument}</div>
-        <div class="caution"><strong>Scope and limitations:</strong> ${a.limit}</div>
-      </details>`;
-    axiomContainer.appendChild(article);
+  /* ---------- 2. Search helpers (accent-insensitive: "godel" finds "Gödel") ---------- */
+  function norm(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+  function textMap(cards) { var m = new Map(); cards.forEach(function (c) { m.set(c, norm(c.textContent)); }); return m; }
+
+  /* ---------- 3. Axiom filters: bucket chips + search ---------- */
+  var axiomCards = Array.prototype.slice.call(document.querySelectorAll(".axiom"));
+  var axiomText = textMap(axiomCards);
+  var stageGroups = Array.prototype.slice.call(document.querySelectorAll(".stage-group"));
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var axiomSearch = document.getElementById("axiomSearch");
+  var axiomCount = document.getElementById("axiomCount");
+  var axiomEmpty = document.getElementById("axiomEmpty");
+  var bucket = "all";
+
+  function filterAxioms() {
+    var q = norm(axiomSearch.value.trim());
+    var shown = 0;
+    axiomCards.forEach(function (c) {
+      var ok = (bucket === "all" || c.dataset.bucket === bucket) && (!q || axiomText.get(c).indexOf(q) !== -1);
+      c.hidden = !ok;
+      if (ok) shown++;
+    });
+    stageGroups.forEach(function (g) { g.hidden = !g.querySelector(".axiom:not([hidden])"); });
+    axiomCount.textContent = "Showing " + shown + " of " + axiomCards.length + " axioms";
+    axiomEmpty.hidden = shown !== 0;
+  }
+  function setBucket(b) {
+    bucket = b;
+    chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.dataset.filter === b)); });
+    filterAxioms();
+  }
+  chips.forEach(function (c) { c.addEventListener("click", function () { setBucket(c.dataset.filter); }); });
+  axiomSearch.addEventListener("input", filterAxioms);
+  document.querySelectorAll("[data-show-bucket]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      axiomSearch.value = "";
+      setBucket(btn.dataset.showBucket);
+      document.getElementById("axioms").scrollIntoView({ behavior: scrollMode, block: "start" });
+    });
   });
-}
-renderAxioms();
 
-document.getElementById("axiomSearch").addEventListener("input",e=>renderAxioms(e.target.value));
-
-document.getElementById("worldviewSearch").addEventListener("input",e=>{
-  const q=e.target.value.toLowerCase();
-  document.querySelectorAll(".worldview").forEach(card=>{
-    card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+  /* ---------- 4. Axiom cross-links jump to the card (clearing filters if it's hidden) ---------- */
+  function flash(el) { el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#axiom-"]');
+    if (!a) return;
+    var target = document.getElementById(a.getAttribute("href").slice(1));
+    if (!target) return;
+    e.preventDefault();
+    if (target.hidden) { axiomSearch.value = ""; setBucket("all"); }
+    target.scrollIntoView({ behavior: scrollMode, block: "start" });
+    if (history.replaceState) history.replaceState(null, "", "#" + target.id);
+    flash(target);
   });
-});
 
-const menuButton=document.getElementById("menuButton");
-const navLinks=document.getElementById("navLinks");
-menuButton.addEventListener("click",()=>{
-  navLinks.classList.toggle("open");
-});
-navLinks.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",()=>navLinks.classList.remove("open"));
-});
+  /* ---------- 5. Debate Q&A search ---------- */
+  var qaCards = Array.prototype.slice.call(document.querySelectorAll(".qa"));
+  var qaText = textMap(qaCards);
+  var qaSearch = document.getElementById("qaSearch");
+  var qaCount = document.getElementById("qaCount");
+  var qaEmpty = document.getElementById("qaEmpty");
+  qaSearch.addEventListener("input", function () {
+    var q = norm(qaSearch.value.trim());
+    var shown = 0;
+    qaCards.forEach(function (c) {
+      var ok = !q || qaText.get(c).indexOf(q) !== -1;
+      c.hidden = !ok;
+      if (ok) shown++;
+    });
+    qaCount.textContent = "Showing " + shown + " of " + qaCards.length + " questions";
+    qaEmpty.hidden = shown !== 0;
+  });
+
+  /* ---------- 6. Copy buttons (paste an axiom or rebuttal straight into a debate chat) ---------- */
+  function plainText(el) {
+    if (!el) return "";
+    var c = el.cloneNode(true);
+    Array.prototype.slice.call(c.querySelectorAll("sup")).reverse().forEach(function (s) { s.replaceWith("^" + s.textContent); });
+    c.querySelectorAll("sub").forEach(function (s) { s.replaceWith("_" + s.textContent); });
+    c.querySelectorAll("li").forEach(function (li) { li.prepend("\uE000"); });
+    return c.textContent.replace(/\s+/g, " ").replace(/\s*\uE000\s*/g, "\n• ").trim();
+  }
+  var SIGN = "— QuantumTheology (S-GUOT)";
+  function copyTextFor(card) {
+    if (card.classList.contains("axiom")) {
+      return [
+        plainText(card.querySelector(".label")).toUpperCase() + " — " + plainText(card.querySelector("h3")),
+        plainText(card.querySelector(".evidence")),
+        plainText(card.querySelector(".receipts")),
+        SIGN
+      ].join("\n\n");
+    }
+    var note = card.querySelector(".q-note");
+    return [
+      "Q: " + plainText(card.querySelector("h3")) + (note ? " (" + plainText(note) + ")" : ""),
+      plainText(card.querySelector(".fallacy")),
+      plainText(card.querySelector(".evidence")),
+      SIGN
+    ].join("\n\n");
+  }
+  function legacyCopy(text) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand("copy");
+      ta.remove();
+      return ok;
+    } catch (err) { return false; }
+  }
+  function copyToClipboard(text) {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+      }
+    } catch (err) { /* fall through */ }
+    return Promise.resolve(legacyCopy(text));
+  }
+  document.querySelectorAll(".axiom, .qa").forEach(function (card) {
+    var top = card.querySelector(".card-top");
+    if (!top) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "copy-btn";
+    btn.textContent = "Copy";
+    btn.setAttribute("aria-label", "Copy " + plainText(card.querySelector(".label")));
+    btn.addEventListener("click", function () {
+      copyToClipboard(copyTextFor(card)).then(function (ok) {
+        btn.textContent = ok ? "Copied ✓" : "Couldn't copy";
+        btn.classList.toggle("copied", ok);
+        clearTimeout(btn._reset);
+        btn._reset = setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1600);
+      });
+    });
+    top.appendChild(btn);
+  });
+
+  /* ---------- 7. Menu ---------- */
+  var menuButton = document.getElementById("menuButton");
+  var navLinks = document.getElementById("navLinks");
+  function setMenu(open) { navLinks.classList.toggle("open", open); menuButton.setAttribute("aria-expanded", String(open)); }
+  menuButton.addEventListener("click", function (e) { e.stopPropagation(); setMenu(!navLinks.classList.contains("open")); });
+  navLinks.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+  document.addEventListener("click", function (e) { if (navLinks.classList.contains("open") && !navLinks.contains(e.target)) setMenu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+
+  /* ---------- 8. Back to top ---------- */
+  var toTop = document.getElementById("toTop");
+  function onScroll() { toTop.classList.toggle("show", window.scrollY > 900); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: scrollMode }); });
+
+  if (location.hash) {
+    var landed = document.getElementById(location.hash.slice(1));
+    if (landed && landed.classList.contains("card")) flash(landed);
+  }
+})();
 </script>
 
 </body>
