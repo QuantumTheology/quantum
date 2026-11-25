@@ -3,1186 +3,867 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080914">
-<meta name="description" content="QuantumTheology: A rigorous investigation of God, Jesus Christ, Christianity, competing religions, science, philosophy, and history.">
-<title>QuantumTheology — The Case for Christ</title>
+<meta name="theme-color" content="#080912">
+<title>QuantumTheology | The Case for Christ</title>
+<meta name="description" content="A Christian apologetics research archive examining atheism, naturalism, competing religions, philosophy, cosmology, morality, and the identity of Jesus Christ.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --bg:#080914;
-    --surface:#101323;
-    --surface2:#151a2d;
-    --text:#f5f6ff;
-    --muted:#a7adc4;
-    --purple:#a77bff;
-    --blue:#66aaff;
-    --cyan:#63e6e6;
-    --border:rgba(255,255,255,.09);
-    --green:#7de2b0;
-    --red:#ff8585;
+:root{
+  --bg:#080912;
+  --panel:#111321;
+  --panel2:#171a2b;
+  --line:rgba(255,255,255,.09);
+  --text:#f5f6ff;
+  --muted:#a6abc2;
+  --purple:#a78bfa;
+  --blue:#60a5fa;
+  --cyan:#67e8f9;
+  --green:#6ee7b7;
+  --gold:#fbbf77;
+  --red:#fb7185;
 }
-
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth;scroll-padding-top:90px}
-body {
-    background:var(--bg);
-    color:var(--text);
-    font-family:'DM Sans',sans-serif;
-    line-height:1.7;
-    overflow-x:hidden;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+  radial-gradient(ellipse at 15% 0%,rgba(124,58,237,.16),transparent 35%),
+  radial-gradient(ellipse at 90% 35%,rgba(14,165,233,.10),transparent 35%),
+  var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
 }
-body:before {
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:-1;
-    background:
-      radial-gradient(ellipse at 12% 8%,rgba(130,80,255,.16),transparent 35%),
-      radial-gradient(ellipse at 90% 35%,rgba(40,145,255,.12),transparent 35%),
-      radial-gradient(ellipse at 50% 100%,rgba(90,55,190,.09),transparent 40%);
+a{color:var(--cyan);text-decoration:none}
+a:hover{opacity:.8}
+button,input{font:inherit}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(8,9,18,.9);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
 }
-a {color:inherit;text-decoration:none}
-button,input {font:inherit}
-button {cursor:pointer}
-.container {width:min(1160px,91%);margin:auto}
-
-nav {
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(8,9,20,.91);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
+.nav{
+  max-width:1250px;margin:auto;padding:18px 25px;
+  display:flex;align-items:center;justify-content:space-between;
 }
-.nav-inner {
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+.logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:23px;font-weight:700;letter-spacing:-1.2px;
 }
-.logo {
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:21px;
-    letter-spacing:-1px;
+.logo span{
+  background:linear-gradient(90deg,var(--purple),var(--blue),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.logo span {
-    background:linear-gradient(90deg,var(--purple),var(--cyan));
-    -webkit-background-clip:text;
-    color:transparent;
+.menu-button{
+  background:var(--panel2);border:1px solid var(--line);
+  color:white;border-radius:13px;padding:11px 18px;
+  cursor:pointer;font-weight:700;
 }
-.nav-links {display:flex;align-items:center;gap:23px}
-.nav-links a {
-    color:var(--muted);
-    font-size:12px;
-    transition:.2s;
+.nav-links{
+  display:none;position:absolute;top:72px;right:20px;
+  background:#151727;border:1px solid var(--line);
+  border-radius:16px;padding:15px;min-width:220px;
+  box-shadow:0 20px 60px #0009;
 }
-.nav-links a:hover {color:white}
-.menu-button {
-    display:none;
-    color:white;
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:9px;
-    padding:8px 12px;
+.nav-links.open{display:grid;gap:12px}
+.nav-links a{color:var(--text);padding:7px}
+.container{max-width:1150px;margin:auto;padding:0 25px}
+.hero{padding:100px 0 80px;text-align:center}
+.eyebrow{
+  display:inline-block;padding:8px 14px;border-radius:30px;
+  border:1px solid rgba(167,139,250,.3);
+  color:var(--purple);font-size:12px;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;
 }
-.hero {
-    min-height:690px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:100px 0 80px;
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+h1{font-size:clamp(42px,8vw,82px);letter-spacing:-4px;margin:25px 0}
+.gradient{
+  background:linear-gradient(90deg,#c4b5fd,#60a5fa,#67e8f9);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.eyebrow {
-    color:var(--cyan);
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:17px;
+.hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:18px}
+.hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:14px 22px;border-radius:13px;
+  font-weight:800;border:1px solid var(--line);
 }
-.hero h1 {
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(48px,8vw,91px);
-    line-height:1.02;
-    letter-spacing:-5px;
-    max-width:950px;
-    margin-bottom:27px;
+.btn-primary{background:linear-gradient(100deg,#7655d9,#287fbd);color:white}
+.btn-secondary{background:var(--panel);color:white}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px;margin-top:65px;
 }
-.gradient {
-    background:linear-gradient(95deg,#ad80ff,#69aaff,#65e7df);
-    -webkit-background-clip:text;
-    color:transparent;
+.stat{
+  background:rgba(17,19,33,.8);border:1px solid var(--line);
+  border-radius:17px;padding:22px;
 }
-.hero p {
-    max-width:690px;
-    color:var(--muted);
-    font-size:17px;
-    margin-bottom:32px;
+.stat strong{display:block;font-size:27px;color:var(--cyan);font-family:'Space Grotesk'}
+.stat span{color:var(--muted);font-size:13px}
+section{padding:65px 0}
+.section-heading{margin-bottom:30px}
+.section-heading h2{font-size:clamp(30px,5vw,45px);margin:0 0 12px}
+.section-heading p{color:var(--muted);max-width:760px;margin:0}
+.card{
+  background:linear-gradient(145deg,rgba(21,24,42,.96),rgba(13,15,28,.96));
+  border:1px solid var(--line);border-radius:22px;
+  padding:28px;margin-bottom:17px;
+  box-shadow:0 15px 45px rgba(0,0,0,.12);
 }
-.buttons {display:flex;gap:13px;flex-wrap:wrap}
-.btn {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:13px 20px;
-    border-radius:9px;
-    font-size:12px;
-    font-weight:800;
-    transition:.2s;
+.card h3{font-size:23px;margin:8px 0 12px}
+.label{
+  color:var(--purple);font-size:12px;letter-spacing:2px;
+  font-weight:800;text-transform:uppercase;
 }
-.btn:hover {transform:translateY(-3px);filter:brightness(1.12)}
-.btn-primary {
-    background:linear-gradient(100deg,var(--purple),var(--cyan));
-    color:#080914;
+.card p{color:var(--muted);margin:10px 0}
+.evidence{
+  border-left:3px solid var(--green);
+  background:rgba(110,231,183,.055);
+  padding:14px 17px;border-radius:0 12px 12px 0;
+  margin-top:17px;color:#d5f8e9;
 }
-.btn-outline {border:1px solid var(--border);color:white}
-.hero-stats {
-    display:flex;
-    flex-wrap:wrap;
-    gap:55px;
-    margin-top:75px;
+.reasoning{
+  border-left:3px solid var(--gold);
+  background:rgba(251,191,36,.05);
+  padding:14px 17px;border-radius:0 12px 12px 0;
+  margin-top:14px;color:#f5dfbd;
 }
-.stat strong {
-    display:block;
-    font-family:'Space Grotesk',sans-serif;
-    font-size:27px;
+.caution{
+  border-left:3px solid var(--blue);
+  background:rgba(96,165,250,.06);
+  padding:14px 17px;border-radius:0 12px 12px 0;
+  margin-top:14px;color:#d5e7ff;
 }
-.stat span {color:var(--muted);font-size:10px;letter-spacing:1px}
-
-section {padding:88px 0;border-top:1px solid var(--border)}
-.section-head {margin-bottom:37px}
-.section-head h2 {
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(31px,5vw,49px);
-    letter-spacing:-2px;
-    line-height:1.15;
-    margin-bottom:12px;
+.tag{
+  display:inline-block;font-size:11px;font-weight:800;
+  border:1px solid var(--line);border-radius:30px;
+  padding:5px 9px;color:var(--cyan);margin:3px 4px 3px 0;
 }
-.section-head p {color:var(--muted);max-width:760px;font-size:14px}
-.grid {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.search{
+  width:100%;padding:16px 18px;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;
+  color:white;margin:15px 0 25px;outline:none;
 }
-.card {
-    background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
-    border:1px solid var(--border);
-    border-radius:15px;
-    padding:24px;
-    transition:.25s;
+.search:focus{border-color:var(--purple)}
+details{margin-top:15px;border-top:1px solid var(--line);padding-top:13px}
+summary{cursor:pointer;color:var(--cyan);font-weight:800}
+details p{margin-top:14px}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{text-align:left;padding:15px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:13px}
+td{color:var(--muted)}
+.table-wrap{overflow-x:auto}
+footer{
+  border-top:1px solid var(--line);padding:45px 20px;
+  text-align:center;color:var(--muted);
 }
-.card:hover {transform:translateY(-4px);border-color:rgba(167,123,255,.55)}
-.icon {font-size:25px;margin-bottom:14px}
-.tag {
-    display:inline-block;
-    color:var(--cyan);
-    background:rgba(99,230,230,.08);
-    border:1px solid rgba(99,230,230,.17);
-    border-radius:30px;
-    padding:3px 9px;
-    font-size:9px;
-    letter-spacing:1px;
-    font-weight:800;
-    margin-bottom:12px;
+footer strong{color:white}
+.tiktok{
+  display:inline-block;margin-top:15px;padding:13px 20px;
+  border-radius:12px;background:#171a2b;border:1px solid var(--line);
+  color:white;font-weight:800;
 }
-.card h3 {font-family:'Space Grotesk',sans-serif;font-size:17px;margin-bottom:9px}
-.card p {font-size:12px;color:var(--muted)}
-.notice {
-    margin-top:23px;
-    padding:19px 21px;
-    background:rgba(167,123,255,.07);
-    border:1px solid rgba(167,123,255,.23);
-    border-radius:12px;
-    color:var(--muted);
-    font-size:12px;
-}
-.notice strong {color:white}
-
-.search {
-    width:100%;
-    background:var(--surface);
-    color:white;
-    border:1px solid var(--border);
-    border-radius:10px;
-    outline:none;
-    padding:14px 16px;
-    margin-bottom:18px;
-}
-.search:focus {border-color:var(--purple)}
-.filters {display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.filter {
-    border:1px solid var(--border);
-    background:var(--surface);
-    color:var(--muted);
-    border-radius:30px;
-    padding:7px 13px;
-    font-size:10px;
-}
-.filter.active,.filter:hover {
-    color:white;
-    border-color:var(--purple);
-    background:rgba(167,123,255,.13);
-}
-.entry {
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:13px;
-    padding:22px;
-    margin-bottom:12px;
-}
-.entry h3 {font-family:'Space Grotesk',sans-serif;font-size:17px;margin:5px 0 8px}
-.entry p {font-size:12px;color:var(--muted);margin-top:8px}
-.entry details {border-top:1px solid var(--border);margin-top:14px;padding-top:12px}
-.entry summary {color:var(--cyan);font-size:11px;font-weight:800;cursor:pointer}
-.entry details p {margin-top:12px}
-.label {
-    color:var(--purple);
-    font-size:9px;
-    letter-spacing:1.5px;
-    font-weight:800;
-    text-transform:uppercase;
-}
-.answer-label {color:var(--green);font-weight:800}
-.challenge-label {color:#ffc77b;font-weight:800}
-.two-col {display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.worldview {
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:13px;
-    padding:22px;
-}
-.worldview h3 {font-family:'Space Grotesk',sans-serif;margin-bottom:8px}
-.worldview p {font-size:12px;color:var(--muted);margin-top:8px}
-.worldview details {margin-top:13px;padding-top:12px;border-top:1px solid var(--border)}
-.worldview summary {color:var(--cyan);font-size:11px;cursor:pointer;font-weight:800}
-
-.source-list {display:grid;gap:10px}
-.source {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:14px;
-    padding:16px;
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:10px;
-}
-.source span {font-size:12px}
-.source a {color:var(--cyan);font-size:10px;font-weight:800;white-space:nowrap}
-.source a:hover {text-decoration:underline}
-
-.tiktok-box {
-    text-align:center;
-    padding:48px 25px;
-    border:1px solid var(--border);
-    border-radius:18px;
-    background:linear-gradient(120deg,rgba(167,123,255,.15),rgba(99,230,230,.08));
-}
-.tiktok-box h2 {
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(27px,5vw,40px);
-    margin-bottom:10px;
-}
-.tiktok-box p {color:var(--muted);font-size:13px;margin-bottom:23px}
-.tiktok-link {
-    display:inline-flex;
-    padding:13px 22px;
-    border-radius:9px;
-    background:linear-gradient(100deg,var(--purple),var(--cyan));
-    color:#080914;
-    font-weight:800;
-    font-size:12px;
-}
-footer {border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:10px}
-.footer-inner {display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.empty {padding:20px;color:var(--muted);font-size:12px}
-
-@media(max-width:850px) {
-    .grid {grid-template-columns:repeat(2,1fr)}
-    .nav-links {
-        display:none;
-        position:absolute;
-        top:76px;
-        left:0;right:0;
-        background:#101323;
-        padding:22px 5%;
-        flex-direction:column;
-        align-items:flex-start;
-        border-bottom:1px solid var(--border);
-    }
-    .nav-links.open {display:flex}
-    .menu-button {display:block}
-}
-@media(max-width:570px) {
-    .grid,.two-col {grid-template-columns:1fr}
-    .hero h1 {letter-spacing:-2.5px}
-    .hero-stats {gap:25px}
-    section {padding:65px 0}
-    .source {align-items:flex-start;flex-direction:column}
-    .tiktok-box {padding:35px 18px}
+@media(max-width:700px){
+  .container{padding:0 17px}
+  .nav{padding:15px 17px}
+  .logo{font-size:19px}
+  .hero{padding:75px 0 55px}
+  h1{letter-spacing:-2px}
+  .stats{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .card{padding:21px}
+  section{padding:48px 0}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="container nav-inner">
-    <a class="logo" href="#top">QUANTUM<span>THEOLOGY</span></a>
-
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home" style="color:white">QUANTUM<span>THEOLOGY</span></a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation">MENU ☰</button>
     <div class="nav-links" id="navLinks">
-        <a href="#case">God</a>
-        <a href="#jesus">Jesus</a>
-        <a href="#religions">Religions</a>
-        <a href="#objections">Objections</a>
-        <a href="#research">Research</a>
-        <a href="#sources">Sources</a>
+      <a href="#thesis">Central Thesis</a>
+      <a href="#worldviews">Worldview Examination</a>
+      <a href="#axioms">20 Axioms</a>
+      <a href="#christ">Jesus Christ</a>
+      <a href="#islam">Islam</a>
+      <a href="#sources">Sources</a>
     </div>
-
-    <button class="menu-button" onclick="toggleMenu()">MENU</button>
-</div>
-</nav>
-
-<header class="container hero" id="top">
-    <div class="eyebrow">Faith · Reason · Evidence · Truth</div>
-
-    <h1>
-        Is Jesus<br>
-        <span class="gradient">who He claimed to be?</span>
-    </h1>
-
-    <p>
-        A serious investigation into the existence of God, the identity of Jesus,
-        the resurrection, and the truth claims of competing religions.
-        No question is off limits. No argument gets a free pass.
-    </p>
-
-    <div class="buttons">
-        <a class="btn btn-primary" href="#jesus">Examine the Case for Christ →</a>
-        <a class="btn btn-outline" href="#religions">Compare Worldviews</a>
-    </div>
-
-    <div class="hero-stats">
-        <div class="stat"><strong>01</strong><span>GOD</span></div>
-        <div class="stat"><strong>02</strong><span>JESUS</span></div>
-        <div class="stat"><strong>03</strong><span>RESURRECTION</span></div>
-        <div class="stat"><strong>04</strong><span>WORLDVIEWS</span></div>
-    </div>
+  </nav>
 </header>
 
-<section id="case">
+<main id="home">
 <div class="container">
-    <div class="section-head">
-        <div class="eyebrow">01 / Does God exist?</div>
-        <h2>The foundation of <span class="gradient">reality</span></h2>
-        <p>
-            Before asking whether Christianity is true, we should ask whether
-            theism offers a better explanation of existence, the universe,
-            consciousness, morality, and reason than its alternatives.
-        </p>
-    </div>
 
-    <div class="grid">
-        <article class="card">
-            <div class="icon">🌌</div>
-            <span class="tag">COSMOLOGY</span>
-            <h3>Why is there something rather than nothing?</h3>
-            <p>
-                The universe exists. The deeper philosophical question is
-                why contingent physical reality exists at all rather than
-                nothing. A necessary foundation is one proposed explanation.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">⚛️</div>
-            <span class="tag">PHYSICS</span>
-            <h3>The universe and its origin</h3>
-            <p>
-                Modern cosmology describes an expanding universe with a hot,
-                dense early state. The Big Bang model does not, by itself,
-                settle whether the universe was created from absolute nothing.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">🎯</div>
-            <span class="tag">FINE-TUNING</span>
-            <h3>Why does the universe permit life?</h3>
-            <p>
-                Some physical parameters appear to lie within ranges compatible
-                with complex structures. Design, physical necessity, and
-                multiverse proposals are competing explanations.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">🧠</div>
-            <span class="tag">CONSCIOUSNESS</span>
-            <h3>Why is there subjective experience?</h3>
-            <p>
-                Brain activity correlates with conscious experience, but
-                philosophers continue to debate how physical processes
-                relate to first-person awareness.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">⚖️</div>
-            <span class="tag">MORALITY</span>
-            <h3>Are moral truths objective?</h3>
-            <p>
-                If some actions are genuinely wrong regardless of opinion,
-                what makes them wrong? Theism offers one account; secular
-                moral realism offers another.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">🔭</div>
-            <span class="tag">REASON</span>
-            <h3>Why trust human reasoning?</h3>
-            <p>
-                We rely on reason to evaluate every worldview, including
-                naturalism and theism. The question is how best to explain
-                the reliability and limits of human cognition.
-            </p>
-        </article>
-    </div>
-
-    <div class="notice">
-        <strong>How the case works:</strong> These arguments can support a
-        cumulative case for theism. They do not independently prove that
-        Jesus is God. That requires a separate examination of Jesus,
-        the earliest Christian testimony, and the resurrection claim.
-    </div>
-</div>
+<section class="hero">
+  <span class="eyebrow">Christian Apologetics Research Archive</span>
+  <h1>Does every worldview<br><span class="gradient">lead to the same truth?</span></h1>
+  <p>
+    A systematic Christian examination of atheism, naturalism, pantheism,
+    Buddhism, Islam, and competing explanations of reality.
+    The central question: which worldview best accounts for existence,
+    reason, consciousness, morality, and the historical Jesus?
+  </p>
+  <div class="hero-buttons">
+    <a class="btn btn-primary" href="#worldviews">Examine the Worldviews</a>
+    <a class="btn btn-secondary" href="#thesis">Read the Central Thesis</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>20</strong><span>Core philosophical and theological arguments</span></div>
+    <div class="stat"><strong>6+</strong><span>Major worldview categories examined</span></div>
+    <div class="stat"><strong>1</strong><span>Central question: Is Jesus truly God?</span></div>
+  </div>
 </section>
 
-<section id="jesus">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">02 / The central claim</div>
-        <h2>The case for <span class="gradient">Jesus Christ</span></h2>
-        <p>
-            Christianity stands or falls on claims about Jesus. The central
-            question is not merely whether Jesus existed, but whether the
-            best explanation of the evidence is that He truly rose from
-            the dead and is who historic Christianity says He is.
-        </p>
+<section id="thesis">
+  <div class="section-heading">
+    <span class="eyebrow">The central thesis</span>
+    <h2>Why Christianity?</h2>
+    <p>The Christian case is cumulative. It does not depend on one scientific discovery or one philosophical argument.</p>
+  </div>
+
+  <div class="card">
+    <h3>The S-GUOT Thesis</h3>
+    <p>
+      The Seibert Grand Unified Ontological Theory examines whether a
+      reality grounded in a personal, rational, morally perfect Creator
+      explains the universe more coherently than worldviews that treat
+      reality as ultimately impersonal, self-existing, or dependent on
+      finite beings.
+    </p>
+    <div class="evidence">
+      <strong>Central Christian claim:</strong>
+      The universe is created by God; human beings possess real moral
+      significance; and Jesus Christ is the incarnate Son of God whose
+      death and resurrection are the foundation of Christian salvation.
     </div>
-
-    <div class="grid">
-        <article class="card">
-            <div class="icon">📜</div>
-            <span class="tag">HISTORY</span>
-            <h3>Jesus existed</h3>
-            <p>
-                The broad scholarly consensus is that Jesus of Nazareth
-                was a real first-century Jewish teacher who was executed
-                under Pontius Pilate. His existence is not the main
-                historical controversy.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">✝️</div>
-            <span class="tag">HISTORY</span>
-            <h3>Jesus was crucified</h3>
-            <p>
-                Jesus' crucifixion is among the most widely accepted
-                facts about his life. The early Christian movement
-                centered its message on a crucified Messiah.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">📖</div>
-            <span class="tag">EARLY TESTIMONY</span>
-            <h3>Resurrection belief appeared early</h3>
-            <p>
-                Paul's letters preserve early traditions that Jesus died,
-                was buried, was raised, and appeared to followers.
-                First Corinthians 15 is especially important to this debate.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">👥</div>
-            <span class="tag">HISTORY</span>
-            <h3>Followers reported appearances</h3>
-            <p>
-                The earliest Christian sources report that individuals
-                and groups experienced what they understood as appearances
-                of the risen Jesus. The nature and explanation of these
-                experiences remain debated.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">🪦</div>
-            <span class="tag">HISTORICAL DEBATE</span>
-            <h3>The empty tomb</h3>
-            <p>
-                The empty tomb is a major part of many Christian arguments.
-                Scholars disagree about how confidently it can be
-                established from the surviving sources.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="icon">🔥</div>
-            <span class="tag">THEOLOGY</span>
-            <h3>The resurrection</h3>
-            <p>
-                Christians argue that God raised Jesus bodily from death.
-                If true, this would be powerful evidence for Jesus'
-                unique authority and identity. It is the central claim
-                that competing explanations must address.
-            </p>
-        </article>
+    <div class="reasoning">
+      <strong>Method:</strong>
+      Examine each worldview by its explanation of existence, the origin
+      and reliability of reason, consciousness, morality, evil, and the
+      historical claims surrounding Jesus.
     </div>
-
-    <div class="notice">
-        <strong>The key inference:</strong> Early belief in the resurrection
-        is historically important, but it is not identical to proving
-        that the resurrection occurred. The Christian case must argue
-        that the resurrection best explains the relevant evidence,
-        while addressing alternative explanations fairly.
-    </div>
-
-    <div style="margin-top:30px">
-        <article class="entry">
-            <span class="label">THE CHRISTIAN ARGUMENT</span>
-            <h3>Why the resurrection matters</h3>
-            <p>
-                If Jesus truly rose from the dead through God's action,
-                Christianity is not merely one spiritual philosophy among
-                many. It would mean that God publicly vindicated Jesus
-                and that His teachings about His identity deserve
-                extraordinary attention.
-            </p>
-            <details>
-                <summary>What would need to be established?</summary>
-                <p>
-                    First, determine which facts about Jesus' death and
-                    the earliest resurrection claims are historically
-                    well supported. Second, compare explanations such as
-                    sincere religious experiences, legendary development,
-                    mistaken beliefs, and the Christian claim of a real
-                    resurrection. Third, explain why a supernatural
-                    explanation is or is not justified. The conclusion
-                    should follow from the evidence, not be assumed in advance.
-                </p>
-            </details>
-        </article>
-
-        <article class="entry">
-            <span class="label">THE IDENTITY OF JESUS</span>
-            <h3>Did Jesus claim divine status?</h3>
-            <p>
-                Christians point to Jesus' authority, his relationship
-                with the Father, his use of divine titles and imagery,
-                and passages such as John 1, John 8:58, John 10:30,
-                and Mark 14:61–64. The interpretation of these passages
-                is debated, so each should be read in context.
-            </p>
-            <details>
-                <summary>Why the resurrection is relevant to this question</summary>
-                <p>
-                    If Jesus made divine claims and God raised Him,
-                    Christians argue that the resurrection is divine
-                    vindication of His identity and mission. The argument
-                    requires both a careful case about what Jesus claimed
-                    and a careful case that the resurrection happened.
-                </p>
-            </details>
-        </article>
-    </div>
-</div>
+  </div>
 </section>
 
-<section id="trinity">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">03 / Christian doctrine</div>
-        <h2>One God. Three persons. <span class="gradient">One divine nature.</span></h2>
-        <p>
-            Historic Christianity teaches that the Father, Son, and Holy
-            Spirit are distinct persons who share the one divine nature.
-            The doctrine is not that there are three gods.
-        </p>
-    </div>
+<section id="worldviews">
+  <div class="section-heading">
+    <span class="eyebrow">Worldview examination</span>
+    <h2>Competing explanations of reality</h2>
+    <p>Each worldview is examined by its central claims, philosophical challenges, and the Christian response.</p>
+  </div>
 
-    <div class="grid">
-        <article class="card">
-            <div class="icon">Ⅰ</div>
-            <h3>The Father</h3>
-            <p>
-                The Father is fully God. He is not the Son or the Holy Spirit.
-            </p>
-        </article>
-        <article class="card">
-            <div class="icon">Ⅱ</div>
-            <h3>The Son</h3>
-            <p>
-                Jesus Christ is understood as fully divine and fully human.
-                The Son is distinct from the Father.
-            </p>
-        </article>
-        <article class="card">
-            <div class="icon">Ⅲ</div>
-            <h3>The Holy Spirit</h3>
-            <p>
-                The Holy Spirit is understood as a distinct divine person,
-                not merely an impersonal force.
-            </p>
-        </article>
-    </div>
+  <input class="search" id="worldviewSearch" placeholder="Search worldviews or arguments...">
 
-    <div class="notice">
-        The Trinity distinguishes between what God is (one divine being)
-        and who God is (three persons). Whether this formulation is
-        philosophically coherent and biblically justified is a question
-        that deserves detailed argument.
-    </div>
-</div>
+  <div id="worldviewCards">
+
+    <article class="card worldview">
+      <span class="label">Worldview 01</span>
+      <h3>Atheism & Naturalism</h3>
+      <p><span class="tag">Materialism</span><span class="tag">Cosmology</span><span class="tag">Consciousness</span><span class="tag">Morality</span></p>
+      <p><strong>Central claim:</strong> Reality is ultimately physical, and no God exists.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        The universe's expansion, the past-boundary implications of the
+        Borde-Guth-Vilenkin theorem, the existence of mathematical laws,
+        the hard problem of consciousness, and debates about objective morality.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        Even a complete physical description of the universe leaves
+        philosophical questions about why physical reality exists,
+        why it is mathematically intelligible, and how subjective
+        consciousness and objective moral obligations fit into a
+        fundamentally impersonal reality.
+      </div>
+      <div class="caution">
+        <strong>Important distinction:</strong>
+        These are serious explanatory challenges, not demonstrations
+        that every atheist position is logically impossible.
+        Naturalists offer responses involving brute facts, physicalism,
+        emergent consciousness, and moral realism.
+        The debate must address those responses directly.
+      </div>
+    </article>
+
+    <article class="card worldview">
+      <span class="label">Worldview 02</span>
+      <h3>Pantheism</h3>
+      <p><span class="tag">God and universe</span><span class="tag">Identity</span><span class="tag">Change</span></p>
+      <p><strong>Central claim:</strong> God and the universe are identical, or all reality is divine.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        The universe contains change, decay, physical distinctions,
+        and apparently contingent objects. Classical theism describes
+        God as necessary and not dependent on the physical universe.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        If God is identical to the changing physical universe, pantheism
+        must explain how ultimate divinity relates to change, imperfection,
+        and suffering. Christianity distinguishes the Creator from creation.
+      </div>
+      <div class="caution">
+        <strong>Important distinction:</strong>
+        Not every form of pantheism defines God as a single unchanging
+        object. Some versions distinguish ultimate reality from the
+        changing world. Those versions require their own examination.
+      </div>
+    </article>
+
+    <article class="card worldview">
+      <span class="label">Worldview 03</span>
+      <h3>Hindu Philosophical Traditions</h3>
+      <p><span class="tag">Brahman</span><span class="tag">Karma</span><span class="tag">Reincarnation</span></p>
+      <p><strong>Central claim:</strong> Hindu traditions contain different accounts of ultimate reality, the self, karma, and liberation.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        Advaita Vedanta, Dvaita Vedanta, and other Hindu schools
+        disagree about whether the individual self is ultimately
+        identical with Brahman, distinct from Brahman, or related
+        to ultimate reality in another way.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        Christianity challenges accounts in which personal identity
+        is ultimately dissolved or in which salvation depends on
+        escaping the cycle of rebirth. It instead argues for a personal
+        Creator, enduring human identity, resurrection, and a final
+        moral judgment.
+      </div>
+      <div class="caution">
+        <strong>Important distinction:</strong>
+        Hinduism is not one uniform worldview. Arguments against
+        Advaita do not automatically refute every Hindu tradition.
+      </div>
+    </article>
+
+    <article class="card worldview">
+      <span class="label">Worldview 04</span>
+      <h3>Buddhism</h3>
+      <p><span class="tag">Anatta</span><span class="tag">Karma</span><span class="tag">Samsara</span></p>
+      <p><strong>Central claim:</strong> Buddhist traditions explain suffering through craving, impermanence, and ignorance, with liberation through awakening.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        The doctrine of anatta denies a permanent, independent self.
+        Buddhist traditions explain continuity across lives through
+        causal processes rather than an unchanging soul.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        Christianity disagrees with the denial of a permanent self
+        and with rebirth as the explanation of human destiny.
+        It argues that personal identity, moral responsibility,
+        and the hope of resurrection are grounded in a personal God.
+      </div>
+      <div class="caution">
+        <strong>Important distinction:</strong>
+        Buddhism has developed multiple schools, and its account of
+        rebirth is not simply the claim that an identical soul moves
+        from one body to another. The Christian critique must address
+        the actual Buddhist position.
+      </div>
+    </article>
+
+    <article class="card worldview">
+      <span class="label">Worldview 05</span>
+      <h3>Islam</h3>
+      <p><span class="tag">Tawhid</span><span class="tag">Quran</span><span class="tag">Jesus</span></p>
+      <p><strong>Central claim:</strong> There is one God, and Muhammad is His messenger. Jesus is honored as a prophet and Messiah, but not as God.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        The Quran's statements about earlier revelation, its account
+        of Jesus, the historical evidence for the crucifixion, and
+        the development and transmission of biblical and Quranic texts.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        Christianity argues that Jesus' identity cannot be reduced
+        to that of a prophet. The earliest Christian sources place
+        extraordinary claims about Jesus at the center of their
+        message, including His crucifixion, resurrection, divine
+        status, and role in salvation.
+      </div>
+      <div class="caution">
+        <strong>Important distinction:</strong>
+        The relationship between the Quran and earlier scriptures
+        is debated. The Islamic response includes arguments about
+        textual corruption and interpretation. Those arguments
+        must be examined passage by passage.
+      </div>
+    </article>
+
+    <article class="card worldview">
+      <span class="label">Worldview 06</span>
+      <h3>Deism</h3>
+      <p><span class="tag">First cause</span><span class="tag">Creator</span><span class="tag">Revelation</span></p>
+      <p><strong>Central claim:</strong> A creator exists but does not necessarily intervene in the universe or reveal Himself through specific historical events.</p>
+      <div class="evidence">
+        <strong>Evidence examined:</strong>
+        Cosmological arguments can support a first cause or necessary
+        foundation of reality, but additional historical and
+        philosophical arguments are needed to establish revelation.
+      </div>
+      <div class="reasoning">
+        <strong>Christian argument:</strong>
+        If God is personal, powerful, and morally good, divine
+        communication is not inherently impossible. Christianity
+        claims that God has acted in history, most decisively through Jesus.
+      </div>
+    </article>
+
+  </div>
 </section>
 
-<section id="religions">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">04 / Comparative religion</div>
-        <h2>Testing competing <span class="gradient">worldviews</span></h2>
-        <p>
-            If Christianity is true, contradictory religious claims cannot
-            all be true in the same sense. The way to assess them is to
-            compare their central claims, historical foundations, internal
-            coherence, and explanatory power—not to caricature their followers.
-        </p>
-    </div>
-
-    <input class="search" id="worldSearch" placeholder="Search religions and worldviews...">
-    <div class="two-col" id="worldviewList"></div>
-
-    <div class="notice">
-        <strong>Important:</strong> This section evaluates claims, not the
-        worth or intelligence of people who hold them. A strong Christian
-        argument should represent each tradition accurately and engage
-        its best thinkers.
-    </div>
-</div>
+<section id="axioms">
+  <div class="section-heading">
+    <span class="eyebrow">The S-GUOT framework</span>
+    <h2>The 20 core arguments</h2>
+    <p>Explore the philosophical, scientific, moral, and historical arguments in the archive.</p>
+  </div>
+  <input class="search" id="axiomSearch" placeholder="Search the 20 arguments...">
+  <div id="axiomCards"></div>
 </section>
 
-<section id="objections">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">05 / Hard questions</div>
-        <h2>Objections to Christianity</h2>
-        <p>
-            These are serious challenges, not straw men. Each answer explains
-            a Christian response and identifies what remains contested.
-        </p>
-    </div>
+<section id="christ">
+  <div class="section-heading">
+    <span class="eyebrow">The central Christian claim</span>
+    <h2>Why Jesus is claimed to be God</h2>
+    <p>The question is not merely whether God exists. It is whether Jesus is the divine Son of God.</p>
+  </div>
 
-    <input class="search" id="objectionSearch" placeholder="Search questions and objections...">
-    <div id="objectionList"></div>
-</div>
+  <div class="card">
+    <h3>1. Jesus' identity in the New Testament</h3>
+    <p>
+      The Gospel of John opens by describing the Word as existing
+      in the beginning, being with God, and being God. John then
+      identifies the Word as becoming flesh.
+    </p>
+    <div class="evidence">
+      <strong>Primary texts:</strong>
+      John 1:1–14; John 8:58; John 10:30; John 17:5;
+      Colossians 2:9; Hebrews 1:1–12.
+    </div>
+    <div class="reasoning">
+      <strong>Christian interpretation:</strong>
+      These passages are understood as presenting Jesus as more
+      than a prophet or moral teacher: He shares divine identity
+      while becoming genuinely human.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>2. The crucifixion</h3>
+    <p>
+      Jesus' crucifixion under Pontius Pilate is one of the most
+      widely accepted facts about His life among historians.
+      It is reported in early Christian sources and referenced
+      by non-Christian ancient writers.
+    </p>
+    <div class="evidence">
+      <strong>Sources to examine:</strong>
+      Tacitus, Annals 15.44; Josephus, Antiquities 18.3.3
+      (with scholarly discussion of the passage's textual history);
+      the Pauline letters and the canonical Gospels.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>3. The resurrection claim</h3>
+    <p>
+      The earliest Christians proclaimed that Jesus had been raised
+      from the dead. The central historical questions include
+      the disciples' experiences, the origin of resurrection belief,
+      Paul's conversion, and James' conversion.
+    </p>
+    <div class="evidence">
+      <strong>Primary text:</strong>
+      1 Corinthians 15:3–8 preserves an early tradition concerning
+      Jesus' death, burial, resurrection, and appearances.
+    </div>
+    <div class="reasoning">
+      <strong>Christian argument:</strong>
+      Christians argue that the resurrection best explains the
+      origin of the early Christian movement and the disciples'
+      conviction that Jesus was alive.
+    </div>
+    <div class="caution">
+      <strong>Historical distinction:</strong>
+      Historians can investigate testimony, experiences, and
+      the origins of belief. Whether a miracle occurred also
+      involves philosophical assumptions about God's existence
+      and the possibility of divine action.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>4. The Christian argument for the God-man</h3>
+    <p><strong>Step one:</strong> Christianity teaches that humanity is morally accountable to a perfectly holy God.</p>
+    <p><strong>Step two:</strong> Human beings cannot earn their way into salvation through perfect moral performance.</p>
+    <p><strong>Step three:</strong> Christianity teaches that God acts in grace rather than abandoning justice.</p>
+    <p><strong>Step four:</strong> Jesus is understood as fully human, representing humanity, and fully divine, revealing God and accomplishing salvation.</p>
+    <div class="evidence">
+      <strong>Primary texts:</strong>
+      John 1:1–14; Romans 3:21–26; Hebrews 2:14–17;
+      Philippians 2:5–11; Colossians 2:9.
+    </div>
+  </div>
 </section>
 
-<section id="research">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">06 / Searchable research</div>
-        <h2>Argument <span class="gradient">library</span></h2>
-        <p>
-            Explore arguments by subject. Each entry separates the reasoning
-            from important objections and limitations.
-        </p>
+<section id="islam">
+  <div class="section-heading">
+    <span class="eyebrow">Comparative theology</span>
+    <h2>Christianity and Islam</h2>
+    <p>A focused examination of the central disagreements between the two faiths.</p>
+  </div>
+
+  <div class="card">
+    <h3>1. The identity of Jesus</h3>
+    <p>
+      Christianity teaches that Jesus is the incarnate Son of God.
+      Islam honors Jesus as Messiah and prophet but rejects His
+      divinity.
+    </p>
+    <div class="evidence">
+      <strong>Texts:</strong>
+      John 1:1–14; John 20:28; Colossians 2:9;
+      Quran 4:171; Quran 5:72–75.
     </div>
-
-    <input class="search" id="evidenceSearch" placeholder="Search arguments...">
-
-    <div class="filters">
-        <button class="filter active" data-category="All">All</button>
-        <button class="filter" data-category="Philosophy">Philosophy</button>
-        <button class="filter" data-category="Science">Science</button>
-        <button class="filter" data-category="History">History</button>
-        <button class="filter" data-category="Theology">Theology</button>
+    <div class="reasoning">
+      <strong>Christian argument:</strong>
+      The New Testament's earliest theological claims about Jesus
+      create a major disagreement with the Quran's later account.
+      The historical reliability and interpretation of these
+      sources are central to evaluating the disagreement.
     </div>
+  </div>
 
-    <div id="evidenceList"></div>
-</div>
+  <div class="card">
+    <h3>2. The crucifixion disagreement</h3>
+    <p>
+      The mainstream Islamic interpretation of Quran 4:157 denies
+      that Jesus was crucified in the way Christians believe.
+      Christianity places the crucifixion at the center of its
+      historical and theological message.
+    </p>
+    <div class="evidence">
+      <strong>Evidence to examine:</strong>
+      Paul's letters, the four Gospels, Tacitus' Annals 15.44,
+      and the historical scholarship on Jesus' execution.
+    </div>
+    <div class="reasoning">
+      <strong>Christian argument:</strong>
+      If Jesus was crucified, as the strong historical consensus
+      holds, an interpretation denying the crucifixion faces a
+      substantial historical challenge.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>3. Earlier revelation and the Bible</h3>
+    <p>
+      The Quran refers to the Torah and Gospel. Christian-Muslim
+      debate concerns what those references mean and whether
+      the Quran affirms the biblical texts available in its time.
+    </p>
+    <div class="evidence">
+      <strong>Texts:</strong>
+      Quran 3:3; 5:47; 5:68; 10:94; 18:27.
+    </div>
+    <div class="reasoning">
+      <strong>Christian argument:</strong>
+      Christians argue that the manuscript history of the New
+      Testament provides substantial evidence that its central
+      claims were not simply invented centuries later.
+    </div>
+    <div class="caution">
+      <strong>Important distinction:</strong>
+      Manuscript evidence demonstrates textual transmission
+      and variation. It does not by itself prove every event
+      described in the New Testament.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>4. Salvation and assurance</h3>
+    <p>
+      Christianity teaches salvation through God's grace, received
+      through faith in Christ. Islamic theology has different
+      accounts of divine mercy, judgment, faith, and deeds.
+    </p>
+    <div class="evidence">
+      <strong>Texts:</strong>
+      Ephesians 2:8–10; Romans 3:21–26; Quran 23:102–103;
+      Quran 39:53.
+    </div>
+    <div class="reasoning">
+      <strong>Christian argument:</strong>
+      The Christian message emphasizes assurance grounded in
+      Christ's completed work rather than confidence in one's
+      own ability to accumulate sufficient merit.
+    </div>
+  </div>
 </section>
 
 <section id="sources">
-<div class="container">
-    <div class="section-head">
-        <div class="eyebrow">07 / Go beyond summaries</div>
-        <h2>Research & <span class="gradient">academic sources</span></h2>
-        <p>
-            Use primary texts and academic references. Read arguments
-            from both Christian and non-Christian scholars.
-        </p>
-    </div>
+  <div class="section-heading">
+    <span class="eyebrow">Research foundations</span>
+    <h2>Sources & further reading</h2>
+    <p>Primary texts and scholarly resources for examining the arguments rather than relying on slogans.</p>
+  </div>
 
-    <div class="source-list">
-        <div class="source">
-            <span>Stanford Encyclopedia — Philosophy of Religion</span>
-            <a href="https://plato.stanford.edu/entries/philosophy-religion/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>Stanford Encyclopedia — Natural Theology</span>
-            <a href="https://plato.stanford.edu/entries/natural-theology/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>Stanford Encyclopedia — Miracles</span>
-            <a href="https://plato.stanford.edu/entries/miracles/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>Stanford Encyclopedia — Philosophy of Christianity</span>
-            <a href="https://plato.stanford.edu/archives/spr2022/entries/christiantheology-philosophy/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>NASA — The Universe</span>
-            <a href="https://science.nasa.gov/universe/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>NASA — The Big Bang</span>
-            <a href="https://science.nasa.gov/universe/the-big-bang/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>Internet Encyclopedia of Philosophy</span>
-            <a href="https://iep.utm.edu/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>Early Christian Writings — Ancient texts</span>
-            <a href="https://www.earlychristianwritings.com/" target="_blank" rel="noopener">OPEN ↗</a>
-        </div>
-        <div class="source">
-            <span>New Testament — 1 Corinthians 15</span>
-            <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015&version=ESV" target="_blank" rel="noopener">READ ↗</a>
-        </div>
-        <div class="source">
-            <span>New Testament — Gospel of John 1</span>
-            <a href="https://www.biblegateway.com/passage/?search=John%201&version=ESV" target="_blank" rel="noopener">READ ↗</a>
-        </div>
-    </div>
-</div>
+  <div class="card">
+    <h3>Philosophy and science</h3>
+    <p><a href="https://plato.stanford.edu/entries/philosophy-religion/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Philosophy of Religion</a></p>
+    <p><a href="https://plato.stanford.edu/entries/natural-theology/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Natural Theology</a></p>
+    <p><a href="https://plato.stanford.edu/entries/miracles/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Miracles</a></p>
+    <p><a href="https://plato.stanford.edu/entries/consciousness/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Consciousness</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Historical Christianity</h3>
+    <p><a href="https://www.biblegateway.com/" target="_blank" rel="noopener">Bible Gateway — Biblical texts</a></p>
+    <p><a href="https://www.deadseascrolls.org.il/" target="_blank" rel="noopener">Israel Antiquities Authority — Dead Sea Scrolls</a></p>
+    <p><a href="https://www.csntm.org/" target="_blank" rel="noopener">Center for the Study of New Testament Manuscripts</a></p>
+  </div>
+
+  <div class="card">
+    <h3>How evidence is evaluated</h3>
+    <p>
+      Scientific findings, historical testimony, philosophical
+      arguments, and theological conclusions are different kinds
+      of evidence. Each must be evaluated using the appropriate
+      standards. A strong argument should acknowledge its
+      assumptions and address the best opposing response.
+    </p>
+  </div>
 </section>
 
-<section id="tiktok">
-<div class="container">
-    <div class="tiktok-box">
-        <div class="eyebrow">Continue the conversation</div>
-        <h2>Follow <span class="gradient">QuantumTheology</span></h2>
-        <p>Faith, science, philosophy, history, and the case for Christ.</p>
-
-        <a class="tiktok-link"
-           href="https://www.tiktok.com/@quantumtheology"
-           target="_blank"
-           rel="noopener noreferrer">
-           VISIT @QUANTUMTHEOLOGY ↗
-        </a>
-
-        <p style="margin-top:15px;font-size:11px">
-            If the TikTok app does not open, the link will open TikTok in your browser.
-        </p>
-    </div>
 </div>
-</section>
+</main>
 
 <footer>
-<div class="container footer-inner">
-    <span>© 2026 QuantumTheology</span>
-    <span>Faith. Reason. Evidence. Inquiry.</span>
-</div>
+  <strong>QUANTUMTHEOLOGY</strong>
+  <p>Faith examined. Arguments tested. Truth pursued.</p>
+  <a class="tiktok" href="https://www.tiktok.com/@quantumtheology" target="_blank" rel="noopener">
+    Follow @QuantumTheology on TikTok ↗
+  </a>
+  <p style="font-size:12px;margin-top:25px">An independent Christian apologetics project.</p>
 </footer>
 
 <script>
-const evidence = [
+const axioms = [
 {
-title:"The Contingency Argument",
-category:"Philosophy",
-summary:"Why does contingent reality exist at all?",
-argument:"1. Contingent things exist: things that could have failed to exist. 2. Contingent things do not contain the complete explanation of their own existence. 3. If contingent reality has an explanation, that explanation cannot be merely another unexplained contingent thing. 4. Philosophers therefore argue that reality ultimately depends on something necessary.",
-response:"The theistic conclusion is that a necessary foundation exists and that God is the best explanation of it. Critics question whether every contingent fact requires an explanation, whether an infinite explanatory chain is impossible, and whether the necessary foundation must be personal or divine."
+n:1,t:"Thermodynamic & Spacetime Boundary",
+tags:"cosmology physics BGV thermodynamics contingency",
+body:"The universe's expansion and thermodynamic history raise questions about whether physical reality is past-eternal and what explains its existence.",
+evidence:"The Borde-Guth-Vilenkin theorem shows that spacetimes with a positive average expansion rate along a past-directed geodesic are past-incomplete under its assumptions. The laws of thermodynamics describe physical processes and the behavior of energy.",
+argument:"If the physical universe has a past boundary, its explanation may require a cause or foundation not contained within the physical spacetime it explains.",
+limit:"The BGV theorem does not prove creation from absolute nothing, nor does it establish the identity of the cause. The first law of thermodynamics is not a simple proof that the universe required an external energy source."
 },
 {
-title:"The Kalam Cosmological Argument",
-category:"Philosophy",
-summary:"An argument that the universe has a cause if it began to exist.",
-argument:"1. Whatever begins to exist has a cause. 2. The universe began to exist. 3. Therefore, the universe has a cause. Defenders argue that a cause of spacetime would not itself be an ordinary physical object within spacetime.",
-response:"The argument does not by itself establish the Christian God. Critics question the premise about causation at the origin of time, the interpretation of cosmology, and whether the cause must be personal. The Borde-Guth-Vilenkin theorem concerns past incompleteness under certain conditions; it is not a proof of creation from absolute nothing."
+n:2,t:"Quantum Measurement & Cosmic Lawfulness",
+tags:"quantum mechanics measurement consciousness",
+body:"Quantum mechanics describes physical systems through mathematical states and probabilities, raising philosophical questions about measurement and the intelligibility of nature.",
+evidence:"Quantum theory and decoherence are extensively studied. Different interpretations disagree about what the mathematical formalism says about physical reality.",
+argument:"A rational Creator offers a philosophical explanation for why reality is intelligible and governed by stable mathematical structures.",
+limit:"Quantum measurement does not generally require a conscious observer. Quantum mechanics does not establish that the universe needs an external mind to perform measurements."
 },
 {
-title:"Fine-Tuning",
-category:"Science",
-summary:"The apparent life-permitting ranges of physical parameters.",
-argument:"Some physical constants appear to fall within ranges compatible with complex structures and life. Theism proposes that a universe intended for life is not surprising if a creator exists.",
-response:"Alternative proposals include deeper physical necessity, selection effects, and multiverse hypotheses. The probabilities involved are difficult to define, so fine-tuning is a philosophical inference from physics rather than a direct laboratory proof of God."
+n:3,t:"Mathematical Platonism & Abstract Truth",
+tags:"mathematics Gödel logic",
+body:"Mathematical truths appear objective and are remarkably effective in describing the physical universe.",
+evidence:"Kurt Gödel's incompleteness theorems establish limits on what sufficiently expressive consistent formal systems can prove about arithmetic.",
+argument:"The existence of abstract mathematical truths and the intelligibility of nature are compatible with theism and can be incorporated into a theistic account of rational creation.",
+limit:"Gödel's theorems do not prove God. Philosophers disagree about the nature of mathematical objects and whether mathematical realism requires a divine mind."
 },
 {
-title:"The Moral Argument",
-category:"Philosophy",
-summary:"What grounds objective moral values and obligations?",
-argument:"If objective moral duties and values exist, they require an adequate foundation. Theists argue that God's necessarily good nature can ground moral reality and that moral obligations make sense as duties to a personal source of goodness.",
-response:"Secular moral realists argue that moral truths can be objective without God. A complete Christian account must also explain why goodness is not arbitrary and how God's nature relates to moral standards."
+n:4,t:"Biological Information & Abiogenesis",
+tags:"DNA biology information origins life",
+body:"Living organisms contain highly organized molecular systems, including DNA and RNA, whose sequences play essential roles in biological function.",
+evidence:"DNA stores hereditary information. Research into the origin of life examines possible prebiotic chemistry, self-organization, catalytic molecules, and early replication systems.",
+argument:"The complexity and functional organization of life can be considered within a broader argument for design.",
+limit:"DNA is not literally computer software, and abiogenesis research is ongoing. Natural selection acts on heritable variation, but research into life's origin also investigates processes before modern natural selection."
 },
 {
-title:"Consciousness",
-category:"Philosophy",
-summary:"Why is there subjective experience?",
-argument:"Consciousness includes first-person experience, not merely observable behavior. Some philosophers argue that a fundamentally mental source of reality may explain consciousness better than a worldview in which mind appears only from nonmental matter.",
-response:"Physicalists argue that consciousness depends on brain processes and may ultimately be explained by neuroscience and philosophy of mind. The hard problem remains debated; consciousness alone does not prove theism."
+n:5,t:"First Cause & Agent Causation",
+tags:"cause time free will Kalam",
+body:"The Kalam cosmological argument reasons that whatever begins to exist has a cause, and that the universe began to exist.",
+evidence:"The argument is defended in contemporary philosophy of religion and draws on philosophical and cosmological premises.",
+argument:"A cause of spacetime would not be an ordinary physical object inside spacetime. Theism proposes a transcendent personal cause.",
+limit:"The argument's premises and the move from a first cause to a personal God are debated."
 },
 {
-title:"The Resurrection of Jesus",
-category:"History",
-summary:"The central historical claim of Christianity.",
-argument:"Christian arguments commonly examine Jesus' crucifixion, early resurrection proclamation, reported appearances, the experiences of early followers, and the origins of the Christian movement. If God exists, a resurrection is not ruled out merely by the regularity of ordinary nature.",
-response:"The historical case must establish what the earliest sources actually say and compare natural and supernatural explanations. Historians disagree about some details, including the empty tomb. A supernatural conclusion requires philosophical reasoning in addition to historical source analysis."
+n:6,t:"Consciousness & Rationality",
+tags:"mind consciousness qualia Plantinga EAAN",
+body:"Subjective experience remains a major philosophical challenge for purely physical accounts of mind.",
+evidence:"The hard problem of consciousness, associated with David Chalmers, asks why and how physical processes are accompanied by subjective experience.",
+argument:"A worldview grounded in a fundamental mind may offer a unified account of consciousness and rationality.",
+limit:"The existence of consciousness does not by itself prove theism. Physicalist, emergentist, and panpsychist theories offer competing explanations. Plantinga's evolutionary argument against naturalism is philosophical and contested."
 },
 {
-title:"The Historical Jesus",
-category:"History",
-summary:"What can be established about Jesus of Nazareth?",
-argument:"The broad scholarly consensus is that Jesus existed and was crucified under Pontius Pilate. Early Christian writings provide important evidence for the beliefs and experiences of the first Christian communities.",
-response:"Establishing Jesus' existence does not establish every Gospel detail or his divinity. Individual claims must be assessed through dating, authorship, genre, source relationships, and historical context."
+n:7,t:"Objective Morality & Human Worth",
+tags:"morality ethics conscience value",
+body:"People often regard at least some moral claims as objectively true rather than merely matters of preference.",
+evidence:"Metaethics debates whether moral truths are objective and, if so, what grounds them.",
+argument:"Christianity grounds human worth and moral obligation in God's nature and humanity's creation in God's image.",
+limit:"Secular moral realists argue that objective moral truths can exist without God. Theism must explain how moral facts relate to God's nature."
 },
 {
-title:"The Argument from Reason",
-category:"Philosophy",
-summary:"Can reason be trusted in a purely naturalistic universe?",
-argument:"Some Christian philosophers argue that rational thought is more expected if reality is grounded in an intelligent source, and that purely nonrational origins may raise questions about the reliability of reason.",
-response:"Naturalists argue that evolution can favor cognitive abilities that reliably track important features of the environment. The debate concerns whether evolutionary explanations account for abstract reasoning, truth-tracking, and justification."
+n:8,t:"Trinitarian Relational Ontology",
+tags:"Trinity love unitarian theology",
+body:"Christianity teaches one God eternally existing as Father, Son, and Holy Spirit.",
+evidence:"The New Testament contains passages used by Christians to develop Trinitarian theology, including Matthew 28:19, John 1:1–14, and 2 Corinthians 13:14.",
+argument:"The Trinity offers an account of eternal personal relationship and love within God's own life before creation.",
+limit:"A unitarian theologian can argue that God does not need another person to be loving. The Trinity is a distinctively Christian theological claim, not a standalone proof against every unitarian conception of God."
 },
 {
-title:"The Problem of Evil",
-category:"Philosophy",
-summary:"Can a good and powerful God coexist with suffering?",
-argument:"The existence of apparently unnecessary suffering creates a serious challenge to traditional theism. The logical and evidential versions of the problem should be distinguished.",
-response:"Christian responses include free-will defenses, soul-making approaches, and the possibility that humans lack the perspective to understand all divine reasons. Critics argue that these responses may not adequately explain extreme or apparently pointless suffering."
+n:9,t:"Free Will & The Problem of Evil",
+tags:"evil suffering free will Augustine Plantinga",
+body:"The existence of suffering and evil is one of the strongest challenges to belief in an all-powerful, perfectly good God.",
+evidence:"Augustine developed the privation account of evil. Alvin Plantinga argued that the existence of evil is not logically incompatible with God's existence if creatures have significant freedom.",
+argument:"Christianity argues that freedom, moral responsibility, and the possibility of love help explain why God might permit some evil, while the cross presents God as entering human suffering.",
+limit:"The free-will defense does not fully answer every question about natural suffering or apparently pointless evil."
 },
 {
-title:"The Origin of Life",
-category:"Science",
-summary:"How did the first living systems emerge?",
-argument:"Life depends on complex chemical systems. Some theists argue that the emergence of life is more expected if reality has an intelligent source.",
-response:"Abiogenesis research investigates possible pathways from nonliving chemistry to early life. Open scientific questions are not automatically evidence for a supernatural explanation; the argument must compare actual explanatory models."
+n:10,t:"Grace & Resurrection",
+tags:"Jesus resurrection salvation grace",
+body:"Christianity centers salvation on the death and resurrection of Jesus.",
+evidence:"1 Corinthians 15:3–8 preserves an early summary of the resurrection proclamation. The Pauline letters provide early evidence for Christian belief.",
+argument:"Christians argue that the resurrection best explains the disciples' conviction that Jesus had been raised and the rapid emergence of resurrection-centered Christianity.",
+limit:"The historical evidence must be evaluated carefully. A historical argument for resurrection also depends on whether miracles are considered possible."
 },
 {
-title:"The Argument from Beauty",
-category:"Philosophy",
-summary:"Why does the universe contain beauty and aesthetic experience?",
-argument:"Some theists argue that beauty, mathematical elegance, and our capacity to appreciate them fit naturally within a world grounded in a creative mind.",
-response:"Naturalistic accounts explain aesthetic experience through biology, culture, psychology, and evolution. Beauty may contribute to a cumulative case but does not independently demonstrate God's existence."
+n:11,t:"Cosmic Fine-Tuning",
+tags:"fine tuning physics cosmology multiverse",
+body:"Some physical constants and initial conditions appear to fall within ranges compatible with complex structures and life.",
+evidence:"Fine-tuning arguments are discussed by physicists and philosophers. Proposed explanations include design, selection effects, and multiverse hypotheses.",
+argument:"A purposeful Creator is one possible explanation for life-permitting physical conditions.",
+limit:"The probabilities involved are difficult to establish, and fine-tuning does not by itself identify Christianity as the correct religion."
 },
 {
-title:"The Historical Reliability of the Gospels",
-category:"History",
-summary:"How should the Gospel accounts be evaluated?",
-argument:"The Gospels preserve ancient traditions about Jesus, his teachings, his followers, and his execution. Their historical claims can be investigated using ordinary historical methods.",
-response:"The Gospels are theological narratives, not modern neutral biographies. Their dating, authorship, sources, and literary aims are debated. A responsible case examines each claim rather than assuming either total reliability or total fabrication."
+n:12,t:"Modal Ontological Argument",
+tags:"Anselm Plantinga necessity logic",
+body:"Ontological arguments attempt to reason from the concept or possibility of a maximally great being to necessary existence.",
+evidence:"Versions have been developed by Anselm and Alvin Plantinga, among others.",
+argument:"If a maximally great being is genuinely possible in the relevant modal sense, some versions argue that such a being exists necessarily.",
+limit:"The possibility premise is controversial. These arguments do not automatically establish the Christian doctrine of God."
 },
 {
-title:"The Trinity",
-category:"Theology",
-summary:"One God existing as three distinct persons.",
-argument:"Historic Christian theology argues that the Father, Son, and Holy Spirit are distinct persons who share one divine nature. Christians appeal to the whole pattern of biblical teaching rather than one isolated verse.",
-response:"Critics question whether the doctrine is coherent and whether the New Testament supports its later formal definition. Christian theology distinguishes person from being; the doctrine does not mean three gods or one person wearing three masks."
+n:13,t:"Logical Laws & Rational Foundations",
+tags:"logic truth reason transcendental",
+body:"Reasoning presupposes logical principles such as identity, non-contradiction, and valid inference.",
+evidence:"The laws of logic are foundational to mathematics, science, and ordinary reasoning.",
+argument:"Christian theists argue that an eternal rational God provides a foundation for objective logical truths and human rationality.",
+limit:"Non-theistic philosophers have developed accounts of logic as abstract truths, necessary structures, or features of rational thought."
 },
 {
-title:"The Incarnation",
-category:"Theology",
-summary:"The claim that the eternal Son became human.",
-argument:"Christianity teaches that Jesus is fully divine and fully human. The incarnation explains how God can enter human history and participate in human life without ceasing to be divine.",
-response:"Critics ask how one person can possess both divine and human natures. Historic Christian theology uses the distinction between nature and person to address this, while debates about the doctrine continue."
+n:14,t:"New Testament Textual Transmission",
+tags:"Bible manuscripts textual criticism history",
+body:"The New Testament survives in a large manuscript tradition with thousands of Greek manuscripts and many ancient translations.",
+evidence:"Textual critics compare manuscripts to reconstruct the earliest attainable text and identify variations.",
+argument:"The manuscript tradition makes it possible to study the transmission of the New Testament rather than relying on a single late copy.",
+limit:"Manuscript quantity does not prove every event in the text. Textual criticism identifies variants and evaluates readings."
 },
 {
-title:"The Argument from Religious Experience",
-category:"Philosophy",
-summary:"Can personal experiences provide evidence for God?",
-argument:"People across history report experiences they interpret as encounters with the divine. Some philosophers argue that such experiences can provide initial justification unless there are reasons to distrust them.",
-response:"Experiences can be shaped by psychology, culture, expectation, and neurological processes. Conflicting religious experiences make careful evaluation necessary."
+n:15,t:"Jesus' Identity & Messianic Prophecy",
+tags:"Jesus Messiah prophecy Isaiah Daniel Micah",
+body:"Christians interpret several Hebrew Bible passages as anticipating Jesus and His mission.",
+evidence:"Commonly discussed texts include Isaiah 53, Micah 5:2, Psalm 22, and Daniel 9.",
+argument:"Christians argue that Jesus' life, death, and resurrection fulfill a coherent pattern of biblical expectation.",
+limit:"Jewish and secular interpreters often understand these passages differently. Each proposed prophecy must be examined in its literary and historical context."
 },
 {
-title:"The Problem of Divine Hiddenness",
-category:"Philosophy",
-summary:"Why do sincere seekers sometimes remain unconvinced?",
-argument:"If a perfectly loving God desires relationship with people, why is God's existence not clearer to everyone who is willing to know Him?",
-response:"Christian responses appeal to freedom, the nature of relationship, and possible reasons for divine restraint. The existence of apparently sincere nonbelievers remains a significant challenge that deserves more than dismissal."
+n:16,t:"Beauty, Meaning & Intentionality",
+tags:"beauty aesthetics meaning mind",
+body:"Human experience includes beauty, meaning, intentional thought, and the ability of thoughts to refer to things.",
+evidence:"Philosophy of mind and aesthetics examine intentionality, artistic value, and the nature of beauty.",
+argument:"Theism can explain meaning and beauty as reflections of a rational and creative source.",
+limit:"Naturalistic accounts of aesthetics, meaning, and intentionality also exist and require engagement."
+},
+{
+n:17,t:"Conscience & Final Justice",
+tags:"justice conscience morality judgment",
+body:"Human beings frequently experience moral responsibility and a desire for justice beyond immediate social consequences.",
+evidence:"Moral philosophy examines conscience, responsibility, punishment, forgiveness, and justice.",
+argument:"Christianity teaches that God is the final judge and that no injustice is ultimately beyond His concern.",
+limit:"The desire for ultimate justice does not independently demonstrate that a final judge exists."
+},
+{
+n:18,t:"Biblical Continuity & Temple Theology",
+tags:"Temple sacrifice Hebrews history 70 AD",
+body:"The New Testament interprets Jesus' death through themes of sacrifice, covenant, priesthood, and fulfillment.",
+evidence:"Hebrews 7–10 develops a theological account of Jesus' priesthood and sacrifice. The Jerusalem Temple was destroyed by Rome in AD 70.",
+argument:"Christian theology understands Jesus as the fulfillment of the sacrificial system and the mediator of a new covenant.",
+limit:"The destruction of the Temple does not independently prove that Jesus was the Messiah. Jewish interpretations of sacrifice and covenant differ."
+},
+{
+n:19,t:"Human Nature & the Image of God",
+tags:"human nature sin dignity anthropology",
+body:"Christianity describes humanity as possessing extraordinary dignity while also being morally fallen.",
+evidence:"Genesis 1:26–27 teaches humanity is made in God's image. Christian theology uses this to explain both human worth and moral responsibility.",
+argument:"This account combines human dignity with a realistic understanding of moral failure.",
+limit:"Other religious and secular traditions also offer accounts of human dignity and moral weakness."
+},
+{
+n:20,t:"The Historical Growth of Christianity",
+tags:"early church martyrs Roman history resurrection",
+body:"The Christian movement emerged in the first century and spread throughout the Roman world.",
+evidence:"Tacitus, Pliny the Younger, and early Christian writings provide evidence for the movement and its beliefs.",
+argument:"Christians argue that the early movement's growth, commitment, and resurrection proclamation are best understood in light of the disciples' experiences of the risen Jesus.",
+limit:"The growth of a religious movement does not itself prove its central supernatural claims. Historical context and alternative explanations matter."
 }
 ];
 
-const objections = [
-{
-title:"Who created God?",
-question:"If everything needs a creator, what created God?",
-answer:"Classical theism does not claim that absolutely everything needs a creator. It claims that things which begin to exist or are contingent need an explanation. God is defined as eternal and necessary, not as a created object. The real philosophical question is whether a necessary being exists and whether it is a better explanation than a necessary universe or brute fact.",
-challenge:"Critics argue that calling God necessary does not prove that God is necessary. The argument must establish why the universe itself cannot be the ultimate explanation."
-},
-{
-title:"Why does God allow suffering?",
-question:"How can a loving and powerful God permit terrible suffering?",
-answer:"Christian thinkers offer several responses: genuine freedom makes moral evil possible; a stable natural world makes meaningful action possible but also permits natural harms; and suffering can sometimes produce courage, compassion, or moral growth. Christianity also presents God as entering human suffering through Jesus.",
-challenge:"These answers do not automatically explain every instance of suffering. The scale and apparent pointlessness of some suffering remain among the strongest objections to theism."
-},
-{
-title:"Science explains the universe without God.",
-question:"Doesn't science make God unnecessary?",
-answer:"Science explains natural processes through testable models. Theism asks a different, broader question: why there is a law-governed reality at all. Scientific explanations and metaphysical explanations are not automatically competitors.",
-challenge:"A critic can argue that natural explanations may eventually answer more questions than current science can. Theism should not use gaps in scientific knowledge as proof."
-},
-{
-title:"There are thousands of religions.",
-question:"Why should Christianity be true rather than another religion?",
-answer:"The existence of competing religions does not logically prove that all are false. Their claims can be compared: what do they say about God, history, human nature, salvation, and revelation? Christianity's central historical claim is the resurrection of Jesus, which can be investigated separately from general arguments for God.",
-challenge:"Religious diversity makes it necessary to explain why Christian revelation should be trusted over competing revelations. Christians must engage the strongest versions of other traditions."
-},
-{
-title:"The Bible contains contradictions.",
-question:"How can the Bible be trustworthy if passages seem to conflict?",
-answer:"Some apparent conflicts can be examined through genre, translation, context, authorial purpose, and the possibility that different accounts select different details. A difference is not automatically a contradiction; a genuine contradiction would require two claims that cannot both be true in the same sense.",
-challenge:"Not every proposed reconciliation is convincing. Each alleged contradiction should be evaluated individually, and uncertainty should be acknowledged where evidence is incomplete."
-},
-{
-title:"The resurrection is impossible.",
-question:"Dead people do not normally rise. Why believe it happened?",
-answer:"Christianity does not claim resurrection is an ordinary natural event. It claims God acted extraordinarily. If God exists, a miracle is possible in principle. The question becomes whether the historical evidence justifies believing this particular miracle occurred.",
-challenge:"The fact that a miracle is possible does not show that it happened. The evidence must be strong enough to justify an extraordinary conclusion."
-},
-{
-title:"Evolution disproves Christianity.",
-question:"Does evolution contradict the Bible?",
-answer:"Many Christians accept evolutionary biology and interpret Genesis through theological, literary, or ancient-context approaches. Other Christians defend different understandings of creation. Evolution as a biological theory does not by itself settle whether God exists.",
-challenge:"Questions remain about Adam, original sin, death, and how particular biblical passages should be interpreted."
-},
-{
-title:"Morality does not require God.",
-question:"Can atheists be good people?",
-answer:"Absolutely. A person's moral character is not determined simply by whether they believe in God. The philosophical question is not whether nonbelievers can act morally, but what ultimately grounds objective moral truths and obligations.",
-challenge:"Secular moral realism is a serious position. Christian arguments need to address it rather than claim that atheists cannot be moral."
-},
-{
-title:"Jesus never claimed to be God.",
-question:"Was Jesus actually understood as divine?",
-answer:"Christians point to the Gospel of John, Jesus' authority to forgive sins, his relationship with the Father, and passages such as Mark 14:61–64. They argue that the New Testament presents a high view of Jesus from early Christianity.",
-challenge:"Scholars debate how to interpret these texts and how Jesus understood himself. A strong case reads passages in context and considers the historical development of Christian belief."
-},
-{
-title:"Christianity copied older religions.",
-question:"Are Christian beliefs just borrowed myths?",
-answer:"Claims of borrowing need specific evidence: which text, which date, which tradition, and what exact parallel? Similar themes do not automatically establish direct borrowing. Historical influence is possible and should be investigated rather than assumed or dismissed.",
-challenge:"Some popular comparisons exaggerate similarities; others raise genuine historical questions. Each case needs careful source comparison."
-},
-{
-title:"God is hidden.",
-question:"Why doesn't God make Himself obvious to everyone?",
-answer:"Some Christian philosophers argue that God may value freely chosen relationship, that overwhelming displays of power would not necessarily create love, and that people can resist evidence for many reasons.",
-challenge:"This does not fully explain why sincere, open-minded people sometimes remain unconvinced. Divine hiddenness is a serious philosophical challenge."
-},
-{
-title:"The Bible was written by humans.",
-question:"Why trust ancient writings?",
-answer:"Christians generally agree that human authors wrote the biblical books. They argue that divine inspiration can work through human authors, languages, historical settings, and literary styles. Historical investigation can assess what the texts preserve.",
-challenge:"Inspiration is a theological claim, not something established merely by identifying an ancient manuscript. Authorship, transmission, canon formation, and interpretation all matter."
-},
-{
-title:"The multiverse explains fine-tuning.",
-question:"Why invoke God if many universes could exist?",
-answer:"A multiverse could potentially explain why observers find themselves in a life-permitting universe: observers can only exist in universes compatible with their existence. Theism proposes that a creator explains why there is a life-permitting reality at all.",
-challenge:"The multiverse is not a settled explanation, but neither is design a direct scientific result. Both proposals face questions about evidence and explanatory power."
-},
-{
-title:"Why believe Christianity rather than Islam?",
-question:"Both religions believe in one God. Why accept Jesus as divine?",
-answer:"The central disagreement is about Jesus. Christianity says Jesus is the incarnate Son of God, crucified and resurrected. Islam honors Jesus as Messiah and prophet but rejects his divinity and generally rejects the Christian account of the crucifixion and resurrection. The historical evidence for Jesus' execution and the early Christian resurrection proclamation is therefore central to the debate.",
-challenge:"Muslim arguments appeal to the Quran as revelation and offer different interpretations of the earlier scriptures. A fair comparison must examine the reliability and dating of the sources each tradition relies on."
-},
-{
-title:"Why not Judaism?",
-question:"Why accept Jesus as Messiah when Judaism does not?",
-answer:"Christianity argues that Jesus fulfills Israel's story and messianic hopes, while interpreting some prophecies in ways that differ from Jewish readings. The earliest Christian movement was itself Jewish and came to identify Jesus as Messiah.",
-challenge:"Jewish interpretations of messianic prophecy differ substantially. The question requires close reading of the Hebrew Bible, historical context, and the claims made about Jesus."
-},
-{
-title:"Why not Buddhism?",
-question:"Does Buddhism explain human life without a creator?",
-answer:"Buddhist traditions offer sophisticated accounts of suffering, impermanence, craving, and liberation. Christianity differs by affirming a personal creator, objective purpose, and resurrection. The traditions address overlapping but not identical questions.",
-challenge:"Buddhism is internally diverse. It should not be reduced to one simple claim, and its philosophical arguments deserve serious study."
-},
-{
-title:"Is hell compatible with love?",
-question:"How can a loving God permit eternal punishment?",
-answer:"Christian traditions disagree about the nature of hell. Some defend eternal conscious punishment, some conditional immortality, and some hope for universal reconciliation. Their arguments appeal to justice, freedom, judgment, and biblical interpretation.",
-challenge:"The justice and duration of punishment remain difficult theological and moral questions. A Christian answer should identify which view it defends and why."
+const axiomContainer=document.getElementById("axiomCards");
+
+function renderAxioms(filter=""){
+  const q=filter.toLowerCase();
+  axiomContainer.innerHTML="";
+  axioms.filter(a=>(a.t+" "+a.tags+" "+a.body+" "+a.argument).toLowerCase().includes(q))
+  .forEach(a=>{
+    const article=document.createElement("article");
+    article.className="card";
+    article.innerHTML=`
+      <span class="label">AXIOM ${a.n}</span>
+      <h3>${a.t}</h3>
+      <p>${a.tags.split(" ").map(t=>`<span class="tag">${t}</span>`).join("")}</p>
+      <p>${a.body}</p>
+      <details>
+        <summary>▼ Examine the evidence and argument</summary>
+        <div class="evidence"><strong>Evidence:</strong> ${a.evidence}</div>
+        <div class="reasoning"><strong>Christian argument:</strong> ${a.argument}</div>
+        <div class="caution"><strong>Scope and limitations:</strong> ${a.limit}</div>
+      </details>`;
+    axiomContainer.appendChild(article);
+  });
 }
-];
+renderAxioms();
 
-const worldviews = [
-{
-name:"Christianity",
-summary:"One God; Jesus Christ is the divine Son who became human, was crucified, and was raised from the dead.",
-claim:"Central claim to test: Did Jesus rise from the dead, and does the earliest Christian testimony support His divine identity?",
-question:"What historical and theological reasons justify trusting the New Testament's claims about Jesus?"
-},
-{
-name:"Islam",
-summary:"Strict monotheism; the Quran is revelation from God, and Muhammad is God's final prophet. Jesus is honored as Messiah and prophet, but not God.",
-claim:"Central disagreement: Islam rejects the Christian understanding of Jesus' divine identity and the crucifixion/resurrection account.",
-question:"How should the Quran's claims about Jesus be evaluated alongside earlier Christian sources and the historical evidence?"
-},
-{
-name:"Judaism",
-summary:"Monotheistic tradition centered on the covenant, Torah, and Jewish people. Mainstream Judaism does not accept Jesus as God or the Messiah.",
-claim:"Central disagreement: Christian interpretations of messianic prophecy and Jesus' identity differ from Jewish interpretations.",
-question:"Do the Hebrew scriptures support the Christian reading of messianic expectation, and how should those texts be understood in context?"
-},
-{
-name:"Atheism",
-summary:"Generally a lack of belief in gods or the belief that no gods exist. Atheists hold many different philosophical positions.",
-claim:"Central question: Can natural reality adequately explain existence, consciousness, reason, and morality?",
-question:"Which arguments for theism, if any, succeed against the strongest naturalistic alternatives?"
-},
-{
-name:"Naturalism",
-summary:"The view that reality is fundamentally natural and does not require supernatural explanations.",
-claim:"Central question: Is the natural world all that exists, or does it depend on a deeper foundation?",
-question:"Can naturalism explain why there is a universe and why it has orderly laws?"
-},
-{
-name:"Deism",
-summary:"Belief in a creator who does not necessarily intervene through miracles or special revelation.",
-claim:"Central disagreement: Deism may accept a creator while rejecting Christianity's claims about revelation and incarnation.",
-question:"Is there good reason to believe God has acted in history, especially in Jesus?"
-},
-{
-name:"Buddhism",
-summary:"A diverse set of traditions focused on suffering, impermanence, ethical practice, meditation, and liberation.",
-claim:"Central difference: Many Buddhist traditions do not center on a creator God or a divine incarnation.",
-question:"Which worldview best explains consciousness, suffering, moral obligation, and ultimate reality?"
-},
-{
-name:"Hindu traditions",
-summary:"A broad family of philosophies and religious traditions with varied accounts of ultimate reality, divinity, self, karma, and liberation.",
-claim:"Central difference: Hindu traditions include forms of monism, theism, polytheistic worship, and other metaphysical positions.",
-question:"How do different accounts of ultimate reality compare with Christian personal theism?"
-}
-];
+document.getElementById("axiomSearch").addEventListener("input",e=>renderAxioms(e.target.value));
 
-function renderEvidence() {
-    const query=document.getElementById("evidenceSearch").value.toLowerCase();
-    const category=document.querySelector(".filter.active").dataset.category;
-    const results=evidence.filter(x =>
-        (category==="All" || x.category===category) &&
-        (x.title+" "+x.summary+" "+x.argument+" "+x.response).toLowerCase().includes(query)
-    );
-    const root=document.getElementById("evidenceList");
-    root.innerHTML="";
-    if(!results.length) {
-        root.innerHTML='<div class="empty">No matching research entries.</div>';
-        return;
-    }
-    results.forEach(x => {
-        root.innerHTML+=`
-        <article class="entry">
-            <span class="label">${x.category}</span>
-            <h3>${x.title}</h3>
-            <p>${x.summary}</p>
-            <details>
-                <summary>Read the argument and critical response</summary>
-                <p><span class="answer-label">Argument:</span> ${x.argument}</p>
-                <p><span class="challenge-label">Critical response:</span> ${x.response}</p>
-            </details>
-        </article>`;
-    });
-}
-
-function renderObjections() {
-    const query=document.getElementById("objectionSearch").value.toLowerCase();
-    const results=objections.filter(x =>
-        (x.title+" "+x.question+" "+x.answer+" "+x.challenge).toLowerCase().includes(query)
-    );
-    const root=document.getElementById("objectionList");
-    root.innerHTML="";
-    if(!results.length) {
-        root.innerHTML='<div class="empty">No matching questions found.</div>';
-        return;
-    }
-    results.forEach(x => {
-        root.innerHTML+=`
-        <article class="entry">
-            <span class="label">QUESTION / OBJECTION</span>
-            <h3>${x.title}</h3>
-            <p>${x.question}</p>
-            <details>
-                <summary>Read the Christian response and remaining challenge</summary>
-                <p><span class="answer-label">Christian response:</span> ${x.answer}</p>
-                <p><span class="challenge-label">What remains to be addressed:</span> ${x.challenge}</p>
-            </details>
-        </article>`;
-    });
-}
-
-function renderWorldviews() {
-    const query=document.getElementById("worldSearch").value.toLowerCase();
-    const results=worldviews.filter(x =>
-        (x.name+" "+x.summary+" "+x.claim+" "+x.question).toLowerCase().includes(query)
-    );
-    const root=document.getElementById("worldviewList");
-    root.innerHTML="";
-    if(!results.length) {
-        root.innerHTML='<div class="empty">No matching worldviews found.</div>';
-        return;
-    }
-    results.forEach(x => {
-        root.innerHTML+=`
-        <article class="worldview">
-            <span class="label">WORLDVIEW</span>
-            <h3>${x.name}</h3>
-            <p>${x.summary}</p>
-            <details>
-                <summary>Explore its central claims</summary>
-                <p><strong>Key issue:</strong> ${x.claim}</p>
-                <p><strong>Question to investigate:</strong> ${x.question}</p>
-            </details>
-        </article>`;
-    });
-}
-
-document.getElementById("evidenceSearch").addEventListener("input",renderEvidence);
-document.getElementById("objectionSearch").addEventListener("input",renderObjections);
-document.getElementById("worldSearch").addEventListener("input",renderWorldviews);
-
-document.querySelectorAll(".filter").forEach(button => {
-    button.addEventListener("click",() => {
-        document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
-        button.classList.add("active");
-        renderEvidence();
-    });
+document.getElementById("worldviewSearch").addEventListener("input",e=>{
+  const q=e.target.value.toLowerCase();
+  document.querySelectorAll(".worldview").forEach(card=>{
+    card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+  });
 });
 
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("open");
-}
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click",() => {
-        document.getElementById("navLinks").classList.remove("open");
-    });
+const menuButton=document.getElementById("menuButton");
+const navLinks=document.getElementById("navLinks");
+menuButton.addEventListener("click",()=>{
+  navLinks.classList.toggle("open");
 });
-
-renderEvidence();
-renderObjections();
-renderWorldviews();
+navLinks.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",()=>navLinks.classList.remove("open"));
+});
 </script>
 
 </body>
