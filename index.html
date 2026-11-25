@@ -5,487 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#06070f">
 <title>QuantumTheology | S-GUOT Apologetics Archive</title>
-<meta name="description" content="The Seibert Grand Unified Ontological Theory (S-GUOT): 20 hardened axioms showing every worldview fails except Jesus.">
+<meta name="description" content="The Seibert Grand Unified Ontological Theory (S-GUOT): 20 hardened axioms, 22 worldviews eliminated, 48 debate rebuttals, and the case that every worldview fails except Jesus.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="QuantumTheology | S-GUOT Apologetics Archive">
-<meta property="og:description" content="Every worldview fails except Jesus. The 20 hardened axioms, the disjunctive syllogism, and the debate archive.">
+<meta property="og:description" content="Every worldview fails except Jesus. 20 hardened axioms, 22 worldviews eliminated, and 48 debate rebuttals.">
 <script>
 document.documentElement.classList.add("js");
 setTimeout(function () { if (!window.__qtReady) document.documentElement.classList.remove("js"); }, 3000);
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#06070f;
-  --panel:#111321;
-  --panel2:#171a2b;
-  --line:rgba(255,255,255,.09);
-  --text:#f5f6ff;
-  --muted:#a6abc2;
-  --body:#dfe2f3;
-  --purple:#a78bfa;
-  --blue:#60a5fa;
-  --cyan:#67e8f9;
-  --pink:#f0abfc;
-  --green:#6ee7b7;
-  --gold:#fbbf77;
-  --red:#fb7185;
-  --card-bg:linear-gradient(145deg,rgba(24,27,48,.9),rgba(11,13,25,.93));
-  --ease:cubic-bezier(.16,.84,.3,1);
-}
-@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
-*{box-sizing:border-box}
-[hidden]{display:none !important}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:'DM Sans',sans-serif;line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-main{overflow-x:hidden;overflow-x:clip}
-a{color:var(--cyan);text-decoration:none}
-a:hover{opacity:.85}
-button,input{font:inherit}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
-::selection{background:rgba(167,139,250,.35);color:#fff}
-
-/* ---------- Living background: aurora + starfield + cursor bloom ---------- */
-.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
-.aurora i{position:absolute;width:70vmax;height:70vmax;border-radius:50%;mix-blend-mode:screen;will-change:transform}
-.aurora i:nth-child(1){left:-28vmax;top:-32vmax;background:radial-gradient(circle,rgba(124,58,237,.5),rgba(124,58,237,0) 62%);animation:drift1 24s ease-in-out infinite alternate}
-.aurora i:nth-child(2){right:-32vmax;top:0;background:radial-gradient(circle,rgba(14,165,233,.36),rgba(14,165,233,0) 62%);animation:drift2 30s ease-in-out infinite alternate}
-.aurora i:nth-child(3){left:0;bottom:-44vmax;background:radial-gradient(circle,rgba(217,70,239,.26),rgba(217,70,239,0) 62%);animation:drift3 36s ease-in-out infinite alternate}
-@keyframes drift1{to{transform:translate(24vmax,20vmax) scale(1.15)}}
-@keyframes drift2{to{transform:translate(-22vmax,26vmax) scale(.88)}}
-@keyframes drift3{to{transform:translate(20vmax,-18vmax) scale(1.2)}}
-#stars{position:fixed;left:0;top:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.cursor-glow{
-  position:fixed;left:0;top:0;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;
-  background:radial-gradient(circle,rgba(167,139,250,.14),rgba(96,165,250,.06) 38%,rgba(96,165,250,0) 66%);
-  pointer-events:none;z-index:-1;opacity:0;transition:opacity .5s,transform .2s ease-out;will-change:transform;
-}
-.cursor-glow.on{opacity:1}
-
-/* ---------- Header ---------- */
-header{
-  position:sticky;top:0;z-index:20;
-  background:rgba(6,7,15,.68);
-  backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);
-  border-bottom:1px solid var(--line);
-}
-.nav{
-  max-width:1250px;margin:auto;padding:18px 25px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{font-family:'Space Grotesk',sans-serif;color:#fff;font-size:23px;font-weight:700;letter-spacing:-1.2px}
-.logo span{
-  background:linear-gradient(90deg,var(--purple),var(--blue),var(--cyan),var(--purple));background-size:200% auto;
-  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s linear infinite;
-}
-.menu-button{
-  background:rgba(23,26,43,.8);border:1px solid var(--line);color:#fff;
-  border-radius:13px;padding:11px 18px;cursor:pointer;font-weight:700;
-  transition:border-color .3s,box-shadow .3s;
-}
-.menu-button:hover,.menu-button[aria-expanded="true"]{border-color:rgba(167,139,250,.5);box-shadow:0 0 26px -6px rgba(167,139,250,.8)}
-.nav-links{
-  display:none;position:absolute;top:72px;right:20px;
-  background:rgba(15,17,32,.97);border:1px solid rgba(167,139,250,.24);
-  border-radius:18px;padding:12px;min-width:250px;transform-origin:top right;
-  box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px -20px rgba(167,139,250,.55);
-}
-.nav-links.open{display:grid;gap:4px;animation:menuBloom .45s var(--ease)}
-.nav-links a{color:var(--text);padding:9px 12px;border-radius:11px;transition:background .25s,padding-left .3s var(--ease)}
-.nav-links a:hover{background:rgba(167,139,250,.13);padding-left:17px;opacity:1}
-.progress{
-  position:absolute;left:0;right:0;bottom:-1px;height:2px;transform:scaleX(0);transform-origin:0 50%;
-  background:linear-gradient(90deg,var(--purple),var(--blue),var(--cyan));
-  box-shadow:0 0 14px rgba(103,232,249,.8);pointer-events:none;
-}
-@keyframes menuBloom{from{opacity:0;transform:translateY(-10px) scale(.94);filter:blur(8px)}}
-@keyframes shimmer{to{background-position:200% 0}}
-
-/* ---------- Hero ---------- */
-.container{max-width:1150px;margin:auto;padding:0 25px}
-.hero{position:relative;isolation:isolate;padding:110px 0 90px;text-align:center}
-.hero-bloom{
-  position:absolute;left:50%;top:40%;width:min(880px,150vw);aspect-ratio:1/1;
-  translate:-50% -50%;z-index:-1;pointer-events:none;animation:bloomOpen 2.8s var(--ease) backwards;
-}
-.petals-fade{
-  position:absolute;inset:0;opacity:.8;
-  -webkit-mask-image:radial-gradient(circle closest-side,#000 18%,rgba(0,0,0,0) 100%);
-  mask-image:radial-gradient(circle closest-side,#000 18%,rgba(0,0,0,0) 100%);
-}
-.petals-spin{position:absolute;inset:0;filter:blur(24px);animation:spin 80s linear infinite}
-.petals{
-  position:absolute;inset:6%;border-radius:50%;opacity:.55;
-  background:conic-gradient(from 0deg,#a78bfa,#60a5fa,#67e8f9,#f0abfc,#a78bfa);
-  -webkit-mask-image:repeating-conic-gradient(#000 0deg 7deg,rgba(0,0,0,0) 15deg 30deg);
-  mask-image:repeating-conic-gradient(#000 0deg 7deg,rgba(0,0,0,0) 15deg 30deg);
-}
-.bloom-core{
-  position:absolute;inset:24%;border-radius:50%;
-  background:radial-gradient(circle,rgba(196,181,253,.4),rgba(96,165,250,.15) 42%,rgba(96,165,250,0) 70%);
-  animation:breathe 6s ease-in-out infinite;
-}
-.ring{
-  position:absolute;inset:27%;border-radius:50%;border:1px solid rgba(167,139,250,.45);
-  box-shadow:0 0 34px rgba(167,139,250,.22),inset 0 0 34px rgba(103,232,249,.1);
-  opacity:0;animation:ripple 8s cubic-bezier(.2,.6,.3,1) infinite;
-}
-.ring:nth-of-type(2){animation-delay:2.66s}
-.ring:nth-of-type(3){animation-delay:5.33s}
-@keyframes bloomOpen{from{opacity:0;scale:.3}}
-@keyframes spin{to{rotate:360deg}}
-@keyframes breathe{50%{scale:1.14;opacity:.75}}
-@keyframes ripple{0%{scale:.4;opacity:0}14%{opacity:.75}100%{scale:1.85;opacity:0}}
-
-.eyebrow{
-  display:inline-block;padding:8px 15px;border-radius:30px;border:1px solid transparent;
-  background:
-    linear-gradient(#0c0e1b,#0c0e1b) padding-box,
-    conic-gradient(from var(--a,0deg),rgba(167,139,250,.2),#a78bfa,#67e8f9,rgba(167,139,250,.2) 55%,rgba(167,139,250,.2)) border-box;
-  color:var(--purple);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
-  box-shadow:0 0 26px -8px rgba(167,139,250,.65);animation:spinBorder 6s linear infinite;
-}
-@keyframes spinBorder{to{--a:360deg}}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
-h1{font-size:clamp(44px,8.6vw,92px);line-height:1.04;letter-spacing:-.045em;margin:26px 0}
-.w{display:inline-block;animation:wordBloom 1.2s var(--ease) backwards;animation-delay:calc(var(--i,0) * 130ms + 150ms)}
-.w.grad{
-  padding:0 .04em .1em;margin-bottom:-.1em;
-  background:linear-gradient(90deg,#c4b5fd,#60a5fa,#67e8f9,#f0abfc,#c4b5fd);background-size:200% auto;
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:wordBloomSoft 1.3s var(--ease) .55s backwards,shimmer 8s linear infinite;
-}
-@keyframes wordBloom{from{opacity:0;transform:translateY(.4em) scale(.8);filter:blur(16px)}}
-@keyframes wordBloomSoft{from{opacity:0;transform:translateY(.4em) scale(.8)}}
-@keyframes fadeBloom{from{opacity:0;transform:translateY(16px) scale(.96);filter:blur(10px)}}
-.hero .eyebrow{animation:fadeBloom 1s var(--ease) backwards,spinBorder 6s linear infinite}
-.hero-sub{max-width:760px;margin:0 auto;color:var(--muted);font-size:18px;animation:fadeBloom 1.1s var(--ease) .85s backwards}
-.hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px;animation:fadeBloom 1.1s var(--ease) 1s backwards}
-.btn{
-  position:relative;overflow:hidden;display:inline-block;padding:14px 24px;border-radius:14px;
-  font-weight:800;border:1px solid var(--line);
-  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;
-}
-.btn:hover{opacity:1;transform:translateY(-2px)}
-.btn-primary{
-  color:#fff;border-color:rgba(255,255,255,.12);
-  background:linear-gradient(100deg,#7c5cf0,#3b82f6 60%,#22d3ee);
-  box-shadow:0 12px 34px -10px rgba(124,92,240,.85);
-}
-.btn-primary::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(110deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.38) 50%,rgba(255,255,255,0) 70%);
-  translate:-120% 0;animation:shine 5s ease-in-out 2.4s infinite;
-}
-.btn-primary:hover{box-shadow:0 18px 48px -10px rgba(124,92,240,1),0 0 60px -12px rgba(34,211,238,.7)}
-.btn-secondary{color:#fff;background:rgba(17,19,33,.75);border-color:rgba(167,139,250,.28)}
-.btn-secondary:hover{border-color:rgba(103,232,249,.55);box-shadow:0 0 36px -10px rgba(103,232,249,.75)}
-@keyframes shine{0%,62%{translate:-120% 0}100%{translate:120% 0}}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:70px auto 0}
-.stat{
-  position:relative;overflow:hidden;border-radius:20px;padding:24px;
-  background:linear-gradient(145deg,rgba(24,27,48,.72),rgba(11,13,25,.78));
-  border:1px solid rgba(167,139,250,.18);animation:fadeBloom 1.1s var(--ease) backwards;
-}
-.stat:nth-child(1){animation-delay:1.1s}
-.stat:nth-child(2){animation-delay:1.22s}
-.stat::before{
-  content:"";position:absolute;left:10%;right:10%;top:-70%;height:140%;pointer-events:none;
-  background:radial-gradient(closest-side,rgba(103,232,249,.2),rgba(103,232,249,0));
-}
-.stat strong{
-  position:relative;display:block;font-size:44px;line-height:1.1;color:var(--cyan);
-  font-family:'Space Grotesk',sans-serif;text-shadow:0 0 28px rgba(103,232,249,.6);
-}
-.stat span{position:relative;color:var(--muted);font-size:13px;letter-spacing:.5px}
-
-/* ---------- Sections ---------- */
-section{padding:70px 0;scroll-margin-top:70px}
-.section-heading{margin-bottom:32px}
-.section-heading .eyebrow{margin-bottom:16px}
-.section-heading h2{font-size:clamp(32px,5.4vw,50px);letter-spacing:-.02em;margin:0 0 12px;text-shadow:0 0 44px rgba(167,139,250,.38)}
-.section-heading p{color:var(--muted);max-width:760px;margin:0}
-
-/* ---------- Cards ---------- */
-.card{
-  position:relative;isolation:isolate;
-  background:var(--card-bg);border:1px solid var(--line);border-radius:22px;
-  padding:28px;margin-bottom:18px;scroll-margin-top:95px;
-  box-shadow:0 18px 50px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.04);
-  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s;
-}
-.card::before{
-  content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
-  background:radial-gradient(460px circle at var(--mx,50%) var(--my,0%),rgba(167,139,250,.11),rgba(167,139,250,0) 45%);
-  opacity:0;transition:opacity .4s;
-}
-.card::after{
-  content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;
-  background:radial-gradient(300px circle at var(--mx,50%) var(--my,0%),rgba(196,181,253,.95),rgba(96,165,250,.45) 40%,rgba(96,165,250,0) 70%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
-  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
-  opacity:0;transition:opacity .4s;
-}
-@media (hover:hover) and (pointer:fine){
-  .card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.22);box-shadow:0 26px 70px rgba(0,0,0,.4),0 0 50px -16px rgba(167,139,250,.45)}
-  .card:hover::before,.card:hover::after{opacity:1}
-}
-.card h3{font-size:23px;margin:8px 0 12px}
-.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.label{
-  color:var(--purple);font-size:12px;letter-spacing:2px;font-weight:800;text-transform:uppercase;
-  text-shadow:0 0 14px rgba(167,139,250,.5);
-}
-.card p{color:var(--muted);margin:10px 0}
-.card .body{color:var(--body)}
-.card .q-note{margin:-6px 0 4px;font-size:14px;font-weight:700}
-.evidence,.receipts,.fallacy{padding:14px 17px;border-radius:0 14px 14px 0;margin-top:14px}
-.evidence{
-  border-left:3px solid var(--green);color:#d5f8e9;
-  background:linear-gradient(90deg,rgba(110,231,183,.09),rgba(110,231,183,.03));
-  box-shadow:-6px 0 20px -12px rgba(110,231,183,.9);
-}
-.receipts{
-  border-left:3px solid var(--gold);color:#f5dfbd;
-  background:linear-gradient(90deg,rgba(251,191,119,.08),rgba(251,191,119,.025));
-  box-shadow:-6px 0 20px -12px rgba(251,191,119,.9);
-}
-.fallacy{
-  border-left:3px solid var(--red);color:#ffd6dd;
-  background:linear-gradient(90deg,rgba(251,113,133,.09),rgba(251,113,133,.03));
-  box-shadow:-6px 0 20px -12px rgba(251,113,133,.9);
-}
-.tag{
-  display:inline-block;font-size:11px;font-weight:800;
-  border:1px solid var(--line);border-radius:30px;
-  padding:5px 10px;color:var(--cyan);margin:3px 4px 3px 0;
-}
-.tag.green{color:var(--green);border-color:rgba(110,231,183,.35);box-shadow:0 0 16px -6px rgba(110,231,183,.8)}
-.tag.red{color:var(--red);border-color:rgba(251,113,133,.35);box-shadow:0 0 16px -6px rgba(251,113,133,.8)}
-.ref{color:var(--cyan);text-decoration:underline dotted;text-underline-offset:3px}
-.axlink{color:var(--purple);font-weight:700;text-shadow:0 0 12px rgba(167,139,250,.45)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.grid > .card{margin:0}
-.sub-list{margin:10px 0 0;padding-left:20px}
-.sub-list li{margin:8px 0}
-
-/* ---------- Bucket colors (memory map, axioms, chips) ---------- */
-[data-bucket="cosmos"],[data-filter="cosmos"]{--accent:#a78bfa;--glow:rgba(167,139,250,.2);--ring:rgba(167,139,250,.45)}
-[data-bucket="code"],[data-filter="code"]{--accent:#60a5fa;--glow:rgba(96,165,250,.2);--ring:rgba(96,165,250,.45)}
-[data-bucket="mind"],[data-filter="mind"]{--accent:#67e8f9;--glow:rgba(103,232,249,.16);--ring:rgba(103,232,249,.45)}
-[data-bucket="trinity"],[data-filter="trinity"]{--accent:#fbbf77;--glow:rgba(251,191,119,.16);--ring:rgba(251,191,119,.45)}
-[data-bucket="jesus"],[data-filter="jesus"]{--accent:#6ee7b7;--glow:rgba(110,231,183,.16);--ring:rgba(110,231,183,.45)}
-
-/* ---------- Search + filters ---------- */
-.search{
-  -webkit-appearance:none;appearance:none;width:100%;padding:16px 18px 16px 48px;
-  background:rgba(17,19,33,.78) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a78bfa' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") no-repeat 18px 50%/18px 18px;
-  border:1px solid var(--line);border-radius:16px;color:#fff;margin:16px 0 10px;outline:none;
-  transition:border-color .3s,box-shadow .3s;
-}
-.search:focus{border-color:rgba(167,139,250,.6);box-shadow:0 0 0 4px rgba(167,139,250,.14),0 0 34px -6px rgba(167,139,250,.55)}
-.result-count{color:var(--muted);font-size:13px;margin:0 0 18px}
-.empty{color:var(--muted);text-align:center;padding:30px;border:1px dashed rgba(167,139,250,.3);border-radius:18px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{
-  background:rgba(17,19,33,.78);border:1px solid var(--line);color:var(--muted);
-  border-radius:30px;padding:8px 15px;font-size:13px;font-weight:800;cursor:pointer;
-  transition:color .25s,border-color .25s,box-shadow .3s,background .3s;
-}
-.chip:hover{color:var(--text);border-color:var(--ring,rgba(167,139,250,.45))}
-.chip[aria-pressed="true"]{background:var(--accent);color:#0a0b16;border-color:transparent;box-shadow:0 0 28px -4px var(--accent)}
-.chip[data-filter="all"][aria-pressed="true"]{background:linear-gradient(100deg,#7c5cf0,#3b82f6);color:#fff;box-shadow:0 0 28px -4px rgba(124,92,240,.85)}
-.stage{
-  display:flex;align-items:center;gap:12px;margin:34px 0 16px;
-  color:var(--cyan);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;
-  text-shadow:0 0 18px rgba(103,232,249,.45);
-}
-.stage::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px 2px rgba(103,232,249,.8)}
-.stage::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(103,232,249,.5),rgba(103,232,249,0))}
-.copy-btn{
-  background:rgba(17,19,33,.6);border:1px solid var(--line);color:var(--muted);
-  border-radius:10px;padding:5px 12px;font-size:12px;font-weight:800;
-  cursor:pointer;flex-shrink:0;transition:color .25s,border-color .25s,box-shadow .3s;
-}
-.copy-btn:hover{color:var(--text);border-color:rgba(167,139,250,.5);box-shadow:0 0 18px -6px rgba(167,139,250,.9)}
-.copy-btn.copied{color:var(--green);border-color:rgba(110,231,183,.5);box-shadow:0 0 18px -4px rgba(110,231,183,.9)}
-
-/* ---------- Founder ---------- */
-.card .mini-label{
-  font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
-  color:var(--text);margin:18px 0 4px;
-}
-
-/* ---------- Memory map ---------- */
-.bucket-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
-.bucket{
-  grid-column:span 2;display:flex;flex-direction:column;margin:0;
-  background:radial-gradient(380px circle at 100% 0%,var(--glow),rgba(0,0,0,0) 60%),var(--card-bg);
-}
-.bucket:nth-child(n+4){grid-column:span 3}
-.bucket .num{
-  font-family:'Space Grotesk',sans-serif;font-size:42px;font-weight:700;line-height:1;
-  color:transparent;-webkit-text-stroke:1px var(--ring);
-}
-.bucket h3{font-size:27px;letter-spacing:-.5px;margin:10px 0 4px;color:var(--accent);text-shadow:0 0 26px var(--ring)}
-.card .axrefs{font-size:13px;font-weight:700;margin:0}
-.bucket .desc{flex:1}
-.bucket-btn{
-  align-self:flex-start;margin-top:8px;background:rgba(17,19,33,.7);
-  border:1px solid var(--ring);color:#fff;border-radius:12px;
-  padding:10px 15px;font-weight:800;cursor:pointer;transition:box-shadow .3s,transform .3s var(--ease);
-}
-.bucket-btn:hover{box-shadow:0 0 28px -6px var(--accent);transform:translateX(3px)}
-
-/* ---------- Axiom cards take their bucket's color ---------- */
-.axiom{background:radial-gradient(520px circle at 0% 0%,var(--glow,rgba(167,139,250,.14)),rgba(0,0,0,0) 55%),var(--card-bg)}
-.axiom .label{color:var(--accent,var(--purple));text-shadow:0 0 14px var(--ring,rgba(167,139,250,.5))}
-.axiom .tag{color:var(--accent);border-color:var(--ring);box-shadow:0 0 18px -6px var(--ring)}
-
-/* ---------- Worldview elimination ---------- */
-.wv{
-  display:flex;gap:18px;align-items:flex-start;border-left:3px solid var(--red);
-  background:radial-gradient(420px circle at 0% 50%,rgba(251,113,133,.1),rgba(0,0,0,0) 60%),var(--card-bg);
-}
-.wv-num{
-  font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;line-height:1;
-  min-width:40px;color:transparent;-webkit-text-stroke:1px rgba(251,113,133,.6);
-}
-.wv h3{margin:0 0 8px}
-.wv.win{
-  border-color:rgba(110,231,183,.35);border-left-color:var(--green);
-  background:radial-gradient(520px circle at 0% 50%,rgba(110,231,183,.16),rgba(0,0,0,0) 60%),linear-gradient(145deg,rgba(14,44,38,.92),rgba(11,13,25,.94));
-  animation:winGlow 3.6s ease-in-out infinite;
-}
-.wv.win .wv-num{-webkit-text-stroke:1px rgba(110,231,183,.85)}
-.badge{
-  display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;
-  text-transform:uppercase;border-radius:30px;padding:5px 11px;
-}
-.badge.elim{color:var(--red);border:1px solid rgba(251,113,133,.45);background:rgba(251,113,133,.08);box-shadow:0 0 18px -6px rgba(251,113,133,.85)}
-.badge.win{color:var(--green);border:1px solid rgba(110,231,183,.5);background:rgba(110,231,183,.1);box-shadow:0 0 22px -4px rgba(110,231,183,.9)}
-@keyframes winGlow{
-  0%,100%{box-shadow:0 0 0 1px rgba(110,231,183,.2),0 0 40px -12px rgba(110,231,183,.45)}
-  50%{box-shadow:0 0 0 1px rgba(110,231,183,.45),0 0 80px -8px rgba(110,231,183,.6)}
-}
-
-/* ---------- 4-step proof ---------- */
-.step{display:flex;gap:18px;align-items:flex-start}
-.step-n{
-  flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;
-  background:radial-gradient(circle at 35% 30%,rgba(103,232,249,.25),rgba(23,26,43,.9) 70%);
-  border:1px solid rgba(103,232,249,.35);box-shadow:0 0 24px -6px rgba(103,232,249,.7);
-  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--cyan);
-}
-.step p{margin:9px 0 0;color:var(--text);font-size:17px}
-.step.final{
-  border-color:rgba(110,231,183,.38);
-  background:radial-gradient(500px circle at 0% 50%,rgba(110,231,183,.14),rgba(0,0,0,0) 60%),var(--card-bg);
-}
-.step.final .step-n{
-  background:radial-gradient(circle at 35% 30%,rgba(110,231,183,.35),rgba(23,26,43,.9) 70%);
-  border-color:rgba(110,231,183,.5);color:var(--green);box-shadow:0 0 30px -4px rgba(110,231,183,.85);
-}
-
-/* ---------- Thesis (spinning light border) ---------- */
-.thesis{
-  border-color:rgba(167,139,250,.3);
-  background:radial-gradient(600px circle at 100% 0%,rgba(167,139,250,.2),rgba(0,0,0,0) 60%),linear-gradient(145deg,rgba(43,30,88,.6),rgba(11,13,25,.94));
-}
-.card.thesis::after{
-  padding:1.5px;opacity:1;
-  background:conic-gradient(from var(--a,0deg),rgba(167,139,250,0) 0deg,rgba(167,139,250,0) 200deg,#a78bfa 280deg,#67e8f9 330deg,rgba(103,232,249,0) 360deg);
-  animation:spinBorder 5s linear infinite;
-}
-.card .big{font-size:19px;color:var(--text)}
-
-/* ---------- Footer ---------- */
-footer{position:relative;padding:55px 20px 70px;text-align:center;color:var(--muted)}
-footer::before{
-  content:"";position:absolute;top:0;left:12%;right:12%;height:1px;
-  background:linear-gradient(90deg,rgba(167,139,250,0),#a78bfa,#67e8f9,rgba(103,232,249,0));
-  box-shadow:0 0 18px rgba(167,139,250,.7);
-}
-footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1px;text-shadow:0 0 24px rgba(167,139,250,.6)}
-.tiktok{
-  display:inline-block;margin-top:15px;padding:13px 22px;border-radius:14px;
-  background:rgba(23,26,43,.85);border:1px solid rgba(167,139,250,.3);color:#fff;font-weight:800;
-  box-shadow:0 0 30px -10px rgba(167,139,250,.7);transition:transform .3s var(--ease),box-shadow .3s;
-}
-.tiktok:hover{opacity:1;transform:translateY(-2px);box-shadow:0 0 44px -8px rgba(103,232,249,.8)}
-.to-top{
-  position:fixed;right:18px;bottom:18px;z-index:30;width:48px;height:48px;border-radius:16px;
-  background:rgba(23,26,43,.9);border:1px solid rgba(167,139,250,.35);color:#fff;font-size:20px;cursor:pointer;
-  box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 26px -6px rgba(167,139,250,.8);
-  opacity:0;visibility:hidden;transform:translateY(10px) scale(.9);
-  transition:opacity .3s,visibility .3s,transform .3s var(--ease);
-}
-.to-top.show{opacity:1;visibility:visible;transform:none}
-
-/* ---------- Bloom-in on scroll ---------- */
-.js .section-heading:not(.bloomed),.js .card:not(.bloomed),.js .chips:not(.bloomed),.js .search:not(.bloomed),.js .stage:not(.bloomed){opacity:0}
-.js .bloomed{animation:bloomIn 1s var(--ease) backwards;animation-delay:var(--d,0ms)}
-.js .card.bloomed{animation:bloomIn 1s var(--ease) backwards,glowBurst 1.7s ease-out backwards;animation-delay:var(--d,0ms),var(--d,0ms)}
-.js .wv.win.bloomed{
-  animation:bloomIn 1s var(--ease) backwards,glowBurst 1.7s ease-out backwards,winGlow 3.6s ease-in-out infinite;
-  animation-delay:var(--d,0ms),var(--d,0ms),1.8s;
-}
-.js .wv.bloomed .badge{animation:stamp .6s cubic-bezier(.2,1.5,.35,1) backwards;animation-delay:calc(var(--d,0ms) + .45s)}
-.js .step.bloomed .step-n{animation:pop .7s cubic-bezier(.2,1.6,.4,1) backwards;animation-delay:calc(var(--d,0ms) + .3s)}
-.js .card.bloomed.flash,.card.flash{animation:flash 1.8s ease-out}
-@keyframes bloomIn{
-  0%{opacity:0;transform:translateY(30px) scale(.94);filter:blur(10px)}
-  55%{filter:blur(0)}
-  100%{opacity:1;transform:none;filter:none}
-}
-@keyframes glowBurst{
-  0%{box-shadow:0 0 0 0 rgba(167,139,250,0)}
-  35%{box-shadow:0 0 60px 2px rgba(167,139,250,.35),0 0 0 1px rgba(167,139,250,.45)}
-  100%{box-shadow:0 18px 50px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.04)}
-}
-@keyframes stamp{from{opacity:0;transform:scale(2.2) rotate(-10deg);filter:blur(4px)}}
-@keyframes pop{from{opacity:0;transform:scale(.2)}}
-@keyframes flash{
-  0%,35%{border-color:var(--accent,var(--purple));box-shadow:0 0 0 3px var(--ring,rgba(167,139,250,.4)),0 0 60px -6px var(--ring,rgba(167,139,250,.4))}
-  100%{border-color:var(--line);box-shadow:0 18px 50px rgba(0,0,0,.28)}
-}
-
-@media(max-width:900px){
-  .bucket,.bucket:nth-child(n+4){grid-column:span 3}
-  .bucket:last-child{grid-column:span 6}
-}
-@media(max-width:700px){
-  .container{padding:0 17px}
-  .nav{padding:15px 17px}
-  .logo{font-size:19px}
-  .nav-links{top:66px;right:12px;left:12px}
-  .hero{padding:80px 0 60px}
-  .stats{margin-top:56px}
-  .stat{padding:20px 14px}
-  .stat strong{font-size:38px}
-  .grid{grid-template-columns:1fr}
-  .card{padding:21px}
-  section{padding:52px 0}
-  .bucket,.bucket:nth-child(n+4),.bucket:last-child{grid-column:span 6}
-  .wv,.step{gap:12px}
-  .wv-num{font-size:30px;min-width:28px}
-  .step-n{flex-basis:40px;height:40px;font-size:16px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .section-heading,.js .card,.js .chips,.js .search,.js .stage{opacity:1 !important}
-  .ring{display:none}
-}
-</style>
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 
 <body>
@@ -496,7 +27,10 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
 <header>
   <nav class="nav">
     <a class="logo" href="#home">QUANTUM<span>THEOLOGY</span></a>
-    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">MENU ☰</button>
+    <div class="nav-actions">
+      <button class="finder-btn" type="button" data-open-finder aria-label="Open the Rebuttal Finder">⚡<span>Find a Rebuttal</span></button>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">MENU ☰</button>
+    </div>
     <div class="nav-links" id="navLinks">
       <a href="#about">The Founder</a>
       <a href="#map">Memory Map</a>
@@ -504,8 +38,13 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
       <a href="#syllogism">Worldview Elimination</a>
       <a href="#proof">Proof Jesus Is God</a>
       <a href="#atheism">Why Atheism Is Impossible</a>
+      <a href="#timeline">Receipts Timeline</a>
       <a href="#debate">Debate Q&amp;A</a>
+      <a href="#practice">Practice Mode</a>
       <a href="#islam">Islam</a>
+      <a href="#clips">Clips</a>
+      <a href="#glossary">Glossary</a>
+      <a href="#what-now">What Now?</a>
     </div>
   </nav>
   <div class="progress" id="progress"></div>
@@ -531,11 +70,12 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
   <p class="hero-sub">The Seibert Grand Unified Ontological Theory (S-GUOT) &amp; Apologetics Archive — formulated by Jacob Benjamin Seibert.</p>
   <div class="hero-buttons">
     <a class="btn btn-primary" href="#axioms">Explore the 20 Axioms</a>
-    <a class="btn btn-secondary" href="#syllogism">See Every Worldview Eliminated</a>
+    <button class="btn btn-secondary" type="button" data-open-finder>⚡ Find a Rebuttal</button>
   </div>
   <div class="stats">
-    <div class="stat"><strong data-count="20" data-delay="1100">20</strong><span>Hardened axioms</span></div>
-    <div class="stat"><strong data-count="1" data-delay="1220">1</strong><span>Worldview left standing</span></div>
+    <a class="stat" href="#axioms"><strong data-count="20" data-delay="1100">20</strong><span>Hardened axioms</span></a>
+    <a class="stat" href="#syllogism"><strong data-count="22" data-delay="1220">22</strong><span>Worldviews eliminated</span></a>
+    <a class="stat" href="#what-now"><strong data-count="1" data-delay="1340">1</strong><span>Left standing</span></a>
   </div>
 </section>
 
@@ -806,57 +346,236 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
   <div class="section-heading">
     <span class="eyebrow">Part 3 · The S-GUOT Disjunctive Syllogism</span>
     <h2>Worldview Elimination</h2>
-    <p>Every worldview tested against the 20 axioms. Only one is left standing.</p>
+    <p>Every worldview tested against the 20 axioms. 22 eliminated. Only one is left standing.</p>
   </div>
 
-  <article class="card wv">
+  <article class="card wv" id="wv-1">
     <span class="wv-num">1</span>
     <div>
+      <span class="tag wv-cat">No God</span>
       <h3>Materialism / Atheism</h3>
       <span class="badge elim">✕ Eliminated</span>
       <p class="body" data-link>Violates Thermodynamics &amp; BGV Theorem, fails DNA digital code, destroys reason (EAAN), consciousness, logic, and objective morality (Axioms 1, 3, 4, 6, 7, 11, 13).</p>
     </div>
   </article>
 
-  <article class="card wv">
+  <article class="card wv" id="wv-2">
     <span class="wv-num">2</span>
     <div>
+      <span class="tag wv-cat">God is everything</span>
       <h3>Pantheism / Hinduism</h3>
       <span class="badge elim">✕ Eliminated</span>
       <p class="body" data-link>Violates the Law of Non-Contradiction—an unchanging God cannot equal a decaying universe; impersonal karma fails justice (Axioms 5, 7, 9, 13).</p>
     </div>
   </article>
 
-  <article class="card wv">
+  <article class="card wv" id="wv-3">
     <span class="wv-num">3</span>
     <div>
+      <span class="tag wv-cat">No Creator</span>
       <h3>Buddhism</h3>
       <span class="badge elim">✕ Eliminated</span>
       <p class="body" data-link>Infinite regress of Samsara violates Contingency &amp; Thermodynamics; denies a lasting self (Anatta) yet still teaches rebirth—leaving no one to be reborn or to carry karma (Axioms 1, 5, 7, 13).</p>
     </div>
   </article>
 
-  <article class="card wv">
+  <article class="card wv" id="wv-4">
     <span class="wv-num">4</span>
     <div>
+      <span class="tag wv-cat">Many gods</span>
       <h3>Polytheism / Paganism</h3>
       <span class="badge elim">✕ Eliminated</span>
       <p class="body" data-link>Two omnipotent gods cancel out; finite spirits require a Creator (Axioms 1, 9, 12).</p>
     </div>
   </article>
 
-  <article class="card wv">
+  <article class="card wv" id="wv-5">
     <span class="wv-num">5</span>
     <div>
+      <span class="tag wv-cat">One god, no Trinity</span>
       <h3>Strict Unitarian Theism (Islam, JWs, Deism)</h3>
       <span class="badge elim">✕ Eliminated</span>
       <p class="body" data-link>A solitary deity cannot exercise eternal self-giving love before creation without needing creatures (Axiom 8) and cannot forgive infinite sin without breaking justice or demanding impossible works (Axioms 10, 17).</p>
     </div>
   </article>
 
-  <article class="card wv win">
-    <span class="wv-num">6</span>
+  <h3 class="sub-head">More worldviews put to the test</h3>
+  <div class="wv-grid">
+    <article class="card wv" id="wv-6">
+      <span class="wv-num">6</span>
+      <div>
+        <span class="tag wv-cat">No God</span>
+        <h3>Agnosticism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>"We can't know whether God exists" is itself a claim to know something about God—and the evidence isn't missing: the BGV boundary, the DNA code, and the empty tomb are on the table (Axioms 1, 4, 10, 13). Agnosticism isn't neutral ground; it's a decision not to decide.</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-7">
+      <span class="wv-num">7</span>
+      <div>
+        <span class="tag wv-cat">No God</span>
+        <h3>Secular Humanism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Champions human dignity, rights, and reason—but on its own naturalism, humans are rearranged stardust with no objective worth, and reason is a survival accident. Humanism lives on borrowed Imago Dei capital it can't pay for (Axioms 6, 7, 19).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-8">
+      <span class="wv-num">8</span>
+      <div>
+        <span class="tag wv-cat">No God</span>
+        <h3>Nihilism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Says nothing has meaning, value, or truth—then argues as if that statement is meaningful, valuable, and true. It refutes itself with every sentence (Axioms 7, 13, 16).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-9">
+      <span class="wv-num">9</span>
+      <div>
+        <span class="tag wv-cat">All paths</span>
+        <h3>Religious Pluralism ("All religions are true")</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Jesus says He is the only way (John 14:6); Islam says He wasn't crucified (Surah 4:157); Buddhism denies a Creator. They contradict each other, so they can't all be true—and "all paths lead to God" is itself an exclusive truth claim (Axiom 13).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-10">
+      <span class="wv-num">10</span>
+      <div>
+        <span class="tag wv-cat">God is everything</span>
+        <h3>New Age / "Spiritual but not religious"</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Builds a custom god out of energy, vibes, manifesting, and "the universe"—a pantheism remix that fails the same tests (Axioms 5, 7, 13) with zero historical receipts (Axiom 14). A god you design can't save you from anything.</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-11">
+      <span class="wv-num">11</span>
+      <div>
+        <span class="tag wv-cat">One god, no Trinity</span>
+        <h3>Rabbinic Judaism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Worships the God of Abraham and holds the Hebrew Scriptures—but rejects the Messiah they describe. Daniel 9:26 has the Anointed One "cut off" before the Temple falls in AD 70, and without the Temple, the blood atonement the Torah requires (Leviticus 17:11) has been impossible for nearly 2,000 years (Axioms 15, 18).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-12">
+      <span class="wv-num">12</span>
+      <div>
+        <span class="tag wv-cat">Many gods</span>
+        <h3>Mormonism (LDS)</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Teaches that God the Father was once a man who became exalted ("As man now is, God once was"—Lorenzo Snow) and that faithful humans can become gods. But no god was formed before or after Yahweh (Isaiah 43:10), and an exalted man isn't the eternal, necessary Creator (Axioms 1, 5, 12). The Book of Mormon's Nephite civilizations have zero archaeological receipts (Axiom 14).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-13">
+      <span class="wv-num">13</span>
+      <div>
+        <span class="tag wv-cat">One god, no Trinity</span>
+        <h3>Jehovah's Witnesses</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>The Watch Tower's New World Translation renders John 1:1 "the Word was a god"—against the consensus of Greek scholars and straight into polytheism. Its end-times expectations for 1914, 1925, and 1975 all failed, and Deuteronomy 18:22 says not to fear a "prophet" whose predictions fail (Axioms 8, 14).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-14">
+      <span class="wv-num">14</span>
+      <div>
+        <span class="tag wv-cat">One god, no Trinity</span>
+        <h3>Sikhism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Teaches one formless God (Ik Onkar) but keeps karma and the cycle of rebirth—so it inherits the same impersonal-justice problem (Axioms 7, 17)—and it has no atonement: nothing and no one ever pays the infinite sin debt (Axiom 10).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-15">
+      <span class="wv-num">15</span>
+      <div>
+        <span class="tag wv-cat">No Creator</span>
+        <h3>Jainism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Denies any Creator and teaches that the universe is eternal and uncreated—directly contradicting thermodynamics and the BGV boundary (Axiom 1). Its path to liberation is pure self-effort through extreme asceticism: the most impossible ladder of all (Axiom 10).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-16">
+      <span class="wv-num">16</span>
+      <div>
+        <span class="tag wv-cat">God is everything</span>
+        <h3>Taoism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Grounds reality in the Tao, an impersonal "Way" that "cannot be named." But an impersonal force can't explain why the universe began, why minds exist, or why anything is truly right or wrong (Axioms 1, 6, 7).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-17">
+      <span class="wv-num">17</span>
+      <div>
+        <span class="tag wv-cat">No Creator</span>
+        <h3>Confucianism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>A moral code without a Moral Lawgiver: it commands virtue, family duty, and social harmony, but can't ground why virtue is objectively binding—or offer forgiveness when you fail it (Axioms 7, 17).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-18">
+      <span class="wv-num">18</span>
+      <div>
+        <span class="tag wv-cat">Many gods</span>
+        <h3>Shinto</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Honors countless kami—spirits of nature, places, and ancestors. Finite, local spirits are part of creation, not the uncaused Creator, so Shinto collapses into polytheism's problems (Axioms 1, 12).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-19">
+      <span class="wv-num">19</span>
+      <div>
+        <span class="tag wv-cat">All paths</span>
+        <h3>Bahá'í Faith</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Claims Moses, Buddha, Jesus, Muhammad, and Bahá'u'lláh were all messengers of one God—but their teachings contradict each other on who God is, whether Jesus died, and how to be saved. Contradictory revelations can't come from the same God (Axiom 13).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-20">
+      <span class="wv-num">20</span>
+      <div>
+        <span class="tag wv-cat">Dualism</span>
+        <h3>Zoroastrianism</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Pits the good Ahura Mazda against the evil Angra Mainyu in a cosmic struggle. But evil isn't a rival power—it's a privation of good (Axiom 9)—and a God locked in a contest with an independent evil force isn't the Maximally Great Being (Axiom 12).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-21">
+      <span class="wv-num">21</span>
+      <div>
+        <span class="tag wv-cat">Many gods</span>
+        <h3>Wicca &amp; Witchcraft</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>A 20th-century revival popularized by Gerald Gardner in the 1950s—nature worship, a god and goddess, and spells. Finite deities can't create a universe or ground moral law, and "magic" has never passed a single controlled test (Axioms 1, 7, 12).</p>
+      </div>
+    </article>
+
+    <article class="card wv" id="wv-22">
+      <span class="wv-num">22</span>
+      <div>
+        <span class="tag wv-cat">Man-made</span>
+        <h3>Scientology</h3>
+        <span class="badge elim">✕ Eliminated</span>
+        <p class="body" data-link>Founded in 1954 by science-fiction writer L. Ron Hubbard. Its story of thetans and the galactic ruler Xenu has zero historical or scientific receipts (Axiom 14), and its "salvation" is a paid ladder of auditing levels—the opposite of grace (Axiom 10).</p>
+      </div>
+    </article>
+  </div>
+
+  <article class="card wv win" id="wv-win">
+    <span class="wv-num">✓</span>
     <div>
+      <span class="tag wv-cat">The truth</span>
       <h3>Biblical Trinitarian Christianity</h3>
       <span class="badge win">✓ Left standing</span>
       <p class="body">Satisfies all 20 Axioms.</p>
@@ -913,54 +632,183 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
   </div>
 </section>
 
+<!-- ================= RECEIPTS TIMELINE ================= -->
+<section id="timeline">
+  <div class="section-heading">
+    <span class="eyebrow">The Receipts Timeline</span>
+    <h2>3,000 years of receipts</h2>
+    <p>From prophecy to manuscripts, every piece of evidence lines up in order. Scroll and watch it light up.</p>
+  </div>
+
+  <div class="tl-legend">
+    <span class="tl-key" data-kind="prophecy">Prophecy</span>
+    <span class="tl-key" data-kind="jesus">Jesus</span>
+    <span class="tl-key" data-kind="church">Early church</span>
+    <span class="tl-key" data-kind="history">Outside sources</span>
+    <span class="tl-key" data-kind="manuscript">Manuscripts</span>
+    <span class="tl-key" data-kind="islam">Islam</span>
+    <span class="tl-key" data-kind="discovery">Discovery</span>
+  </div>
+
+  <div class="timeline" id="timelineTrack">
+    <div class="tl-line" aria-hidden="true"><span class="tl-fill" id="tlFill"></span></div>
+
+    <div class="tl-item" data-kind="prophecy">
+      <article class="card tl-card"><span class="tl-date">~1000 BC</span><h3>Psalm 22 is written</h3><p class="body" data-link>David describes a sufferer whose hands and feet are pierced and whose clothes are divided by casting lots (Psalm 22:16–18)—fulfilled at the cross (John 19:23–24).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="prophecy">
+      <article class="card tl-card"><span class="tl-date">~700 BC</span><h3>Isaiah &amp; Micah prophesy</h3><p class="body" data-link>Isaiah describes a Servant "pierced for our transgressions" who bears the sin of many (Isaiah 53:5, 12), and Micah names Bethlehem as the birthplace of the eternal Ruler (Micah 5:2).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="prophecy">
+      <article class="card tl-card"><span class="tl-date">~530 BC</span><h3>Daniel's 70 weeks</h3><p class="body" data-link>Daniel foretells an Anointed One who will be "cut off"—and then the city and sanctuary destroyed (Daniel 9:24–26). Messiah had to come before AD 70.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="manuscript">
+      <article class="card tl-card"><span class="tl-date">~125 BC</span><h3>The Great Isaiah Scroll is copied</h3><p class="body">A complete scroll of Isaiah—including chapter 53—is copied over a century before Jesus is born, later found at Qumran.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="jesus">
+      <article class="card tl-card"><span class="tl-date">~5 BC</span><h3>Jesus is born in Bethlehem</h3><p class="body" data-link>Born in the very town Micah named, during the reign of Herod the Great (Matthew 2:1; Luke 2:4–7).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="jesus">
+      <article class="card tl-card"><span class="tl-date">AD 30–33</span><h3>Crucified under Pontius Pilate</h3><p class="body" data-link>Executed by Rome—confirmed by Tacitus, Josephus, and virtually every historian, believer or skeptic (John 19:16–30).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="jesus">
+      <article class="card tl-card"><span class="tl-date">AD 30–33</span><h3>The tomb is empty</h3><p class="body" data-link>Three days later Jesus appears to Peter, the Twelve, more than 500 people at once, His skeptical brother James, and later Paul (1 Corinthians 15:3–8).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="church">
+      <article class="card tl-card"><span class="tl-date">AD 30s</span><h3>The earliest creed forms</h3><p class="body" data-link>The creed Paul quotes in 1 Corinthians 15:3–7 takes shape within a few years of the cross—far too early for legend to grow.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="church">
+      <article class="card tl-card"><span class="tl-date">AD 48–57</span><h3>Paul writes his letters</h3><p class="body" data-link>Galatians, 1 Corinthians, and Romans are written while most of the 500 eyewitnesses are still alive (1 Corinthians 15:6).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="church">
+      <article class="card tl-card"><span class="tl-date">AD 50s–90s</span><h3>The four Gospels are written</h3><p class="body" data-link>Mark, Matthew, Luke, and John are written within the lifetime of the eyewitnesses—Luke after carefully investigating everything (Luke 1:1–4).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">AD 62</span><h3>James is executed</h3><p class="body">Josephus records the stoning of "the brother of Jesus, who was called Christ, whose name was James" (<i>Antiquities</i> 20.9.1)—the skeptic brother turned martyr.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">AD 64</span><h3>Nero persecutes Christians</h3><p class="body">After the great fire of Rome, Nero blames the Christians; Tacitus records their brutal executions (<i>Annals</i> 15.44). Tradition holds Peter and Paul die as martyrs in the years that follow.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">AD 70</span><h3>Rome destroys the Temple</h3><p class="body" data-link>Just as Jesus predicted (Matthew 24:1–2; Luke 19:43–44), Jerusalem and its Temple fall—and animal sacrifice ends for good.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">~AD 93</span><h3>Josephus mentions Jesus</h3><p class="body">The Jewish historian refers to Jesus and His brother James in <i>Antiquities of the Jews</i> (18.3.3; 20.9.1).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">~AD 112</span><h3>Pliny reports to Trajan</h3><p class="body">The Roman governor writes that Christians sing hymns "to Christ as to a god" (<i>Epistles</i> 10.96).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="history">
+      <article class="card tl-card"><span class="tl-date">~AD 116</span><h3>Tacitus records the execution</h3><p class="body">Rome's greatest historian writes that "Christus" suffered the extreme penalty under Pontius Pilate (<i>Annals</i> 15.44).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="manuscript">
+      <article class="card tl-card"><span class="tl-date">~AD 125–175</span><h3>P52 — a scrap of John</h3><p class="body">A papyrus fragment of John 18 found in Egypt—proof the Gospel had already traveled far from where it was written.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="manuscript">
+      <article class="card tl-card"><span class="tl-date">~AD 200</span><h3>P46 &amp; P66</h3><p class="body">Papyri containing most of Paul's letters (P46) and much of John's Gospel (P66).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="church">
+      <article class="card tl-card"><span class="tl-date">AD 325</span><h3>Council of Nicaea</h3><p class="body" data-link>Church leaders formally affirm what Scripture taught all along: Jesus is fully God, of the same nature as the Father (John 1:1).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="manuscript">
+      <article class="card tl-card"><span class="tl-date">~AD 325–360</span><h3>Codex Vaticanus &amp; Sinaiticus</h3><p class="body">Complete Greek Bibles, copied centuries before Islam existed.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="islam">
+      <article class="card tl-card"><span class="tl-date">AD 570</span><h3>Muhammad is born</h3><p class="body">More than 500 years after the crucifixion.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="islam">
+      <article class="card tl-card"><span class="tl-date">AD 610</span><h3>Muhammad's first claimed revelation</h3><p class="body" data-link>In the Cave of Hira—an encounter that left him terrified, as recorded in Sahih al-Bukhari 6982.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="islam">
+      <article class="card tl-card"><span class="tl-date">~AD 650</span><h3>The Quran is compiled under Uthman</h3><p class="body" data-link>Six centuries after Jesus, it denies the crucifixion that every earlier source affirms (Surah 4:157).</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tl-item" data-kind="discovery">
+      <article class="card tl-card"><span class="tl-date">1947</span><h3>The Dead Sea Scrolls are found</h3><p class="body">A Bedouin shepherd discovers the Qumran scrolls, including the Great Isaiah Scroll—showing Isaiah was copied with remarkable accuracy across 1,000 years.</p></article>
+      <span class="tl-dot" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PART 5: DEBATE Q&A ================= -->
 <section id="debate">
   <div class="section-heading">
     <span class="eyebrow">Part 5</span>
     <h2>Debate Q&amp;A Archive &amp; Fallacy Rebuttals</h2>
-    <p>Every objection, the fallacy behind it, and the rebuttal.</p>
+    <p>48 objections, the fallacy behind each one, and the rebuttal. Filter by topic or search.</p>
   </div>
 
+  <div class="chips" role="group" aria-label="Filter questions by topic">
+    <button class="chip qchip" type="button" data-q="all" aria-pressed="true">All</button>
+    <button class="chip qchip" type="button" data-q="science" aria-pressed="false">Science</button>
+    <button class="chip qchip" type="button" data-q="god" aria-pressed="false">God &amp; Logic</button>
+    <button class="chip qchip" type="button" data-q="morality" aria-pressed="false">Morality &amp; Evil</button>
+    <button class="chip qchip" type="button" data-q="bible" aria-pressed="false">Bible &amp; History</button>
+    <button class="chip qchip" type="button" data-q="jesus" aria-pressed="false">Jesus</button>
+    <button class="chip qchip" type="button" data-q="religions" aria-pressed="false">Other Religions</button>
+  </div>
   <input class="search" id="qaSearch" type="search" placeholder='Search objections… (try "energy" or "multiverse")' aria-label="Search the debate archive">
-  <p class="result-count" id="qaCount" aria-live="polite">Showing 14 of 14 questions</p>
+  <p class="result-count" id="qaCount" aria-live="polite">Showing 48 of 48 questions</p>
   <p class="empty" id="qaEmpty" hidden>No questions match that search.</p>
 
-  <article class="card qa" id="q-1">
+  <article class="card qa" id="q-1" data-cat="science" data-keys="thermodynamics bgv theorem disprove atheism big bang">
     <div class="card-top"><span class="label">Question 01</span></div>
     <h3>"How does Thermodynamics + the BGV Theorem disprove atheism?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Ignoratio Elenchi (Missing the Point) &amp; Argument from Personal Incredulity.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Atheism claims only the physical universe exists. Because Thermodynamics and the BGV Theorem prove all matter, energy, space, and time had a hard beginning, the First Cause cannot be physical, spatial, or temporal—mathematically eliminating atheism.</div>
   </article>
 
-  <article class="card qa" id="q-2">
+  <article class="card qa" id="q-2" data-cat="science" data-keys="elements made god chemicals atoms created god">
     <div class="card-top"><span class="label">Question 02</span></div>
     <h3>"Elements made God."</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Category Fallacy.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Chemical elements didn't even exist at <i>t</i> = 0 (they formed via Big Bang nucleosynthesis and stellar fusion after space, time, and energy began). Claiming physical elements created a spaceless, timeless God is like claiming LEGO bricks built the factory and engineer that invented LEGOs.</div>
   </article>
 
-  <article class="card qa" id="q-3">
+  <article class="card qa" id="q-3" data-cat="science" data-keys="energy create itself always existed matter eternal">
     <div class="card-top"><span class="label">Question 03</span></div>
     <h3>"Energy can create itself."</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Violation of the Law of Non-Contradiction &amp; denial of empirical physics.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Directly violates the 1st Law of Thermodynamics (energy cannot be created or destroyed) and basic logic—to create itself, energy would have to already exist before it existed, which is like claiming you gave birth to yourself.</div>
   </article>
 
-  <article class="card qa" id="q-4">
+  <article class="card qa" id="q-4" data-cat="science" data-keys="space always existed eternal universe time beginning">
     <div class="card-top"><span class="label">Question 04</span></div>
     <h3>"How has space not always existed?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Shifting the Burden of Proof &amp; Argument from Personal Incredulity.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Einstein's General Relativity proves space, time, and matter are fused into spacetime, and the BGV Theorem (2003) proves expanding spacetime has an absolute past boundary. Furthermore, you cannot cross an infinite number of past days to reach today.</div>
   </article>
 
-  <article class="card qa" id="q-5">
+  <article class="card qa" id="q-5" data-cat="god" data-keys="who created god who made god god doesn't exist uncaused">
     <div class="card-top"><span class="label">Question 05</span></div>
     <h3>"Well, God doesn't exist / Who created God?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Bare Assertion (Ipse Dixit), Category Error, &amp; Special Pleading.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Only physical things bound by space and time that begin to exist require a cause. A spaceless, timeless, immaterial Necessary Being exists outside time and has no beginning—asking "Who created God?" is like asking "Who drew the married bachelor?"</div>
   </article>
 
-  <article class="card qa" id="q-6">
+  <article class="card qa" id="q-6" data-cat="science" data-keys="infinite universe infinite chances multiverse probability">
     <div class="card-top"><span class="label">Question 06</span></div>
     <h3>"Is 'more is likely infinite' or 'more infinite likely'?"</h3>
     <p class="q-note">Infinite Universe / Infinite Chances</p>
@@ -968,42 +816,42 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
     <div class="evidence" data-link><strong>Rebuttal:</strong> Actual infinities cannot exist in physical reality (Hilbert's Hotel paradox), the BGV Theorem proves our universe has a finite past, and an infinite multiverse spawns delusional Boltzmann Brains rather than trustworthy observers (Sean Carroll / Roger Penrose).</div>
   </article>
 
-  <article class="card qa" id="q-7">
+  <article class="card qa" id="q-7" data-cat="god" data-keys="atheists consciousness non believers conscience mind">
     <div class="card-top"><span class="label">Question 07</span></div>
     <h3>"Why do people who don't believe in God still have internal consciousness?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Strawman &amp; Non Sequitur.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Christianity teaches every human is made in God's image (Imago Dei, Genesis 1:27) with a moral conscience (Romans 2:15), regardless of belief—just like you don't have to believe in gravity for gravity to hold you down. Moreover, mindless quarks have zero inner experience (Hard Problem of Consciousness), proving a Conscious Creator.</div>
   </article>
 
-  <article class="card qa" id="q-8">
+  <article class="card qa" id="q-8" data-cat="science" data-keys="don't believe thermodynamics deny physics science denial">
     <div class="card-top"><span class="label">Question 08</span></div>
     <h3>"I don't believe in Thermodynamics, the BGV Theorem, or Contingency."</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Invincible Ignorance Fallacy.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Denying peer-reviewed physics when cornered exposes blind-faith atheism. Thermodynamics is literally draining your phone battery right now—denying gravity doesn't stop you from falling.</div>
   </article>
 
-  <article class="card qa" id="q-9">
+  <article class="card qa" id="q-9" data-cat="bible" data-keys="firmament dome flat earth outer space real sky">
     <div class="card-top"><span class="label">Question 09</span></div>
     <h3>"What is the 'Firmament' in the Bible, and is outer space real?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Word-Concept Fallacy &amp; Presentism.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> The Hebrew word <i>raqia</i> (Genesis 1:6–8) means "expanse" or "stretched-out space"—not a solid glass dome. Genesis 1 defines it directly: God calls it Sky (Gen 1:8), birds fly across it (Gen 1:20), and the sun, moon, and stars sit inside it (Gen 1:14–17). Both Earth's fine-tuned atmosphere and expanding outer space are 100% real and match Isaiah 40:22 ("stretches out the heavens").</div>
   </article>
 
-  <article class="card qa" id="q-10">
+  <article class="card qa" id="q-10" data-cat="god" data-keys="where is god located space heaven">
     <div class="card-top"><span class="label">Question 10</span></div>
     <h3>"Where is God located in space?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Category Fallacy.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> God created space and time, so He exists outside the universe like a game developer exists outside Minecraft, while being omnipresent everywhere at once (Colossians 1:17; John 4:24).</div>
   </article>
 
-  <article class="card qa" id="q-11">
+  <article class="card qa" id="q-11" data-cat="morality" data-keys="slavery slaves misogyny women sexist religion flaws">
     <div class="card-top"><span class="label">Question 11</span></div>
     <h3>"Religion has flaws like supporting slavery and misogyny."</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Stolen Concept Fallacy, Presentism, &amp; Equivocation (confusing dead man-made religion with Jesus).</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Under atheism, humans are accidental atoms with zero objective human rights. Meanwhile, the actual Bible gave the death penalty for kidnapping slaves (Exodus 21:16), listed slave traders alongside murderers (1 Timothy 1:10), declared equal Imago Dei for male and female from Day One (Genesis 1:27), made women the first eyewitnesses of the Resurrection (Matthew 28:1–10), and commanded husbands to love their wives sacrificially unto death (Ephesians 5:25).</div>
   </article>
 
-  <article class="card qa" id="q-12">
+  <article class="card qa" id="q-12" data-cat="science" data-keys="quantum equations rna abiogenesis circular eaan moral anti realism god of the gaps">
     <div class="card-top"><span class="label">Question 12</span></div>
     <h3>Advanced Skeptic Objections</h3>
     <p class="q-note">Quantum Equations, Prebiotic RNA Catalysts, Circular EAAN, &amp; Moral Anti-Realism</p>
@@ -1018,19 +866,285 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
     </div>
   </article>
 
-  <article class="card qa" id="q-13">
+  <article class="card qa" id="q-13" data-cat="jesus" data-keys="jesus isn't god prophet just a man deity">
     <div class="card-top"><span class="label">Question 13</span></div>
     <h3>"Jesus isn't God / God is merely within Jesus like a prophet."</h3>
     <div class="fallacy"><strong>Fallacy:</strong> Word-Concept Fallacy &amp; Equivocation.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> John 1:1 says the Word WAS God and became flesh (John 1:14); Colossians 2:9 says the whole fullness of deity dwells in Him bodily; He claimed Yahweh's eternal name ("Before Abraham was, I AM", John 8:58), existed in glory before the world began (John 17:5), took Yahweh's exclusive title "First and Last" (Isaiah 44:6 vs. Revelation 1:17), and unlike prophets who refuse worship (Acts 14:15), Jesus accepted Thomas calling Him "My Lord and my God" (John 20:28).</div>
   </article>
 
-  <article class="card qa" id="q-14">
+  <article class="card qa" id="q-14" data-cat="jesus" data-keys="jesus sin sinned human sinless">
     <div class="card-top"><span class="label">Question 14</span></div>
     <h3>"If Jesus was born human, didn't He sin?"</h3>
     <div class="fallacy"><strong>Fallacy:</strong> False Equivalence &amp; Non Sequitur.</div>
     <div class="evidence" data-link><strong>Rebuttal:</strong> Conceived by the Holy Spirit without Adam's sin nature (Luke 1:35; Genesis 3:15), Jesus lived a 100% sinless life (Hebrews 4:15; 2 Corinthians 5:21; 1 Peter 2:22; 1 John 3:5), qualifying Him as the spotless Lamb of God to pay humanity's infinite sin debt.</div>
   </article>
+
+  <article class="card qa" id="q-15" data-cat="bible" data-keys="bible written by men humans people wrote man made">
+    <div class="card-top"><span class="label">Question 15</span></div>
+    <h3>"The Bible was just written by men."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Genetic Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Human authors don't rule out a divine Author—God carried the writers along like wind fills a sail (2 Peter 1:21; 2 Timothy 3:16). The real question isn't who held the pen but whether the content is true—and its history, prophecy, and manuscripts check out (Axioms 14, 15).</div>
+  </article>
+
+  <article class="card qa" id="q-16" data-cat="bible" data-keys="bible changed corrupted translated translations telephone game edited altered">
+    <div class="card-top"><span class="label">Question 16</span></div>
+    <h3>"The Bible has been changed and translated too many times."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> False Analogy (the "Telephone Game").</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Modern Bibles aren't translations of translations—they're translated straight from Hebrew and Greek and checked against 5,800+ Greek manuscripts. When the Dead Sea Scrolls turned up, they showed Isaiah had been copied with remarkable accuracy across 1,000 years (Axiom 14).</div>
+  </article>
+
+  <article class="card qa" id="q-17" data-cat="science" data-keys="science disproved god scientific scientism replaced religion">
+    <div class="card-top"><span class="label">Question 17</span></div>
+    <h3>"Science has disproved God."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Category Error &amp; Scientism.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Science explains how nature works, not why there is a nature at all. "Only science gives truth" isn't a scientific finding—it refutes itself (Axiom 13). The founders of modern science—Kepler, Boyle, Newton, Faraday, Maxwell—believed in a rational Creator, which is exactly why they expected the universe to make sense (Axiom 3).</div>
+  </article>
+
+  <article class="card qa" id="q-18" data-cat="science" data-keys="evolution darwin natural selection apes monkeys">
+    <div class="card-top"><span class="label">Question 18</span></div>
+    <h3>"Evolution proves there's no God."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Non Sequitur.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Evolution describes how living things change—it can't explain why the universe began (Axiom 1), where the laws of physics came from (Axiom 3), how the first self-replicating code arose (Axiom 4), or why matter became conscious (Axiom 6). A process still needs a Lawgiver.</div>
+  </article>
+
+  <article class="card qa" id="q-19" data-cat="morality" data-keys="evil suffering pain bad things happen good people problem of evil cancer why does god allow">
+    <div class="card-top"><span class="label">Question 19</span></div>
+    <h3>"If God is good, why is there so much evil and suffering?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Stolen Concept.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Calling anything "evil" assumes an objective standard of good—which only exists if God does (Axiom 7). Evil is a privation, not a creation (Axiom 9), and God allows real freedom because forced love isn't love. He didn't stay distant either: Jesus suffered with us, and He will wipe away every tear (Revelation 21:4; Romans 8:18).</div>
+  </article>
+
+  <article class="card qa" id="q-20" data-cat="god" data-keys="sky daddy imaginary friend fairy tale spaghetti monster santa">
+    <div class="card-top"><span class="label">Question 20</span></div>
+    <h3>"God is just an imaginary sky daddy."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ad Hominem (Mockery) &amp; Begging the Question.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Mockery isn't an argument. The case for God rests on evidence—the BGV boundary, fine-tuning, the DNA code, and the resurrection (Axioms 1, 4, 10, 11)—not wishful thinking. The real fairy tale is "nothing created everything."</div>
+  </article>
+
+  <article class="card qa" id="q-21" data-cat="god" data-keys="which god thousands of gods zeus thor odin one less god">
+    <div class="card-top"><span class="label">Question 21</span></div>
+    <h3>"Which God? There are thousands of gods."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> False Equivalence.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The question isn't "Is there some god?" but "Which worldview survives the evidence?" Finite gods like Zeus or Thor are part of the universe, not its uncaused Cause (Axiom 12). Run every option through the 20 axioms—only one is left standing.</div>
+  </article>
+
+  <article class="card qa" id="q-22" data-cat="god" data-keys="born where raised parents culture geography country">
+    <div class="card-top"><span class="label">Question 22</span></div>
+    <h3>"You're only a Christian because of where you were born."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Genetic Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> How someone came to a belief doesn't decide whether it's true—by that logic, the atheist is only an atheist because of where they were born. Christianity spread from Jerusalem into every culture on earth because of evidence, not geography (Axiom 20).</div>
+  </article>
+
+  <article class="card qa" id="q-23" data-cat="bible" data-keys="jesus never existed myth fake real historical">
+    <div class="card-top"><span class="label">Question 23</span></div>
+    <h3>"Jesus never even existed."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Denial of Historical Evidence.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Virtually every historian—including skeptic Bart Ehrman (<i>Did Jesus Exist?</i>, 2012)—affirms Jesus lived and was crucified. Tacitus (<i>Annals</i> 15.44), Josephus (<i>Antiquities</i> 18.3.3; 20.9.1), and Paul's letters written within about 20–25 years confirm it (Axioms 10, 20).</div>
+  </article>
+
+  <article class="card qa" id="q-24" data-cat="bible" data-keys="copy horus mithras pagan dionysus krishna zeitgeist copycat myths">
+    <div class="card-top"><span class="label">Question 24</span></div>
+    <h3>"Jesus is just a copy of Horus, Mithras, or other pagan gods."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Parallelomania (False Analogy).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The "Horus was born of a virgin on December 25, had 12 disciples, and was crucified" claims come from modern books and internet videos, not ancient Egyptian sources. Most evidence for the Mithras cult comes after Christianity began. Even skeptic scholars like Bart Ehrman reject the copycat theory.</div>
+  </article>
+
+  <article class="card qa" id="q-25" data-cat="jesus" data-keys="hallucination hallucinated visions dreams grief resurrection">
+    <div class="card-top"><span class="label">Question 25</span></div>
+    <h3>"The disciples just hallucinated the resurrection."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ad Hoc Hypothesis.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Hallucinations are private, but Jesus appeared to more than 500 people at once (1 Corinthians 15:6), to skeptics like James and enemies like Paul—and hallucinations can't empty a tomb (Axiom 10).</div>
+  </article>
+
+  <article class="card qa" id="q-26" data-cat="jesus" data-keys="stole stolen body tomb robbed disciples hid">
+    <div class="card-top"><span class="label">Question 26</span></div>
+    <h3>"The disciples stole the body."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ad Hoc Hypothesis.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Then they suffered and died for what they knew was a lie—liars make terrible martyrs. The stolen-body story itself admits the tomb was empty (Matthew 28:11–15), and it can't explain why Paul and James converted (Axioms 10, 20).</div>
+  </article>
+
+  <article class="card qa" id="q-27" data-cat="jesus" data-keys="swoon passed out fainted didn't die survived cross">
+    <div class="card-top"><span class="label">Question 27</span></div>
+    <h3>"Jesus didn't really die—He just passed out."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ad Hoc Hypothesis (Swoon Theory).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Roman soldiers were professional executioners, a spear pierced His side (John 19:34), and a 1986 article in the <i>Journal of the American Medical Association</i> concluded He was dead. A half-dead, scourged man could never convince anyone He had conquered death (Axiom 10).</div>
+  </article>
+
+  <article class="card qa" id="q-28" data-cat="bible" data-keys="contradict contradictions inconsistent errors mistakes angels tomb gospels">
+    <div class="card-top"><span class="label">Question 28</span></div>
+    <h3>"The Gospels contradict each other."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Confusing Differences with Contradictions.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Independent eyewitnesses naturally report different details—identical stories would suggest collusion. One angel at the tomb (Matthew 28:2) and two (Luke 24:4) isn't a contradiction: where there are two, there's one. On the core facts—death, burial, empty tomb, appearances—all four agree.</div>
+  </article>
+
+  <article class="card qa" id="q-29" data-cat="morality" data-keys="old testament genocide canaanites violent evil god killed">
+    <div class="card-top"><span class="label">Question 29</span></div>
+    <h3>"The God of the Old Testament is evil and genocidal."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Presentism &amp; Stolen Concept.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Calling anything "evil" requires the objective standard only God provides (Axiom 7). The judgment on Canaan came after 400+ years of patience (Genesis 15:16) against cultures that burned their own children as sacrifices (Leviticus 18:21; Deuteronomy 12:31)—and God judged Israel by the same standard.</div>
+  </article>
+
+  <article class="card qa" id="q-30" data-cat="morality" data-keys="hell unfair eternal punishment forever burn">
+    <div class="card-top"><span class="label">Question 30</span></div>
+    <h3>"Hell is unfair—why punish finite sins forever?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Category Error.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The weight of a crime depends on who it's against—sin against an infinitely holy God is infinite (see the 4-Step Proof). Yet God doesn't want anyone to perish (2 Peter 3:9); He paid the debt Himself so no one has to (John 3:16–18).</div>
+  </article>
+
+  <article class="card qa" id="q-31" data-cat="morality" data-keys="never heard tribe remote unreached jungle">
+    <div class="card-top"><span class="label">Question 31</span></div>
+    <h3>"What about people who never heard of Jesus?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Red Herring.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Everyone has creation and conscience as witnesses (Romans 1:20; 2:15), and the Judge of all the earth will do what is right (Genesis 18:25). God is sending the gospel to every nation (Matthew 28:19; Revelation 7:9). But you have heard—so the real question is what you will do with Jesus.</div>
+  </article>
+
+  <article class="card qa" id="q-32" data-cat="god" data-keys="faith blind belief without evidence">
+    <div class="card-top"><span class="label">Question 32</span></div>
+    <h3>"Faith means believing without evidence."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Equivocation.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Biblical faith (<i>pistis</i>) is trust based on evidence. Jesus gave "many convincing proofs" (Acts 1:3), Paul pointed to living eyewitnesses (1 Corinthians 15:6), and Luke investigated everything carefully before writing (Luke 1:1–4). Believing the universe made itself from nothing takes far more blind faith (Axioms 1, 4).</div>
+  </article>
+
+  <article class="card qa" id="q-33" data-cat="god" data-keys="rock heavy lift omnipotent paradox all powerful">
+    <div class="card-top"><span class="label">Question 33</span></div>
+    <h3>"Can God make a rock so heavy He can't lift it?"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Logical Contradiction (Category Error).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Omnipotence means the power to do anything logically possible—not nonsense. "A rock too heavy for the all-powerful" is like a square circle: it isn't a thing at all (Axiom 13). Scripture even says God cannot lie (Titus 1:2)—that's perfection, not weakness.</div>
+  </article>
+
+  <article class="card qa" id="q-34" data-cat="god" data-keys="burden of proof prove it evidence">
+    <div class="card-top"><span class="label">Question 34</span></div>
+    <h3>"The burden of proof is on you, not me."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Shifting the Burden of Proof.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Everyone who makes a claim carries a burden—including "the universe came from nothing" and "life arose by chance." S-GUOT meets its burden with 20 axioms; atheism still owes an explanation for the universe's beginning, the DNA code, consciousness, and morality (Axioms 1, 4, 6, 7).</div>
+  </article>
+
+  <article class="card qa" id="q-35" data-cat="morality" data-keys="crusades inquisition wars violence religion causes killed">
+    <div class="card-top"><span class="label">Question 35</span></div>
+    <h3>"Christianity caused the Crusades and the Inquisition."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Tu Quoque &amp; Equivocation (confusing man-made religion with Jesus).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Jesus commanded love for enemies (Matthew 5:44) and rebuked violence in His name (Matthew 26:52); people disobeying Jesus don't refute Jesus. Meanwhile, officially atheist regimes under Stalin, Mao, and Pol Pot killed tens of millions in the 20th century (Axiom 19).</div>
+  </article>
+
+  <article class="card qa" id="q-36" data-cat="god" data-keys="crutch weak coping comfort cope psychological">
+    <div class="card-top"><span class="label">Question 36</span></div>
+    <h3>"Religion is just a crutch for weak people."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Ad Hominem &amp; Genetic Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Why someone believes doesn't decide whether it's true. And the first Christians gained no comfort from their faith—only prison, beatings, and execution (Axiom 20). If Jesus rose from the dead, He isn't a crutch; He's the cure.</div>
+  </article>
+
+  <article class="card qa" id="q-37" data-cat="morality" data-keys="morality evolution society culture herd instinct relative subjective">
+    <div class="card-top"><span class="label">Question 37</span></div>
+    <h3>"Morality just comes from evolution or society."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Genetic Fallacy &amp; Is–Ought Fallacy.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Evolution and society can explain why people feel moral pressure—not why anything is objectively right or wrong. If morality is just herd instinct, the Holocaust wasn't evil, just unpopular. Objective moral duties need a Moral Lawgiver (Axioms 7, 17).</div>
+  </article>
+
+  <article class="card qa" id="q-38" data-cat="science" data-keys="quantum vacuum fluctuation nothing krauss universe from nothing">
+    <div class="card-top"><span class="label">Question 38</span></div>
+    <h3>"The universe came from a quantum vacuum—from nothing."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Equivocation (on "nothing").</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> A quantum vacuum isn't nothing—it's a field with energy, governed by physical laws. Calling that "nothing" is a bait-and-switch, exactly the criticism philosopher of physics David Albert pressed against Lawrence Krauss's <i>A Universe from Nothing</i> (2012). Something still has to explain the field and its laws (Axioms 1, 3).</div>
+  </article>
+
+  <article class="card qa" id="q-39" data-cat="science" data-keys="aliens panspermia space seeded extraterrestrial">
+    <div class="card-top"><span class="label">Question 39</span></div>
+    <h3>"Aliens seeded life on Earth."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Infinite Regress (pushing the problem back).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Directed panspermia (proposed by Francis Crick and Leslie Orgel in 1973) only moves the question back: who wrote the aliens' DNA? It concedes that life's information needs an intelligence (Axiom 4)—and the aliens still need an uncaused First Cause (Axiom 1).</div>
+  </article>
+
+  <article class="card qa" id="q-40" data-cat="god" data-keys="lack of belief atheism default position don't believe">
+    <div class="card-top"><span class="label">Question 40</span></div>
+    <h3>"Atheism is just a lack of belief."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Equivocation (redefining atheism).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> A rock "lacks belief" in God too. Anyone who says the universe, life, and mind exist without God holds a worldview that has to explain them (Axioms 1, 4, 6). Calling it a "lack of belief" is a way to dodge the burden of proof.</div>
+  </article>
+
+  <article class="card qa" id="q-41" data-cat="god" data-keys="trinity contradiction math three gods 1+1+1">
+    <div class="card-top"><span class="label">Question 41</span></div>
+    <h3>"The Trinity is a contradiction—1 + 1 + 1 = 3."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Strawman &amp; Category Error.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The Trinity isn't three gods in one god. It's one What (one divine being) and three Whos (Father, Son, Spirit)—think 1 × 1 × 1 = 1. "One" and "three" refer to different things, so there's no contradiction (Matthew 28:19; 2 Corinthians 13:14; Axiom 8).</div>
+  </article>
+
+  <article class="card qa" id="q-42" data-cat="jesus" data-keys="never said i am god claim deity jesus claim">
+    <div class="card-top"><span class="label">Question 42</span></div>
+    <h3>"Jesus never said, 'I am God.'"</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Argument from Silence.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> He said it the way a first-century Jew would: forgiving sins only God can forgive (Mark 2:5–7), claiming God's name (John 8:58), accepting worship (Matthew 14:33; John 20:28), and claiming equality with the Father (John 5:18; 10:30–33). His enemies picked up stones because they understood exactly what He meant.</div>
+  </article>
+
+  <article class="card qa" id="q-43" data-cat="bible" data-keys="paul invented christianity hijacked made up">
+    <div class="card-top"><span class="label">Question 43</span></div>
+    <h3>"Paul invented Christianity."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Historical Revisionism.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Paul passed on what he had received (1 Corinthians 15:3), checked his gospel with Peter and James (Galatians 1:18–19; Galatians 2:9), and they gave him the right hand of fellowship. Jesus was worshiped as God from the start—Philippians 2:5–11 preserves an early hymn about it.</div>
+  </article>
+
+  <article class="card qa" id="q-44" data-cat="religions" data-keys="muhammad predicted bible deuteronomy prophet like moses comforter helper paraclete islam muslim">
+    <div class="card-top"><span class="label">Question 44</span></div>
+    <h3>"The Bible predicts Muhammad (Deuteronomy 18:18; John 14:16)."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Proof-Texting (ignoring context).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Deuteronomy 18:15–18 says the prophet comes "from among your brothers"—fellow Israelites, the same phrase used for Israel's kings (Deuteronomy 17:15)—and Acts 3:22–26 applies it to Jesus. The Helper in John 14:16–17 is the Holy Spirit: invisible, living inside believers, and sent days later at Pentecost (Acts 2:1–4).</div>
+  </article>
+
+  <article class="card qa" id="q-45" data-cat="religions" data-keys="messiah judaism jewish world peace didn't fulfill prophecies third temple">
+    <div class="card-top"><span class="label">Question 45</span></div>
+    <h3>"Jesus can't be the Messiah—He didn't bring world peace."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> False Dilemma (ignoring the two comings).</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> The Hebrew Scriptures describe a Messiah who suffers and dies for sin (Isaiah 53:5; Daniel 9:26) and a Messiah who reigns in peace (Isaiah 9:6–7)—fulfilled in two comings. And Daniel 9 requires the Messiah to come before the Temple's destruction in AD 70 (Axioms 15, 18).</div>
+  </article>
+
+  <article class="card qa" id="q-46" data-cat="religions" data-keys="mormon book of mormon lds joseph smith latter day saints">
+    <div class="card-top"><span class="label">Question 46</span></div>
+    <h3>"The Book of Mormon is another testament of Jesus."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Special Pleading.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Paul warned against "a different gospel," even if preached by an angel (Galatians 1:8). The Book of Mormon's Nephite cities, steel, and horses have no archaeological support, and Mormon teaching says God was once a man (Joseph Smith's King Follett Discourse, 1844)—not the eternal God of Isaiah 43:10 (Axioms 12, 14).</div>
+  </article>
+
+  <article class="card qa" id="q-47" data-cat="religions" data-keys="we are god divine universe is god pantheism oneness new age hindu">
+    <div class="card-top"><span class="label">Question 47</span></div>
+    <h3>"We are all God—the universe is God."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Self-Refutation.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> If you're God, why did you have to learn that you're God? An all-knowing God can't be ignorant or need enlightenment. Changing, learning, dying beings are creatures, not the Creator (Axiom 5).</div>
+  </article>
+
+  <article class="card qa" id="q-48" data-cat="religions" data-keys="buddhism desire suffering nirvana eliminate craving buddha">
+    <div class="card-top"><span class="label">Question 48</span></div>
+    <h3>"Suffering comes from desire, so get rid of desire."</h3>
+    <div class="fallacy"><strong>Fallacy:</strong> Self-Refutation.</div>
+    <div class="evidence" data-link><strong>Rebuttal:</strong> Desiring to get rid of desire is still a desire. Christianity doesn't erase your deepest longings—it points them to the only One who can satisfy them (Psalm 16:11; John 6:35).</div>
+  </article>
+</section>
+
+<!-- ================= PRACTICE MODE ================= -->
+<section id="practice">
+  <div class="section-heading">
+    <span class="eyebrow">Train</span>
+    <h2>Debate Practice Mode</h2>
+    <p>Read the objection, answer it out loud, then flip the card to check yourself. Swipe or use the arrows to move.</p>
+  </div>
+  <div class="practice">
+    <div class="fc-meta"><span id="fcCount">1 / 48</span><span class="fc-cat" id="fcCat"></span></div>
+    <div class="flashcard" id="flashcard">
+      <div class="fc-inner">
+        <div class="fc-face fc-front">
+          <span class="label">Objection</span>
+          <h3 id="fcQ">Loading…</h3>
+          <span class="fc-hint">Tap to flip ↻</span>
+        </div>
+        <div class="fc-face fc-back" id="fcA"></div>
+      </div>
+    </div>
+    <div class="fc-controls">
+      <button type="button" class="fc-btn" id="fcPrev" aria-label="Previous card">←</button>
+      <button type="button" class="fc-btn fc-flip" id="fcFlip">Flip ↻</button>
+      <button type="button" class="fc-btn" id="fcNext" aria-label="Next card">→</button>
+      <button type="button" class="fc-btn" id="fcShuffle">Shuffle</button>
+    </div>
+  </div>
 </section>
 
 <!-- ================= PART 6: ISLAM ================= -->
@@ -1101,371 +1215,116 @@ footer strong{color:#fff;font-family:'Space Grotesk',sans-serif;letter-spacing:1
   </article>
 </section>
 
+<!-- ================= CLIPS ================= -->
+<section id="clips">
+  <div class="section-heading">
+    <span class="eyebrow">Watch</span>
+    <h2>Clips from @QuantumTheology</h2>
+    <p>The latest debates and breakdowns, straight from TikTok.</p>
+  </div>
+  <article class="card clips-card">
+    <div class="tiktok-wrap">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@quantumtheology" data-unique-id="quantumtheology" data-embed-type="creator" style="max-width:780px;min-width:288px;">
+        <section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@quantumtheology?refer=creator_embed">@quantumtheology</a></section>
+      </blockquote>
+    </div>
+    <a class="btn btn-primary" href="https://www.tiktok.com/@quantumtheology" target="_blank" rel="noopener">Watch on TikTok ↗</a>
+  </article>
+</section>
+
+<!-- ================= GLOSSARY ================= -->
+<section id="glossary">
+  <div class="section-heading">
+    <span class="eyebrow">Glossary</span>
+    <h2>Know the words</h2>
+    <p>Tap any underlined word anywhere on the site to see what it means. Here's the full list.</p>
+  </div>
+  <input class="search" id="glossSearch" type="search" placeholder='Search terms… (try "EAAN" or "strawman")' aria-label="Search the glossary">
+  <div class="gloss-grid" id="glossaryList"></div>
+</section>
+
+<!-- ================= WHAT NOW? ================= -->
+<section id="what-now">
+  <div class="section-heading">
+    <span class="eyebrow">What Now?</span>
+    <h2>Every worldview fails. Jesus doesn't.</h2>
+    <p>If Jesus really rose from the dead, He isn't just an argument to win—He's a Person to know. Here's how.</p>
+  </div>
+
+  <article class="card step"><span class="step-n">1</span><div><h3>You've sinned against a holy God</h3><p data-link>Everyone has broken God's law—lying, lust, pride, hate (Romans 3:23). Sin against an infinitely holy God creates a debt you can't pay.</p></div></article>
+  <article class="card step"><span class="step-n">2</span><div><h3>Sin earns death—but God offers a gift</h3><p data-link>"The wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord" (Romans 6:23).</p></div></article>
+  <article class="card step"><span class="step-n">3</span><div><h3>Jesus paid your debt in full</h3><p data-link>The 100% God, 100% Man Savior died in your place and rose again (Romans 5:8; 1 Corinthians 15:3–4). God made Him who knew no sin to be sin for us (2 Corinthians 5:21).</p></div></article>
+  <article class="card step"><span class="step-n">4</span><div><h3>It's grace through faith—not works</h3><p data-link>You can't earn it with rituals, rules, or good deeds (Ephesians 2:8–9; Titus 3:5). No priest, saint, or church can stand between you and God—there is one Mediator, Christ Jesus (1 Timothy 2:5).</p></div></article>
+  <article class="card step final"><span class="step-n">5</span><div><h3>Turn and trust</h3><p data-link>Turn from your sin and trust Jesus alone as your Lord and Savior: "If you confess with your mouth that Jesus is Lord and believe in your heart that God raised Him from the dead, you will be saved" (Romans 10:9; Acts 3:19; John 1:12).</p></div></article>
+
+  <div class="grid">
+    <article class="card prayer">
+      <span class="label">Talk to God</span>
+      <h3>Not a magic formula—God sees your heart</h3>
+      <p class="body">Words don't save you; Jesus does. But if you're ready to trust Him, you can pray something like this:</p>
+      <blockquote>"Jesus, I know I've sinned against You and I can't save myself. I believe You died for my sins and rose from the dead. I turn from my sin and trust You alone to save me. Be my Lord and my God. Amen."</blockquote>
+    </article>
+    <article class="card">
+      <span class="label">Next steps</span>
+      <h3>Start following Jesus</h3>
+      <ul class="sub-list body" data-link>
+        <li><strong>Read the Bible</strong>—start with the Gospel of John.</li>
+        <li><strong>Pray every day</strong>—you have direct access to God through Jesus (Hebrews 4:16).</li>
+        <li><strong>Get baptized</strong>—a public declaration that you belong to Jesus (Matthew 28:19).</li>
+        <li><strong>Find a Bible-teaching church</strong>—you weren't made to follow Jesus alone (Hebrews 10:24–25).</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
 </div>
 </main>
 
 <footer>
   <strong>QUANTUMTHEOLOGY</strong>
   <p>Physics + Logic = Jesus. Debate me.</p>
-  <a class="tiktok" href="https://www.tiktok.com/@quantumtheology" target="_blank" rel="noopener">
-    Follow @QuantumTheology on TikTok ↗
-  </a>
+  <a class="tiktok" href="https://www.tiktok.com/@quantumtheology" target="_blank" rel="noopener">Follow @QuantumTheology on TikTok ↗</a>
   <p style="font-size:12px;margin-top:25px">S-GUOT · The Seibert Grand Unified Ontological Theory · Formulated by Jacob Benjamin Seibert</p>
 </footer>
 
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
 
-<script>
-(function () {
-  "use strict";
-  function mq(q) { return !!(window.matchMedia && window.matchMedia(q).matches); }
-  var reduceMotion = mq("(prefers-reduced-motion: reduce)");
-  var finePointer = mq("(hover: hover) and (pointer: fine)");
-  var scrollMode = reduceMotion ? "auto" : "smooth";
+<!-- Rebuttal Finder -->
+<div class="finder" id="finder" hidden role="dialog" aria-modal="true" aria-labelledby="finderTitle">
+  <div class="overlay-backdrop" data-close-finder></div>
+  <div class="finder-panel">
+    <div class="panel-head">
+      <h2 id="finderTitle">⚡ Rebuttal Finder</h2>
+      <button class="icon-btn" type="button" data-close-finder aria-label="Close">✕</button>
+    </div>
+    <input class="finder-input" id="finderInput" type="search" autocomplete="off" placeholder='What did they say? (e.g. "who made God?")' aria-label="What did they say?">
+    <div class="finder-suggest" id="finderSuggest">
+      <button type="button" class="chip" data-suggest="Who created God?">Who created God?</button>
+      <button type="button" class="chip" data-suggest="Energy can create itself">Energy created itself</button>
+      <button type="button" class="chip" data-suggest="The Bible was changed">The Bible was changed</button>
+      <button type="button" class="chip" data-suggest="Science disproved God">Science disproved God</button>
+      <button type="button" class="chip" data-suggest="Jesus never existed">Jesus never existed</button>
+      <button type="button" class="chip" data-suggest="Why does God allow suffering?">Why does God allow suffering?</button>
+      <button type="button" class="chip" data-suggest="Evolution">Evolution</button>
+      <button type="button" class="chip" data-suggest="All religions are the same">All religions are the same</button>
+    </div>
+    <div class="finder-results" id="finderResults" aria-live="polite"></div>
+  </div>
+</div>
 
-  /* ---------- 0. Bloom-in: cards and headings open up as they scroll into view ---------- */
-  var bloomEls = Array.prototype.slice.call(document.querySelectorAll(".section-heading, .card, .chips, .search, .stage"));
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    bloomEls.forEach(function (el) { el.classList.add("bloomed"); });
-  } else {
-    var bloomIO = new IntersectionObserver(function (entries) {
-      var n = 0;
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        en.target.style.setProperty("--d", Math.min(n, 6) * 90 + "ms");
-        n++;
-        en.target.classList.add("bloomed");
-        bloomIO.unobserve(en.target);
-      });
-    }, { rootMargin: "0px 0px -5% 0px", threshold: 0.05 });
-    bloomEls.forEach(function (el) { bloomIO.observe(el); });
-  }
-  window.__qtReady = true;
+<!-- Pop-up sheet (verses, glossary, share cards) -->
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="overlay-backdrop" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="panel-head">
+      <span class="sheet-kicker" id="sheetKicker"></span>
+      <button class="icon-btn" type="button" data-close-sheet aria-label="Close">✕</button>
+    </div>
+    <h3 class="sheet-title" id="sheetTitle"></h3>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
 
-  /* ---------- 1. Clickable receipts: Bible, Quran, hadith, Talmud, axiom cross-links ---------- */
-  var BOOKS = "1 Corinthians|2 Corinthians|1 Timothy|1 Peter|1 John|Genesis|Gen|Exodus|Psalms?|Isaiah|Daniel|Micah|Matthew|Mark|Luke|John|Acts|Romans|Ephesians|Philippians|Colossians|Hebrews|Revelation";
-  var SEP = "(?:,\\s(?:and\\s)?|\\sand\\s)";
-  var LINK_RX = new RegExp(
-    "\\b(" + BOOKS + ")\\s(\\d+(?::\\d+(?:[–-]\\d+)?|[–-]\\d+)?(?:,\\s\\d+:\\d+(?:[–-]\\d+)?)*)" +
-    "|\\bSurah\\s(\\d+(?::\\d+(?:[–-]\\d+)?)?(?:" + SEP + "\\d+:\\d+(?:[–-]\\d+)?)*)" +
-    "|\\b(?:Sahih\\s)?(?:al-)?Bukhari\\s(\\d+)" +
-    "|\\bSunan Abi Dawud\\s(\\d+)" +
-    "|\\b(Yoma 39b)" +
-    "|\\b(Axioms?\\s)(\\d+(?:[–-]\\d+)?(?:" + SEP + "\\d+(?:[–-]\\d+)?)*)",
-    "g"
-  );
-  function ext(href, text) { return '<a class="ref" href="' + href + '" target="_blank" rel="noopener">' + text + "</a>"; }
-  function dash(s) { return s.replace(/–/g, "-"); }
-  function bibleUrl(ref) { return "https://www.biblegateway.com/passage/?search=" + encodeURIComponent(dash(ref)) + "&version=ESV"; }
-  function quranUrl(ref) { var p = dash(ref).split(":"); return "https://quran.com/" + p[0] + (p[1] ? "/" + p[1] : ""); }
-  function linkEach(list, rx, make) {
-    var first = true;
-    return list.replace(rx, function (r) { var out = make(r, first); first = false; return out; });
-  }
-  function linkify(html) {
-    return html.replace(LINK_RX, function (m, book, brefs, qrefs, bukhari, dawud, yoma, axWord, axrefs) {
-      if (book) return linkEach(brefs, /\d+(?::\d+(?:[–-]\d+)?|[–-]\d+)?/g, function (r, first) {
-        return ext(bibleUrl(book + " " + r), first ? book + " " + r : r);
-      });
-      if (qrefs) return linkEach(qrefs, /\d+(?::\d+(?:[–-]\d+)?)?/g, function (r, first) {
-        return ext(quranUrl(r), first ? "Surah " + r : r);
-      });
-      if (bukhari) return ext("https://sunnah.com/bukhari:" + bukhari, m);
-      if (dawud) return ext("https://sunnah.com/abudawud:" + dawud, m);
-      if (yoma) return ext("https://www.sefaria.org/Yoma.39b", m);
-      if (axrefs) return linkEach(axrefs, /\d+(?:[–-]\d+)?/g, function (r, first) {
-        return '<a class="axlink" href="#axiom-' + parseInt(r, 10) + '">' + (first ? axWord + r : r) + "</a>";
-      });
-      return m;
-    });
-  }
-  document.querySelectorAll("[data-link]").forEach(function (el) { el.innerHTML = linkify(el.innerHTML); });
-
-  /* ---------- 2. Search helpers (accent-insensitive: "godel" finds "Gödel") ---------- */
-  function norm(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
-  function textMap(cards) { var m = new Map(); cards.forEach(function (c) { m.set(c, norm(c.textContent)); }); return m; }
-
-  /* ---------- 3. Axiom filters: bucket chips + search ---------- */
-  var axiomCards = Array.prototype.slice.call(document.querySelectorAll(".axiom"));
-  var axiomText = textMap(axiomCards);
-  var stageGroups = Array.prototype.slice.call(document.querySelectorAll(".stage-group"));
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
-  var axiomSearch = document.getElementById("axiomSearch");
-  var axiomCount = document.getElementById("axiomCount");
-  var axiomEmpty = document.getElementById("axiomEmpty");
-  var bucket = "all";
-
-  function filterAxioms() {
-    var q = norm(axiomSearch.value.trim());
-    var shown = 0;
-    axiomCards.forEach(function (c) {
-      var ok = (bucket === "all" || c.dataset.bucket === bucket) && (!q || axiomText.get(c).indexOf(q) !== -1);
-      c.hidden = !ok;
-      if (ok) shown++;
-    });
-    stageGroups.forEach(function (g) { g.hidden = !g.querySelector(".axiom:not([hidden])"); });
-    axiomCount.textContent = "Showing " + shown + " of " + axiomCards.length + " axioms";
-    axiomEmpty.hidden = shown !== 0;
-  }
-  function setBucket(b) {
-    bucket = b;
-    chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.dataset.filter === b)); });
-    filterAxioms();
-  }
-  chips.forEach(function (c) { c.addEventListener("click", function () { setBucket(c.dataset.filter); }); });
-  axiomSearch.addEventListener("input", filterAxioms);
-  document.querySelectorAll("[data-show-bucket]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      axiomSearch.value = "";
-      setBucket(btn.dataset.showBucket);
-      document.getElementById("axioms").scrollIntoView({ behavior: scrollMode, block: "start" });
-    });
-  });
-
-  /* ---------- 4. Axiom cross-links jump to the card (clearing filters if it's hidden) ---------- */
-  function flash(el) { el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
-  document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest('a[href^="#axiom-"]');
-    if (!a) return;
-    var target = document.getElementById(a.getAttribute("href").slice(1));
-    if (!target) return;
-    e.preventDefault();
-    if (target.hidden) { axiomSearch.value = ""; setBucket("all"); }
-    target.scrollIntoView({ behavior: scrollMode, block: "start" });
-    if (history.replaceState) history.replaceState(null, "", "#" + target.id);
-    flash(target);
-  });
-
-  /* ---------- 5. Debate Q&A search ---------- */
-  var qaCards = Array.prototype.slice.call(document.querySelectorAll(".qa"));
-  var qaText = textMap(qaCards);
-  var qaSearch = document.getElementById("qaSearch");
-  var qaCount = document.getElementById("qaCount");
-  var qaEmpty = document.getElementById("qaEmpty");
-  qaSearch.addEventListener("input", function () {
-    var q = norm(qaSearch.value.trim());
-    var shown = 0;
-    qaCards.forEach(function (c) {
-      var ok = !q || qaText.get(c).indexOf(q) !== -1;
-      c.hidden = !ok;
-      if (ok) shown++;
-    });
-    qaCount.textContent = "Showing " + shown + " of " + qaCards.length + " questions";
-    qaEmpty.hidden = shown !== 0;
-  });
-
-  /* ---------- 6. Copy buttons (paste an axiom or rebuttal straight into a debate chat) ---------- */
-  function plainText(el) {
-    if (!el) return "";
-    var c = el.cloneNode(true);
-    Array.prototype.slice.call(c.querySelectorAll("sup")).reverse().forEach(function (s) { s.replaceWith("^" + s.textContent); });
-    c.querySelectorAll("sub").forEach(function (s) { s.replaceWith("_" + s.textContent); });
-    c.querySelectorAll("li").forEach(function (li) { li.prepend("\uE000"); });
-    return c.textContent.replace(/\s+/g, " ").replace(/\s*\uE000\s*/g, "\n• ").trim();
-  }
-  var SIGN = "— QuantumTheology (S-GUOT)";
-  function copyTextFor(card) {
-    if (card.classList.contains("axiom")) {
-      return [
-        plainText(card.querySelector(".label")).toUpperCase() + " — " + plainText(card.querySelector("h3")),
-        plainText(card.querySelector(".evidence")),
-        plainText(card.querySelector(".receipts")),
-        SIGN
-      ].join("\n\n");
-    }
-    var note = card.querySelector(".q-note");
-    return [
-      "Q: " + plainText(card.querySelector("h3")) + (note ? " (" + plainText(note) + ")" : ""),
-      plainText(card.querySelector(".fallacy")),
-      plainText(card.querySelector(".evidence")),
-      SIGN
-    ].join("\n\n");
-  }
-  function legacyCopy(text) {
-    try {
-      var ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "");
-      ta.style.position = "fixed";
-      ta.style.top = "-1000px";
-      document.body.appendChild(ta);
-      ta.select();
-      var ok = document.execCommand("copy");
-      ta.remove();
-      return ok;
-    } catch (err) { return false; }
-  }
-  function copyToClipboard(text) {
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
-      }
-    } catch (err) { /* fall through */ }
-    return Promise.resolve(legacyCopy(text));
-  }
-  document.querySelectorAll(".axiom, .qa").forEach(function (card) {
-    var top = card.querySelector(".card-top");
-    if (!top) return;
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "copy-btn";
-    btn.textContent = "Copy";
-    btn.setAttribute("aria-label", "Copy " + plainText(card.querySelector(".label")));
-    btn.addEventListener("click", function () {
-      copyToClipboard(copyTextFor(card)).then(function (ok) {
-        btn.textContent = ok ? "Copied ✓" : "Couldn't copy";
-        btn.classList.toggle("copied", ok);
-        clearTimeout(btn._reset);
-        btn._reset = setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1600);
-      });
-    });
-    top.appendChild(btn);
-  });
-
-  /* ---------- 7. Menu ---------- */
-  var menuButton = document.getElementById("menuButton");
-  var navLinks = document.getElementById("navLinks");
-  function setMenu(open) { navLinks.classList.toggle("open", open); menuButton.setAttribute("aria-expanded", String(open)); }
-  menuButton.addEventListener("click", function (e) { e.stopPropagation(); setMenu(!navLinks.classList.contains("open")); });
-  navLinks.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
-  document.addEventListener("click", function (e) { if (navLinks.classList.contains("open") && !navLinks.contains(e.target)) setMenu(false); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
-
-  /* ---------- 8. Glowing scroll-progress bar + back to top ---------- */
-  var bar = document.getElementById("progress");
-  var toTop = document.getElementById("toTop");
-  var scrollQueued = false;
-  function onScroll() {
-    scrollQueued = false;
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-    bar.style.transform = "scaleX(" + p + ")";
-    toTop.classList.toggle("show", window.scrollY > 900);
-  }
-  window.addEventListener("scroll", function () {
-    if (!scrollQueued) { scrollQueued = true; requestAnimationFrame(onScroll); }
-  }, { passive: true });
-  onScroll();
-  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: scrollMode }); });
-
-  /* ---------- 9. Stats count up ---------- */
-  document.querySelectorAll("[data-count]").forEach(function (el) {
-    var end = parseInt(el.getAttribute("data-count"), 10) || 0;
-    if (reduceMotion) { el.textContent = end; return; }
-    var delay = parseInt(el.getAttribute("data-delay"), 10) || 0;
-    el.textContent = "0";
-    setTimeout(function () {
-      var start = null;
-      function tick(now) {
-        if (start === null) start = now;
-        var p = Math.min(1, (now - start) / 1400);
-        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    }, delay);
-  });
-
-  /* ---------- 10. Twinkling starfield with depth ---------- */
-  (function () {
-    var canvas = document.getElementById("stars");
-    if (!canvas || !canvas.getContext) return;
-    var ctx = canvas.getContext("2d");
-    var W = 0, H = 0, stars = [], running = true;
-    var colors = ["#ffffff", "#c4b5fd", "#a5f3fc", "#bfdbfe", "#f5d0fe"];
-    function build() {
-      var count = Math.round(Math.min(170, Math.max(60, (W * H) / 8500)));
-      stars = [];
-      for (var i = 0; i < count; i++) {
-        var big = Math.random() < 0.08;
-        stars.push({
-          x: Math.random() * W,
-          y: Math.random() * H,
-          r: big ? Math.random() * 1.1 + 1.1 : Math.random() * 0.9 + 0.25,
-          t: Math.random() * Math.PI * 2,
-          tw: Math.random() * 0.025 + 0.006,
-          v: Math.random() * 0.08 + 0.015,
-          z: Math.random() * 0.6 + 0.2,
-          c: colors[(Math.random() * colors.length) | 0]
-        });
-      }
-    }
-    function size() {
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      var newW = window.innerWidth, newH = window.innerHeight;
-      var rebuild = newW !== W || !stars.length;
-      W = newW; H = newH;
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      if (rebuild) build();
-    }
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-      var sy = window.scrollY || 0;
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
-        if (!reduceMotion) {
-          s.t += s.tw;
-          s.y -= s.v;
-          if (s.y < -4) { s.y = H + 4; s.x = Math.random() * W; }
-        }
-        var y = ((s.y - sy * s.z * 0.12) % H + H) % H;
-        var a = 0.25 + 0.75 * Math.abs(Math.sin(s.t));
-        ctx.fillStyle = s.c;
-        ctx.globalAlpha = a;
-        ctx.beginPath();
-        ctx.arc(s.x, y, s.r, 0, 6.2832);
-        ctx.fill();
-        if (s.r > 1.1) {
-          ctx.globalAlpha = a * 0.14;
-          ctx.beginPath();
-          ctx.arc(s.x, y, s.r * 4.5, 0, 6.2832);
-          ctx.fill();
-        }
-      }
-      ctx.globalAlpha = 1;
-    }
-    function loop() { if (running) draw(); requestAnimationFrame(loop); }
-    size();
-    var resizeTimer;
-    window.addEventListener("resize", function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () { size(); if (reduceMotion) draw(); }, 150);
-    });
-    document.addEventListener("visibilitychange", function () { running = !document.hidden; });
-    if (reduceMotion) draw(); else requestAnimationFrame(loop);
-  })();
-
-  /* ---------- 11. Cursor bloom + card spotlight (mouse only) ---------- */
-  if (finePointer && !reduceMotion) {
-    var glow = document.querySelector(".cursor-glow");
-    var px = 0, py = 0, pTarget = null, pQueued = false;
-    document.addEventListener("pointermove", function (e) {
-      px = e.clientX; py = e.clientY; pTarget = e.target;
-      if (pQueued) return;
-      pQueued = true;
-      requestAnimationFrame(function () {
-        pQueued = false;
-        glow.classList.add("on");
-        glow.style.transform = "translate3d(" + px + "px," + py + "px,0)";
-        var card = pTarget && pTarget.closest ? pTarget.closest(".card") : null;
-        if (card) {
-          var r = card.getBoundingClientRect();
-          card.style.setProperty("--mx", (px - r.left) + "px");
-          card.style.setProperty("--my", (py - r.top) + "px");
-        }
-      });
-    }, { passive: true });
-    document.addEventListener("mouseout", function (e) { if (!e.relatedTarget) glow.classList.remove("on"); });
-  }
-
-  if (location.hash) {
-    var landed = document.getElementById(location.hash.slice(1));
-    if (landed && landed.classList.contains("card")) flash(landed);
-  }
-})();
-</script>
-
+<script src="app.js?v=6"></script>
 </body>
 </html>
