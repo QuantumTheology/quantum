@@ -970,7 +970,7 @@ footer strong{color:#fff}
   document.querySelectorAll("[data-link]").forEach(function (el) { el.innerHTML = linkify(el.innerHTML); });
 
   /* ---------- 2. Search helpers (accent-insensitive: "godel" finds "Gödel") ---------- */
-  function norm(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+  function norm(s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
   function textMap(cards) { var m = new Map(); cards.forEach(function (c) { m.set(c, norm(c.textContent)); }); return m; }
 
   /* ---------- 3. Axiom filters: bucket chips + search ---------- */
@@ -1048,8 +1048,8 @@ footer strong{color:#fff}
     var c = el.cloneNode(true);
     Array.prototype.slice.call(c.querySelectorAll("sup")).reverse().forEach(function (s) { s.replaceWith("^" + s.textContent); });
     c.querySelectorAll("sub").forEach(function (s) { s.replaceWith("_" + s.textContent); });
-    c.querySelectorAll("li").forEach(function (li) { li.prepend("\uE000"); });
-    return c.textContent.replace(/\s+/g, " ").replace(/\s*\uE000\s*/g, "\n• ").trim();
+    c.querySelectorAll("li").forEach(function (li) { li.prepend(""); });
+    return c.textContent.replace(/\s+/g, " ").replace(/\s*\s*/g, "\n• ").trim();
   }
   var SIGN = "— QuantumTheology (S-GUOT)";
   function copyTextFor(card) {
