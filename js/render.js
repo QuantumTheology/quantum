@@ -124,12 +124,21 @@
     }
     var wm = $("#wvMount");
     if (!wm || !Q.worldviews) return;
+    var total = Q.axioms ? Q.axioms.length : 50;
+    function whyList(name, win) {
+      var list = Q.reasons && Q.reasons[name];
+      if (!list || !list.length) return "";
+      return '<div class="why"><span class="why-k">' + (win ? "Why it stands" : "Why it fails: " + list.length + " reasons") + '</span><ol class="why-list" data-link>' +
+        list.map(function (x) { return "<li><b>" + x[0] + ".</b> " + x[1] + ' <span class="axnote">(Axioms ' + x[2] + ")</span></li>"; }).join("") + "</ol></div>";
+    }
     var n = 0;
     Q.worldviews.forEach(function (w) {
       if (w.win) {
         var winCard = el("article", "card wv win");
         winCard.id = "wv-win";
-        winCard.innerHTML = '<span class="wv-num">✓</span><div><span class="tag wv-cat">The truth</span><h3>' + w.name + '</h3><span class="badge win">✓ Left standing</span><p class="body" data-link>' + w.text + '</p></div>';
+        winCard.innerHTML = '<span class="wv-num">✓</span><div><span class="tag wv-cat">The truth</span><h3>' + w.name + '</h3>' +
+          '<span class="badge win">✓ Safe and still protected after ' + total + ' axioms</span>' +
+          '<p class="body" data-link>' + w.text + '</p>' + whyList(w.name, true) + '</div>';
         wm.parentNode.appendChild(winCard);
         return;
       }
@@ -140,11 +149,39 @@
         '<span class="tag wv-cat">' + w.cat + '</span><span class="tag wv-cat gate-tag">Gate ' + w.g + '</span>' +
         '<h3>' + w.name + '</h3><span class="badge elim">✕ Eliminated</span>' +
         '<p class="body" data-link>' + w.text + ' <span class="axnote">(Axioms ' + w.ax + ')</span></p>' +
+        whyList(w.name, false) +
         '<p class="reply" data-link><strong>Their best reply:</strong> ' + w.reply + '</p>' +
         (Q.comebacks && Q.comebacks[w.name] ? backBox(Q.comebacks[w.name].b, Q.comebacks[w.name].t, "What they'll say and do, and your answers") : "") +
         '</div>';
       wm.appendChild(c);
     });
+
+    /* Elimination matrix: every worldview against the six gates */
+    var mx = $("#matrixMount");
+    if (mx && Q.gates) {
+      var gateShort = ["A mind?", "One?", "Beyond creation?", "Tri-Une?", "Jesus in history?", "Grace alone?"];
+      var head = '<tr><th scope="col">Worldview</th>' + Q.gates.map(function (g, i) { return '<th scope="col"><span>Gate ' + g.n + "</span><small>" + gateShort[i] + "</small></th>"; }).join("") + '<th scope="col">Result</th></tr>';
+      var k = 0, rows = Q.worldviews.map(function (w) {
+        var id = w.win ? "wv-win" : "wv-" + (++k);
+        var cells = Q.gates.map(function (g) {
+          if (w.win || g.n < w.g) return '<td class="mx-pass" title="Passes">✓</td>';
+          if (g.n === w.g) return '<td class="mx-stop" title="Stopped here">✕</td>';
+          return '<td class="mx-dim" title="Never reached">·</td>';
+        }).join("");
+        return '<tr class="' + (w.win ? "mx-win" : "") + '"><th scope="row"><a href="#' + id + '" data-jump>' + w.name + "</a></th>" + cells +
+          '<td class="mx-res">' + (w.win ? "Safe after " + total + " axioms" : "Stopped at Gate " + w.g) + "</td></tr>";
+      }).join("");
+      mx.innerHTML = '<div class="mx-scroll"><table class="mx"><thead>' + head + "</thead><tbody>" + rows + "</tbody></table></div>";
+    }
+  }
+
+  /* ---------- Axiom index: 50 tiles that jump to each card ---------- */
+  function renderAxiomIndex() {
+    var box = $("#axIndex");
+    if (!box || !Q.axioms) return;
+    box.innerHTML = Q.axioms.map(function (a) {
+      return '<a class="axi" href="#axiom-' + a.n + '" data-jump data-bucket="' + a.b + '" title="' + a.title.replace(/"/g, "&quot;") + '"><b>' + a.n + "</b><span>" + a.title + "</span></a>";
+    }).join("");
   }
 
   /* ---------- Islam ---------- */
@@ -188,7 +225,7 @@
         '<article class="card tl-card bloomed">' +
         '<span class="tl-date">' + r[1] + '</span> <span class="cert cert-' + r[3] + '">' + Q.tlCert[r[3]] + '</span>' +
         '<h3>' + r[4] + '</h3><p class="body" data-link>' + r[5] + '</p>' +
-        '<p class="src">Source: ' + r[6] + '</p></article><span class="tl-dot" aria-hidden="true"></span>';
+        '<p class="src" data-link>Source: ' + r[6] + '</p></article><span class="tl-dot" aria-hidden="true"></span>';
       track.appendChild(item);
     });
     if (Q.enhance) Q.enhance(track);
@@ -283,6 +320,7 @@
 
   try { renderAxioms(); } catch (e) { console.error("render axioms", e); }
   try { renderAdmitted(); } catch (e) { console.error("render admitted", e); }
+  try { renderAxiomIndex(); } catch (e) { console.error("render axiom index", e); }
   try { renderWorldviews(); } catch (e) { console.error("render worldviews", e); }
   try { renderIslam(); } catch (e) { console.error("render islam", e); }
   try { renderTimelineControls(); Q.renderTimeline(); } catch (e) { console.error("render timeline", e); }
