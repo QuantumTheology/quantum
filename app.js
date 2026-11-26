@@ -45,9 +45,11 @@
   /* ---------- 1. Clickable receipts: Bible, Quran, hadith, Talmud, axiom cross-links ---------- */
   var BOOKS = "1 Corinthians|2 Corinthians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|1 Peter|2 Peter|1 John|2 John|3 John|Genesis|Gen|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Galatians|Ephesians|Philippians|Colossians|Titus|Philemon|Hebrews|James|Jude|Revelation";
   var SEP = "(?:,\\s(?:and\\s)?|\\sand\\s)";
+  var SEPQ = "(?:[,;]\\s(?:and\\s)?|\\sand\\s)";
+  var VRS = "\\d+(?::\\d+(?:[–-]\\d+(?::\\d+)?)?|[–-]\\d+)?";
   var LINK_RX = new RegExp(
-    "\\b(" + BOOKS + ")\\s(\\d+(?::\\d+(?:[–-]\\d+)?|[–-]\\d+)?(?:,\\s\\d+:\\d+(?:[–-]\\d+)?)*)" +
-    "|\\bSurah\\s(\\d+(?::\\d+(?:[–-]\\d+)?)?(?:" + SEP + "\\d+:\\d+(?:[–-]\\d+)?)*)" +
+    "\\b(" + BOOKS + ")\\s(" + VRS + "(?:[,;]\\s\\d+:\\d+(?:[–-]\\d+)?)*)" +
+    "|\\b(?:Surah|Qur['’]an|Quran|Koran)\\s(\\d+(?::\\d+(?:[–-]\\d+)?)?(?:" + SEPQ + "\\d+:\\d+(?:[–-]\\d+)?)*)" +
     "|\\b(?:Sahih\\s)?(?:al-)?Bukhari\\s(\\d+)" +
     "|\\bSunan Abi Dawud\\s(\\d+)" +
     "|\\b(Yoma 39b)" +
@@ -62,21 +64,59 @@
     var first = true;
     return list.replace(rx, function (r) { var out = make(r, first); first = false; return out; });
   }
-  function linkify(html) {
-    return html.replace(LINK_RX, function (m, book, brefs, qrefs, bukhari, dawud, yoma, axWord, axrefs) {
-      if (book) return linkEach(brefs, /\d+(?::\d+(?:[–-]\d+)?|[–-]\d+)?/g, function (r, first) {
+  var QURAN_HINT = /Qur['’]?an|Quran|Koran|Surah|Muslim|Islam|Allah|Muhammad/;
+  function quranLink(r, label) {
+    var s = parseInt(r, 10);
+    if (!(s >= 1 && s <= 114)) return label;
+    return ext(quranUrl(r), label, ' data-verse="quran" data-ref="' + r + '"');
+  }
+  function linkify(html, quranCtx) {
+    var out = html.replace(LINK_RX, function (m, book, brefs, qrefs, bukhari, dawud, yoma, axWord, axrefs) {
+      if (book) return linkEach(brefs, /\d+(?::\d+(?:[–-]\d+(?::\d+)?)?|[–-]\d+)?/g, function (r, first) {
         var ref = book + " " + r;
         return ext(bibleUrl(ref), first ? ref : r, ' data-verse="bible" data-ref="' + ref + '"');
       });
-      if (qrefs) return linkEach(qrefs, /\d+(?::\d+(?:[–-]\d+)?)?/g, function (r, first) {
-        return ext(quranUrl(r), first ? "Surah " + r : r, ' data-verse="quran" data-ref="' + r + '"');
-      });
+      if (qrefs) {
+        var prefix = m.slice(0, m.indexOf(qrefs));
+        return linkEach(qrefs, /\d+(?::\d+(?:[–-]\d+)?)?/g, function (r, first) { return quranLink(r, first ? prefix + r : r); });
+      }
       if (bukhari) return ext("https://sunnah.com/bukhari:" + bukhari, m);
       if (dawud) return ext("https://sunnah.com/abudawud:" + dawud, m);
       if (yoma) return ext("https://www.sefaria.org/Yoma.39b", m);
       if (axrefs) return linkEach(axrefs, /\d+(?:[–-]\d+)?/g, function (r, first) {
         return '<a class="axlink" href="#axiom-' + parseInt(r, 10) + '">' + (first ? axWord + r : r) + "</a>";
       });
+      return m;
+    });
+    return shortRefs(out, quranCtx ? "Q" : null);
+  }
+  /* Short refs like "(53:8)" take the last scripture named before them: a Bible book or the Qur'an. */
+  var SHORT_RX = new RegExp(
+    "(<a\\b[^>]*>[\\s\\S]*?</a>)" +
+    "|(<[^>]+>)" +
+    "|(\\d{1,3}:\\d{1,3}(?:[–-]\\d{1,3}(?::\\d{1,3})?)?)(?![\\d:])" +
+    "|\\b(" + BOOKS + ")\\b" +
+    "|\\b(Qur['’]?an|Quran|Koran|Surah)\\b",
+    "g"
+  );
+  function shortRefs(html, start) {
+    var last = start;
+    return html.replace(SHORT_RX, function (m, anchor, tag, ref, book, quran, at, str) {
+      if (anchor) {
+        var dr = /data-ref="([^"]+)"/.exec(anchor), dv = /data-verse="(\w+)"/.exec(anchor);
+        if (dv && dv[1] === "quran") last = "Q";
+        else if (dr) { var bk = /^(.*?)\s\d/.exec(dr[1]); if (bk) last = bk[1]; }
+        return m;
+      }
+      if (tag) return m;
+      if (book) { last = book; return m; }
+      if (quran) { last = "Q"; return m; }
+      if (ref) {
+        if (!last || (at > 0 && /[\d:]/.test(str.charAt(at - 1)))) return m;
+        if (last === "Q") return quranLink(ref, ref);
+        var full = last + " " + ref;
+        return ext(bibleUrl(full), ref, ' data-verse="bible" data-ref="' + full + '"');
+      }
       return m;
     });
   }
@@ -228,9 +268,10 @@
   });
 
   function linkifyIn(root) {
-    $$("[data-link]", root).forEach(function (e) {
+    $$("[data-link], .qa > h3, .point > h3, .admit-q", root).forEach(function (e) {
       if (e.getAttribute("data-linked")) return;
-      e.innerHTML = linkify(e.innerHTML);
+      var card = e.closest(".card, .da-panel"), ctx = !!e.closest("#islam, [data-cat='isl']") || !!(card && QURAN_HINT.test(card.textContent));
+      e.innerHTML = linkify(e.innerHTML, ctx);
       e.setAttribute("data-linked", "1");
     });
   }
@@ -1990,7 +2031,7 @@
     }
     function quitBtn() { return '<button type="button" class="da-quit" data-act="go" data-v="lobby" aria-label="Quit this round">Quit</button>'; }
     function skeptic(who, text) {
-      return '<div class="da-skeptic"><span class="da-av" aria-hidden="true">?</span><div class="da-bubble"><span class="da-who">' + who + "</span><p>" + text + "</p></div></div>";
+      return '<div class="da-skeptic"><span class="da-av" aria-hidden="true">?</span><div class="da-bubble"><span class="da-who">' + who + "</span><p>" + linkify(text, S.mode === "wv" && S.w === "muslim") + "</p></div></div>";
     }
     function optBtns(list, act, mark) {
       return '<div class="opts da-opts">' + list.map(function (o, k) {
@@ -2317,7 +2358,7 @@
       });
       parts.push("So here's my challenge. Pick the premise you deny, and tell everyone what denying it costs you. Because if Jesus really rose from the dead, this isn't just a debate. He's a Person you can know.");
       text = parts.join("\n\n");
-      out.innerHTML = parts.map(function (p, i) { return '<p class="' + (i === 0 ? "os-open" : i === parts.length - 1 ? "os-close" : "os-pt") + '">' + esc(p) + "</p>"; }).join("");
+      out.innerHTML = parts.map(function (p, i) { return '<p class="' + (i === 0 ? "os-open" : i === parts.length - 1 ? "os-close" : "os-pt") + '">' + linkify(esc(p), who.id === "muslim") + "</p>"; }).join("");
       var words = text.split(/\s+/).length, secs = Math.round(words / 150 * 60);
       timeEl.textContent = words + " words · about " + Math.floor(secs / 60) + ":" + ("0" + secs % 60).slice(-2) + " spoken";
     }
