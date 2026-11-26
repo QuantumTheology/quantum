@@ -123,7 +123,7 @@
     "jesus broke sabbath healing grain pharisees", 16);
   q("con", "“John 3:13 says no one has gone up to heaven, but Elijah did (2 Kings 2:11).”", "Hasty Generalization",
     "Jesus is saying no one has gone up to heaven to learn heavenly things and come back to tell us. He alone came down and can speak with authority.",
-    "The context is about revealing heavenly truths (3:12). Elijah was taken up but didn't return to teach them. Jesus claims a unique origin.",
+    "The context is about revealing heavenly truths (John 3:12). Elijah was taken up but didn't return to teach them. Jesus claims a unique origin.",
     "john 3 13 no one ascended elijah 2 kings 2", 16);
   q("con", "“Paul's conversion accounts differ: his companions heard the voice (Acts 9:7), or didn't (22:9).”", F,
     "In Greek, “heard” with a different case means “heard a sound” vs. “understood the speech.” They heard the sound but didn't understand the voice.",

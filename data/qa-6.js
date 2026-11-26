@@ -62,7 +62,7 @@
     "Daniel 9:26 says the Messiah is “cut off” before the Temple is destroyed (AD 70), and Zechariah 12:10 says they will look on the one they pierced. The Messiah has to come before the Temple's destruction.",
     "messiah judaism world peace didn't fulfill prophecies third temple", 19);
   q("rel", "“Isaiah 53 is about Israel, not the Messiah.”", "Special Pleading",
-    "The Servant suffers for “my people” (53:8), distinct from the Servant. And the Targum Jonathan, an ancient Jewish translation, calls the Servant the Messiah.",
+    "The Servant suffers for “my people” (Isaiah 53:8), distinct from the Servant. And the Targum Jonathan, an ancient Jewish translation, calls the Servant the Messiah.",
     "The “Israel” reading became common in the Middle Ages (Rashi). The earlier Targum Jonathan introduces Isaiah 52:13 with “my servant the Messiah.” The Servant is innocent (53:9), and Israel as a nation is not described that way.",
     "isaiah 53 israel messiah servant rashi targum jonathan", 19);
   q("rel", "“The Torah is eternal. Jesus can't change it.”", "Equivocation",

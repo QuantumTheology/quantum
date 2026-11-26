@@ -98,7 +98,7 @@
       text: "Founded in 1954 by science-fiction writer L. Ron Hubbard. Its story has no historical or scientific receipts, and its “salvation” is a paid ladder of auditing levels, the opposite of grace.",
       reply: "“Judge it by results.” Results aren't truth, and the price tags are the problem." },
     { cat: "The truth", name: "Biblical Trinitarian Christianity", g: 6, ax: "1–20", win: true,
-      text: "Survives all six gates: a necessary, personal, Tri-Une Creator, a reliable record, a risen Savior, and a gospel of grace alone through faith alone, with Scripture as the final authority." }
+      text: "Safe and still protected after all six gates and all 50 axioms: a necessary, personal, Tri-Une Creator, a reliable record, a risen Savior, and a gospel of grace alone through faith alone, with Scripture as the final authority." }
   ];
 
   /* strength: strong / medium / contested, so you lead with the right points. */

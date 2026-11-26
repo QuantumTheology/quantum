@@ -55,7 +55,7 @@
     "god die how can god die jesus death cross divine", 20);
   q("jes", "“‘My God, why have You forsaken Me?’ (Mark 15:34). Jesus lost faith.”", "Cherry-Picking",
     "He's quoting Psalm 22, which ends in triumph. At the Cross He bore our sin and the separation it brings. Jesus also said, “It is finished” and “into Your hands I commit My spirit.”",
-    "Quoting the first line of a psalm points to the whole psalm, which ends in God's rule over all nations (22:27–31). He didn't lose faith. He was carrying what we deserved (2 Corinthians 5:21).",
+    "Quoting the first line of a psalm points to the whole psalm, which ends in God's rule over all nations (Psalm 22:27–31). He didn't lose faith. He was carrying what we deserved (2 Corinthians 5:21).",
     "my god why have you forsaken me psalm 22 cross abandon", 20);
   q("jes", "“Jesus said ‘the Father is greater than I’ (John 14:28), so He isn't God.”", "Equivocation",
     "Greater in role, not in nature. Philippians 2:6–7 says the Son humbled Himself, and in the same Gospel He says “I and the Father are one” (John 10:30).",
